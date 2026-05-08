@@ -1,11 +1,118 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 }
 
-@theme inline {
+:root {
+  /* ========================================
+     PRIMARY THEME
+  ======================================== */
+
+  --primary-bg: #f6fbf5;
+  --primary-bg-hover: #eef8ed;
+  --primary-card-bg: #ffffff;
+
+  --primary-text: #111827;
+  --primary-text-light: #6b7280;
+  --primary-text-white: #ffffff;
+
+  --primary-border: #e5e7eb;
+  --primary-border-light: rgba(255, 255, 255, 0.1);
+
+  --primary-color: #38c95c;
+  --primary-color-hover: #2eb350;
+
+  --primary-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
+
+  --primary-glow: 0px 0px 40px rgba(56, 201, 92, 0.3);
+
+  /* ========================================
+     PRIMARY BUTTONS
+  ======================================== */
+
+  --primary-btn-bg: #38c95c;
+  --primary-btn-bg-hover: #2eb350;
+
+  --primary-btn-text: #ffffff;
+
+  --primary-btn-border: #38c95c;
+
+  --primary-btn-transparent-bg: transparent;
+
+  --primary-btn-transparent-text: #38c95c;
+
+  --primary-btn-transparent-border: #38c95c;
+
+  /* ========================================
+     SECONDARY THEME
+  ======================================== */
+
+  --secondary-bg: #070b14;
+  --secondary-bg-light: #111827;
+  --secondary-card-bg: #111827;
+
+  --secondary-text: #ffffff;
+  --secondary-text-light: #9ca3af;
+  --secondary-text-dark: #111827;
+
+  --secondary-border: rgba(255, 255, 255, 0.1);
+
+  --secondary-color: #7c3aed;
+  --secondary-color-hover: #6d28d9;
+
+  --secondary-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
+
+  --secondary-glow: 0px 0px 40px rgba(124, 58, 237, 0.4);
+
+  /* ========================================
+     SECONDARY BUTTONS
+  ======================================== */
+
+  --secondary-btn-bg: #7c3aed;
+  --secondary-btn-bg-hover: #6d28d9;
+
+  --secondary-btn-text: #ffffff;
+
+  --secondary-btn-border: #7c3aed;
+
+  --secondary-btn-transparent-bg: transparent;
+
+  --secondary-btn-transparent-text: #ffffff;
+
+  --secondary-btn-transparent-border: rgba(255, 255, 255, 0.2);
+
+  /* ========================================
+     FONT WEIGHTS
+  ======================================== */
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* ========================================
+     BORDER RADIUS
+  ======================================== */
+
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+
+  /* ========================================
+     TRANSITIONS
+  ======================================== */
+
+  --transition-fast: all 0.2s ease;
+
+  --transition-medium: all 0.3s ease;
+
+  --transition-slow: all 0.5s ease;
+}
+
+/* @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -17,10 +124,52 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+} */
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--primary-bg);
+  color: var(--primary-text);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+
+  transition: var(--transition-medium);
+}
+/* ========================================
+     RESPONSIVE ScrollText
+  ======================================== */
+@keyframes marqueeLeft {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marqueeRight {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee-left {
+  animation: marqueeLeft linear infinite;
+}
+
+.animate-marquee-right {
+  animation: marqueeRight linear infinite;
 }
