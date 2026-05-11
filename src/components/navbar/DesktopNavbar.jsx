@@ -17,21 +17,21 @@ const DesktopNavbar = () => {
         sticky
         top-0
         z-50
+
       "
     >
-      <div
-        className="
-          relative
-          overflow-hidden
-          
-         
-          bg-[var(--primary-bg)]
-        "
-      >
-        {/* BACKGROUND GLOW */}
-
+      <div className="mx-auto w-full max-w-[1400px]">
         <div
           className="
+          relative
+          overflow-hidden
+          bg-[var(--primary-bg)]
+        "
+        >
+          {/* BACKGROUND GLOW */}
+
+          {/* <div
+            className="
             absolute
             left-0
             top-0
@@ -40,10 +40,10 @@ const DesktopNavbar = () => {
             bg-green-400/30
             blur-3xl
           "
-        />
+          /> */}
 
-        <div
-          className="
+          {/* <div
+            className="
             absolute
             right-0
             top-0
@@ -52,12 +52,12 @@ const DesktopNavbar = () => {
             bg-green-400/30
             blur-3xl
           "
-        />
+          /> */}
 
-        {/* NAVBAR CONTAINER */}
+          {/* NAVBAR CONTAINER */}
 
-        <div
-          className="
+          <div
+            className="
             relative
             flex
             items-center
@@ -65,50 +65,50 @@ const DesktopNavbar = () => {
             px-10
             py-9
           "
-        >
-          {/* LEFT LOGO */}
+          >
+            {/* LEFT LOGO */}
 
-          <Link
-            href="/"
-            className="
+            <Link
+              href="/"
+              className="
               flex
               items-center
               gap-4
               z-10
             "
-          >
-            <Image
-              src="/images/product-stakflo.webp"
-              alt="Stakflo Logo"
-              width={60}
-              height={60}
-              priority
-              className="object-contain"
-            />
+            >
+              <Image
+                src="/images/product-stakflo.webp"
+                alt="Stakflo Logo"
+                width={60}
+                height={60}
+                priority
+                className="object-contain"
+              />
 
-            <h2
-              className="
+              <h2
+                className="
                 text-5xl
                 font-bold
                 tracking-tight
                 text-[var(--secondary-bg)]
               "
-            >
-              Stakflo
-            </h2>
-          </Link>
+              >
+                Stakflo
+              </h2>
+            </Link>
 
-          {/* CENTER NAV */}
+            {/* CENTER NAV */}
 
-          <nav
-            className="
+            <nav
+              className="
               absolute
               left-1/2
               -translate-x-1/2
             "
-          >
-            <ul
-              className="
+            >
+              <ul
+                className="
                 flex
                 items-center
                 gap-12
@@ -120,80 +120,80 @@ const DesktopNavbar = () => {
                 px-10
                 py-4
                 shadow-lg
-                
+
               "
-            >
-              {navLinks
-                .filter((item) => !item.hideDesktop)
-                .map((item) => (
-                  <li key={item.label}>
-                    <Link
-                      href={item.href}
-                      className="
+              >
+                {navLinks
+                  .filter((item) => !item.hideDesktop)
+                  .map((item) => (
+                    <li key={item.label}>
+                      <Link
+                        href={item.href}
+                        className="
     relative
     overflow-hidden
     h-6
     flex
     items-center
   "
-                    >
-                      <motion.div
-                        initial="rest"
-                        whileHover="hover"
-                        animate="rest"
-                        className="
+                      >
+                        <motion.div
+                          initial="rest"
+                          whileHover="hover"
+                          animate="rest"
+                          className="
       relative
       overflow-hidden
       h-6
     "
-                      >
-                        {/* DEFAULT TEXT */}
+                        >
+                          {/* DEFAULT TEXT */}
 
-                        <motion.span
-                          variants={{
-                            rest: {
-                              y: 0,
-                              opacity: 1,
-                            },
+                          <motion.span
+                            variants={{
+                              rest: {
+                                y: 0,
+                                opacity: 1,
+                              },
 
-                            hover: {
-                              y: "-100%",
-                              opacity: 0,
-                            },
-                          }}
-                          transition={{
-                            duration: 0.3,
-                            ease: "easeInOut",
-                          }}
-                          className="
+                              hover: {
+                                y: "-100%",
+                                opacity: 0,
+                              },
+                            }}
+                            transition={{
+                              duration: 0.3,
+                              ease: "easeInOut",
+                            }}
+                            className="
         block
         text-[17px]
         font-medium
         text-[var(--secondary-bg)]
       "
-                        >
-                          {item.label}
-                        </motion.span>
+                          >
+                            {item.label}
+                          </motion.span>
 
-                        {/* HOVER TEXT */}
+                          {/* HOVER TEXT */}
 
-                        <motion.span
-                          variants={{
-                            rest: {
-                              y: "100%",
-                              opacity: 0,
-                            },
+                          <motion.span
+                            variants={{
+                              rest: {
+                                y: "100%",
+                                opacity: 0,
+                              },
 
-                            hover: {
-                              y: 0,
-                              opacity: 1,
-                            },
-                          }}
-                          transition={{
-                            duration: 0.3,
-                            ease: "easeInOut",
-                          }}
-                          className="
+                              hover: {
+                                y: 0,
+                                opacity: 1,
+                              },
+                            }}
+                            transition={{
+                              duration: 0.3,
+                              ease: "easeInOut",
+                            }}
+                            className="
         absolute
         left-0
         top-0
@@ -202,19 +202,19 @@ const DesktopNavbar = () => {
         font-medium
         text-[var(--primary-color)]
       "
-                        >
-                          {item.label}
-                        </motion.span>
-                      </motion.div>
-                    </Link>
-                  </li>
-                ))}
-            </ul>
-          </nav>
+                          >
+                            {item.label}
+                          </motion.span>
+                        </motion.div>
+                      </Link>
+                    </li>
+                  ))}
+              </ul>
+            </nav>
 
-          {/* RIGHT BUTTON */}
+            {/* RIGHT BUTTON */}
 
-          {/* <button
+            {/* <button
             className="
               flex
               items-center
@@ -234,17 +234,17 @@ const DesktopNavbar = () => {
             Contact Us
             <FiArrowUpRight className="text-3xl" />
           </button> */}
-          <AnimatedButton
-            text="Contact Us"
-            href="/contact-us"
-            className="
+            <AnimatedButton
+              text="Contact Us"
+              href="/contact-us"
+              className="
     px-3
     py-1
     text-lg
     font-semibold
     text-white
 
-    
+
 
     bg-gradient-to-b
     from-[#2a093d]
@@ -258,9 +258,10 @@ const DesktopNavbar = () => {
 
     hover:shadow-[0px_0px_50px_rgba(255,0,200,0.45)]
 
-    
+
   "
-          />
+            />
+          </div>
         </div>
       </div>
     </header>

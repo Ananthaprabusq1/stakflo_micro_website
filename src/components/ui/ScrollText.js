@@ -1,48 +1,48 @@
 export default function ScrollText({
-    items = [],
-    speed = "20s",
-    direction = "left",
-    className = "",
+  items = [],
+  speed = "20s",
+  direction = "left",
+  className = "",
+  containerClassName = "",
 }) {
-    return (
-        <div
-            className="
+  return (
+    <div
+      className={`
         relative
         overflow-hidden
         whitespace-nowrap
         w-full
-      "
-        >
-            <div
-                className={`
+        ${containerClassName}
+      `}
+    >
+      <div
+        className={`
           flex
           w-max
-          gap-10
-          ${direction === "left"
-                        ? "animate-marquee-left"
-                        : "animate-marquee-right"}
+          gap-2
+          ${
+            direction === "left"
+              ? "animate-marquee-left"
+              : "animate-marquee-right"
+          }
           ${className}
         `}
-                style={{
-                    animationDuration: speed,
-                }}
-            >
-                {/* FIRST SET */}
+        style={{
+          animationDuration: speed,
+        }}
+      >
+        {/* FIRST SET */}
 
-                {items.map((item, index) => (
-                    <span key={index}>
-                        {item}
-                    </span>
-                ))}
+        {items.map((item, index) => (
+          <span key={index}>{item}</span>
+        ))}
 
-                {/* DUPLICATE FOR LOOP */}
+        {/* DUPLICATE FOR LOOP */}
 
-                {items.map((item, index) => (
-                    <span key={`duplicate-${index}`}>
-                        {item}
-                    </span>
-                ))}
-            </div>
-        </div>
-    );
+        {items.map((item, index) => (
+          <span key={`duplicate-${index}`}>{item}</span>
+        ))}
+      </div>
+    </div>
+  );
 }
