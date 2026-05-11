@@ -4,7 +4,13 @@ import MobileNavbar from "./MobileNavbar";
 const Navbar = () => {
   return (
     <>
-      <div>
+      <div
+        className="fixed top-0
+    left-0
+    z-[999]
+    w-full
+      "
+      >
         <DesktopNavbar />
         <MobileNavbar />
       </div>
