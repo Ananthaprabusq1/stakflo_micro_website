@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { useState } from "react";
 import AnimationCard from "@/components/animations/AnimationCard";
 import ActivityStackCards from "@/components/ui/ActivityStackCards";
 import AnimatedButton from "@/components/ui/AnimatedButton";
@@ -7,8 +8,32 @@ import ScrollText from "@/components/ui/ScrollText";
 import PortalRingCard from "@/components/ui/PortalRingCard";
 import { IoSettingsOutline } from "react-icons/io5";
 import { LuCircleCheck } from "react-icons/lu";
+const cards = [
+  {
+    id: 1,
+    title: "Operational Clarity",
+    description:
+      "Gain clear visibility and control across workflows with transparency.",
+  },
+
+  {
+    id: 2,
+    title: "Accelerated Execution",
+    description:
+      "Execute projects faster with streamlined automation systems.",
+  },
+
+  {
+    id: 3,
+    title: "Scalable Performance",
+    description:
+      "Scale infrastructure efficiently without losing performance.",
+  },
+];
 
 export default function Home() {
+  const [active, setActive] = useState(0);
+
   return (
     <main>
       <section className="  relative isolate min-h-screen overflow-hidden bg-[#fbfffa] px-2  sm:px-8 sm:py-12 lg:px-10   lg:py-0 ">
@@ -150,8 +175,8 @@ export default function Home() {
             </div></PortalRingCard>
         </div>
       </section>
-      <section className="   bg-[#fbfffa] pb-50 ">
-        <div className="w-full isolate lg:max-w-[1400px] mx-auto  grid grid-cols-1 lg:grid-cols-[1.3fr_0.9fr] gap-8 p-5 ">
+      <section className="   bg-[#fbfffa] pb-50 overflow-x-hidden" id="company">
+        <div className="w-full overflow-hidden isolate lg:max-w-[1400px] mx-auto  grid grid-cols-1 lg:grid-cols-[1.3fr_0.9fr] gap-8 p-5 ">
           {/* LEFT CARD */}
           <AnimationCard animation="fade-right" className="h-full ">
             <div className=" relative overflow-hidden rounded-[20px] border border-dashed   border-green-500 bg-green-50 p-8  md:p-10  min-h-[560px] ">
@@ -290,7 +315,7 @@ export default function Home() {
         relative
         overflow-hidden
 
-        rounded-[36px]
+        rounded-[20px]
 
         border
         border-dashed
@@ -430,6 +455,318 @@ export default function Home() {
             </div>
           </AnimationCard>
         </div></section>
+      <section className="w-full bg-green-50 py-24 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* LEFT CONTENT */}
+            <div>
+              <h1 className="text-[52px] leading-[1.05] font-bold text-[#130018] max-w-[580px]">
+                Drive Better Results
+                <br />
+                with Zenvique.
+              </h1>
+
+              <p className="mt-8 text-[20px] leading-[38px] text-[#5f5664] max-w-[620px]">
+                Zenvique empowers teams to simplify operations, accelerate
+                execution, and consistently high-impact results.
+              </p>
+
+              {/* FEATURES */}
+              <div className="mt-10 space-y-5" id="features">
+                {cards.map((item, index) => (
+                  <button
+                    key={item.id}
+                    onClick={() => setActive(index)}
+                    className="
+    group
+    relative
+
+    flex
+    items-center
+    gap-4
+
+    w-full
+
+    rounded-[18px]
+
+    px-4
+    py-3
+
+    transition-all
+    duration-500
+
+    hover:bg-white/70
+  "
+                  >
+                    {/* ACTIVE BACKGROUND */}
+
+                    <div
+                      className={`
+      absolute
+      inset-0
+
+      rounded-[18px]
+
+      transition-all
+      duration-500
+
+      ${active === index
+                          ? "bg-white shadow-[0_8px_30px_rgba(34,197,94,0.08)] border border-[#dcfce7]"
+                          : "bg-transparent border border-transparent"
+                        }
+    `}
+                    />
+
+                    {/* LEFT LINE */}
+
+                    <div
+                      className={`
+      relative
+      z-10
+
+      w-[3px]
+
+      rounded-full
+
+      transition-all
+      duration-500
+
+      ${active === index
+                          ? "h-12 bg-gradient-to-b from-[#22c55e] to-[#16a34a]"
+                          : "h-8 bg-[#dcfce7]"
+                        }
+    `}
+                    />
+
+                    {/* ICON */}
+
+                    <div
+                      className={`
+      relative
+      z-10
+
+      flex
+      items-center
+      justify-center
+
+      w-12
+      h-12
+
+      rounded-[14px]
+
+      transition-all
+      duration-500
+
+      ${active === index
+                          ? `
+            bg-gradient-to-br
+            from-[#22c55e]
+            to-[#16a34a]
+
+            text-white
+
+            scale-105
+
+            shadow-[0_8px_20px_rgba(34,197,94,0.22)]
+          `
+                          : `
+            bg-[#f0fdf4]
+
+            text-[#22c55e]
+
+            group-hover:bg-[#dcfce7]
+          `
+                        }
+    `}
+                    >
+                      <span className="text-sm font-semibold">
+                        {index + 1}
+                      </span>
+                    </div>
+
+                    {/* TEXT */}
+
+                    <div className="relative z-10">
+                      <h3
+                        className={`
+        text-[17px]
+        font-semibold
+
+        tracking-[-0.02em]
+
+        transition-all
+        duration-500
+
+        ${active === index
+                            ? "text-[#052e16]"
+                            : "text-[#4b6353]"
+                          }
+      `}
+                      >
+                        {item.title}
+                      </h3>
+
+                      <p
+                        className={`
+        mt-[2px]
+
+        text-[13px]
+
+        transition-all
+        duration-500
+
+        ${active === index
+                            ? "text-[#16a34a]"
+                            : "text-[#94a3b8]"
+                          }
+      `}
+                      >
+                        Smart workflow optimization
+                      </p>
+                    </div>
+
+                    {/* RIGHT ARROW */}
+
+                    <div
+                      className={`
+      relative
+      z-10
+
+      ml-auto
+
+      flex
+      items-center
+      justify-center
+
+      w-8
+      h-8
+
+      rounded-full
+
+      text-sm
+
+      transition-all
+      duration-500
+
+      ${active === index
+                          ? "bg-[#dcfce7] text-[#16a34a]"
+                          : "bg-transparent text-[#94a3b8] opacity-0 group-hover:opacity-100"
+                        }
+    `}
+                    >
+                      →
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* RIGHT CARD */}
+            {/* RIGHT CARD */}
+            <div className="relative flex justify-center items-center min-h-[500px] lg:min-h-[620px] isolate mt-10 lg:mt-0">
+
+              {/* BACK DASHED CARD 1 */}
+              <div
+                key={`back-left-${active}`}
+                className="
+      absolute
+      w-[92%]
+      max-w-[570px]
+      h-[500px]
+      lg:h-[610px]
+      rounded-[32px]
+      border
+      border-dashed
+      border-[#9fe3b5]
+      opacity-100
+      pointer-events-none
+      animate-backLeft
+    "
+              />
+
+              {/* BACK DASHED CARD 2 */}
+              <div
+                key={`back-right-${active}`}
+                className="
+      absolute
+      w-[92%]
+      max-w-[570px]
+      h-[500px]
+      lg:h-[610px]
+      rounded-[32px]
+      border
+      border-dashed
+      border-[#7fd89d]
+      opacity-70
+      pointer-events-none
+      animate-backRight
+    "
+              />
+
+              {/* FRONT CARD */}
+              <div
+                key={active}
+                className="
+      relative
+      z-20
+      w-full
+      max-w-[540px]
+      rounded-[30px]
+      bg-white
+      p-4 sm:p-5
+      shadow-[0_10px_40px_rgba(16,185,129,0.10)]
+      animate-frontCard
+    "
+              >
+                {/* INNER CARD */}
+                <div className="bg-[#f6fff8] border border-[#d8f3df] rounded-[26px] p-5 sm:p-7">
+
+                  {/* HEADER */}
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-[18px] sm:text-[22px] font-semibold text-[#123524]">
+                      {cards[active].title}
+                    </h3>
+
+                    <button className="text-[24px] text-[#4f7a61]">
+                      ⋮
+                    </button>
+                  </div>
+
+                  {/* GRAPH */}
+                  <div className="mt-6 sm:mt-8 h-[180px] sm:h-[210px] rounded-[24px] bg-[#dcfce7] relative overflow-hidden">
+
+                    <svg
+                      viewBox="0 0 500 200"
+                      className="absolute inset-0 w-full h-full"
+                    >
+                      <path
+                        d="M0 130 C60 160, 100 70, 170 110 C240 150, 260 40, 340 90 C400 130, 430 80, 500 110"
+                        fill="none"
+                        stroke="#16a34a"
+                        strokeWidth="4"
+                      />
+                    </svg>
+                  </div>
+
+                  {/* LINES */}
+                  <div className="mt-6 sm:mt-8 space-y-4">
+                    <div className="h-[14px] rounded-full bg-[#bbf7d0] w-full" />
+
+                    <div className="h-[14px] rounded-full bg-[#bbf7d0] w-[74%]" />
+                  </div>
+                </div>
+
+                {/* DESCRIPTION */}
+                <p className="mt-6 sm:mt-8 px-2 text-[15px] sm:text-[17px] leading-[30px] sm:leading-[34px] text-[#4b6353]">
+                  {cards[active].description}
+                </p>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </section>
       <section className="mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-0">
         <section
           className="

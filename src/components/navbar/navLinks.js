@@ -1,17 +1,19 @@
 export const navLinks = [
     {
         label: "Company",
-        href: "/about-us",
+        href: "#company",
     },
 
     {
         label: "Features",
-        href: "/feature",
+        href: "#features",
     },
+
     {
         label: "Delivers",
-        href: "/delivers",
+        href: "#delivers",
     },
+
     {
         label: "Contact Us",
         href: "/contact-us",

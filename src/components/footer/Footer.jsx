@@ -11,6 +11,7 @@ const Footer = () => {
       className="
         bg-[linear-gradient(180deg,#FFFFFF_9%,#ECFDF3_41.3996%,#D1FAE5_82%)]
       "
+      id="delivers"
     >
       {/* TOP TITLE */}
 

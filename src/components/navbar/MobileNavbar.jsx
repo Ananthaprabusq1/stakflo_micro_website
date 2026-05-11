@@ -3,60 +3,83 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 
 import { navLinks } from "./navLinks";
-import Image from "next/image";
 
 const MobileNavbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="lg:hidden">
+    <header className="lg:hidden relative z-[9999]">
       {/* TOP BAR */}
 
       <div
         className="
+          relative
+          z-[10000]
+
           flex
           items-center
           justify-between
+
           px-5
           py-5
+
+          bg-[#f5fff7]
+
+          overflow-hidden
         "
       >
+        {/* LOGO */}
+
         <Link
           href="/"
           className="
-            text-3xl
+            flex
+            items-center
+            gap-2
+
+            text-[32px]
+            leading-none
             font-bold
-            flex items-center gap-2
           "
         >
           <Image
             src="/images/product-stakflo.webp"
             alt="Stakflo Logo"
-            width={45}
-            height={45}
+            width={35}
+            height={35}
             priority
-            className="object-contain"
+            className="object-contain shrink-0"
           />
-          Stakflo
+
+          <span className="text-[var(--secondary-bg)]">Stakflo</span>
         </Link>
+
+        {/* MENU BUTTON */}
 
         <button
           onClick={() => setOpen(!open)}
           className="
+            shrink-0
+
             w-14
             h-14
-            rounded-2xl
+
+            rounded-[18px]
+
             bg-[var(--secondary-bg)]
+
             text-white
+            text-3xl
+
             flex
             items-center
             justify-center
-            text-3xl
           "
         >
           {open ? <IoClose /> : <HiOutlineMenuAlt3 />}
@@ -68,118 +91,114 @@ const MobileNavbar = () => {
       {open && (
         <div
           className="
+            fixed
+            inset-0
+
+            z-[9998]
+
             px-5
-            py-10
+            pt-32
+            pb-10
+
             min-h-screen
-            bg-[var(--primary-bg)]
+
+            bg-[#f5fff7]
+
+            overflow-y-auto
           "
         >
-          <ul
-            className="
-                space-y-8
-              "
-          >
-            {navLinks.map((item) => (
-              <li key={item.label}>
+          <ul className=" flex flex-col gap-2">
+            {navLinks.map((item, index) => (
+              <motion.li
+                key={item.label}
+                initial={{
+                  opacity: 0,
+                  y: 20,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  delay: index * 0.08,
+                }}
+              >
                 <Link
                   href={item.href}
+                  onClick={() => setOpen(false)}
                   className="
-    relative
-    overflow-hidden
-    h-6
-    flex
-    items-center
-  "
+          group
+
+          flex
+          items-center
+          justify-between
+
+          rounded-[10px]
+
+          border
+          border-[#e7f5ea]
+
+          bg-white/70
+
+          px-6
+          py-2
+
+          backdrop-blur-xl
+
+          transition-all
+          duration-300
+
+          hover:border-green-300
+          hover:bg-white
+          hover:shadow-[0_10px_30px_rgba(34,197,94,0.08)]
+        "
                 >
-                  <motion.div
-                    initial="rest"
-                    whileHover="hover"
-                    animate="rest"
+                  <span
                     className="
-      relative
-      overflow-hidden
-      h-6
-    "
+            text-[18px]
+            font-semibold
+            tracking-[-0.03em]
+
+            text-[#071019]
+
+            transition-colors
+            duration-300
+
+            group-hover:text-green-600
+          "
                   >
-                    {/* DEFAULT TEXT */}
+                    {item.label}
+                  </span>
 
-                    <motion.span
-                      variants={{
-                        rest: {
-                          y: 0,
-                          opacity: 1,
-                        },
+                  <div
+                    className="
+            flex
+            items-center
+            justify-center
 
-                        hover: {
-                          y: "-100%",
-                          opacity: 0,
-                        },
-                      }}
-                      transition={{
-                        duration: 0.3,
-                        ease: "easeInOut",
-                      }}
-                      className="
-        block
-        text-[17px]
-        font-medium
-        text-[var(--secondary-bg)]
-      "
-                    >
-                      {item.label}
-                    </motion.span>
+            w-10
+            h-10
 
-                    {/* HOVER TEXT */}
+            rounded-full
 
-                    <motion.span
-                      variants={{
-                        rest: {
-                          y: "100%",
-                          opacity: 0,
-                        },
+            bg-[#f3fff5]
 
-                        hover: {
-                          y: 0,
-                          opacity: 1,
-                        },
-                      }}
-                      transition={{
-                        duration: 0.3,
-                        ease: "easeInOut",
-                      }}
-                      className="
-        absolute
-        left-0
-        top-0
-        block
-        text-[17px]
-        font-medium
-        text-[var(--primary-color)]
-      "
-                    >
-                      {item.label}
-                    </motion.span>
-                  </motion.div>
+            text-green-500
+
+            transition-all
+            duration-300
+
+            group-hover:translate-x-1
+            group-hover:bg-green-500
+            group-hover:text-white
+          "
+                  >
+                    →
+                  </div>
                 </Link>
-              </li>
+              </motion.li>
             ))}
           </ul>
-          {/* <button
-            className="
-              mt-10
-             
-              py-2
-              px-4
-              rounded-[20]
-              bg-[var(--secondary-bg)]
-              text-white
-              text-xl
-              font-semibold
-              mx-auto
-            "
-          >
-            Contact Us
-          </button> */}
         </div>
       )}
     </header>

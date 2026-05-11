@@ -336,3 +336,54 @@ body {
     0 10px 30px rgba(27, 0, 36, 0.35),
     inset 0 1px 2px rgba(255, 255, 255, 0.08);
 }
+@keyframes backLeft {
+  0% {
+    transform: rotate(0deg) translateX(0px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotate(-7deg) translateX(-18px);
+    opacity: 1;
+  }
+}
+
+@keyframes backRight {
+  0% {
+    transform: rotate(0deg) translateX(0px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotate(7deg) translateX(18px);
+    opacity: 1;
+  }
+}
+
+@keyframes frontCard {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) rotate(-6deg) translateY(40px);
+  }
+
+  50% {
+    transform: scale(1.02) rotate(3deg) translateY(-8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg) translateY(0px);
+  }
+}
+
+.animate-backLeft {
+  animation: backLeft 0.7s ease forwards;
+}
+
+.animate-backRight {
+  animation: backRight 0.7s ease forwards;
+}
+
+.animate-frontCard {
+  animation: frontCard 0.7s ease forwards;
+}
