@@ -10,9 +10,6 @@ const Footer = () => {
     <footer
       className="
         bg-[var(--primary-bg)]
-        border-t
-        border-dashed
-        border-pink-300
         mt-20
       "
     >
@@ -42,8 +39,9 @@ const Footer = () => {
           Stakflo
         </h2>
       </div> */}
-      <div
-        className="
+      <div className="mx-auto w-full max-w-[1400px]">
+        <div
+          className="
     relative
     overflow-hidden
     border-b
@@ -51,23 +49,23 @@ const Footer = () => {
     border-pink-300
     py-10
   "
-      >
-        {/* BACKGROUND GLOW */}
+        >
+          {/* BACKGROUND GLOW */}
 
-        <div
-          className="
+          <div
+            className="
       absolute
       inset-0
       bg-green-400/20
       blur-3xl
       opacity-60
     "
-        />
+          />
 
-        {/* TEXT */}
+          {/* TEXT */}
 
-        <h2
-          className="
+          <h2
+            className="
       relative
       z-10
 
@@ -85,7 +83,7 @@ const Footer = () => {
 
       leading-[0.9]
 
-      tracking-[-0.06em]
+      tracking-[7.5]
 
       text-[var(--secondary-bg)]
 
@@ -97,15 +95,15 @@ const Footer = () => {
 
       select-none
     "
-        >
-          Stakflo
-        </h2>
-      </div>
+          >
+            Stakflo
+          </h2>
+        </div>
 
-      {/* FOOTER CONTENT */}
+        {/* FOOTER CONTENT */}
 
-      <div
-        className="
+        <div
+          className="
           grid
           grid-cols-1
           md:grid-cols-3
@@ -115,19 +113,19 @@ const Footer = () => {
           lg:px-16
           py-12
         "
-      >
-        {/* LEFT */}
+        >
+          {/* LEFT */}
 
-        <div>
-          <div
-            className="
+          <div>
+            <div
+              className="
               flex
               items-center
               gap-3
               mb-5
             "
-          >
-            {/* <div
+            >
+              {/* <div
               className="
                 w-12
                 h-12
@@ -135,40 +133,40 @@ const Footer = () => {
                 bg-[var(--primary-color)]
               "
             /> */}
-            <Image
-              src="/images/product-stakflo.webp"
-              alt="Stakflo Logo"
-              width={60}
-              height={60}
-              priority
-              className="object-contain"
-            />
+              <Image
+                src="/images/product-stakflo.webp"
+                alt="Stakflo Logo"
+                width={60}
+                height={60}
+                priority
+                className="object-contain"
+              />
 
-            <h3
-              className="
+              <h3
+                className="
                 text-2xl
                 font-bold
                 text-[var(--secondary-bg)]
               "
-            >
-              Stakflo
-            </h3>
-          </div>
+              >
+                Stakflo
+              </h3>
+            </div>
 
-          <p
-            className="
+            <p
+              className="
               text-[var(--primary-text-light)]
               leading-relaxed
               max-w-[300px]
             "
-          >
-            AI-powered compliance workflows that help teams stay audit-ready,
-            improve collaboration, and scale efficiently.
-          </p>
+            >
+              AI-powered compliance workflows that help teams stay audit-ready,
+              improve collaboration, and scale efficiently.
+            </p>
 
-          {/* SOCIALS */}
+            {/* SOCIALS */}
 
-          {/* <div
+            {/* <div
             className="
               flex
               items-center
@@ -236,76 +234,76 @@ const Footer = () => {
               <FaInstagram />
             </Link>
           </div> */}
-        </div>
+          </div>
 
-        {/* CENTER */}
+          {/* CENTER */}
 
-        <div
-          className="
+          <div
+            className="
             md:border-x
             border-dashed
             border-pink-300
             md:px-10
           "
-        >
-          <h3
-            className="
+          >
+            <h3
+              className="
               text-xl
               font-semibold
               mb-6
               text-[var(--secondary-bg)]
             "
-          >
-            Quick Pages
-          </h3>
+            >
+              Quick Pages
+            </h3>
 
-          <ul className="space-y-4">
-            {navLinks.map((item) => (
-              <li key={item.label}>
-                <Link
-                  href={item.href}
-                  className="
+            <ul className="space-y-4">
+              {navLinks.map((item) => (
+                <li key={item.label}>
+                  <Link
+                    href={item.href}
+                    className="
                     text-md
                     font-medium
                     text-[var(--primary-text-light)]
                   "
-                  onClick={() => setOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+                    onClick={() => setOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        {/* RIGHT */}
+          {/* RIGHT */}
 
-        <div>
-          <h3
-            className="
+          <div>
+            <h3
+              className="
               text-xl
               font-semibold
               mb-6
               text-[var(--secondary-bg)]
             "
-          >
-            Contact Links
-          </h3>
+            >
+              Contact Links
+            </h3>
 
-          <ul className="space-y-4">
-            <li>+91 98765-43210</li>
+            <ul className="space-y-4">
+              <li>+91 98765-43210</li>
 
-            <li>contact@stakflo.com</li>
+              <li>contact@stakflo.com</li>
 
-            <li>Suite 210, California, NY</li>
-          </ul>
+              <li>Suite 210, California, NY</li>
+            </ul>
+          </div>
         </div>
-      </div>
 
-      {/* BOTTOM */}
+        {/* BOTTOM */}
 
-      <div
-        className="
+        <div
+          className="
           flex
           flex-col
           md:flex-row
@@ -322,10 +320,11 @@ const Footer = () => {
           text-sm
           text-[var(--primary-text-light)]
         "
-      >
-        <p>© 2026 Stakflo. All rights reserved.</p>
+        >
+          <p>© 2026 Stakflo. All rights reserved.</p>
 
-        <p>Designed with Next.js & Tailwind CSS</p>
+          <p>Designed with Next.js & Tailwind CSS</p>
+        </div>
       </div>
     </footer>
   );

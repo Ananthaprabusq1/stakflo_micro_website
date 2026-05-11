@@ -1,376 +1,130 @@
 "use client";
+import Image from "next/image";
 import AnimationCard from "@/components/animations/AnimationCard";
 import ActivityStackCards from "@/components/ui/ActivityStackCards";
-import PortalRingCard from "@/components/ui/PortalRingCard";
+import AnimatedButton from "@/components/ui/AnimatedButton";
 import ScrollText from "@/components/ui/ScrollText";
+import PortalRingCard from "@/components/ui/PortalRingCard";
 
 export default function Home() {
   return (
-
-
-    <>
-      <section
-        className="
-    relative
-
-    overflow-hidden
-
-    bg-[#fcf9ff]
-
-    px-6
-    pt-36
-    pb-28
-
-    md:px-10
-    lg:px-16
-  "
-      >
-        {/* =========================
-      TOP PINK GLOW
-  ========================= */}
-
+    <main>
+      <section className="  relative isolate min-h-[calc(100svh-200px)] overflow-hidden bg-[#fbfffa] px-5 py-10 sm:px-8 sm:py-12 lg:px-10 lg:min-h-[calc(100svh-138px)]  lg:py-0 ">
         <div
-          className="
-      absolute
-      left-0
-      top-0
-
-      h-[260px]
-      w-full
-
-      bg-gradient-to-b
-      from-fuchsia-300/50
-      via-pink-200/20
-      to-transparent
-
-      blur-3xl
-    "
-        />
-
-        {/* =========================
-      LEFT GLOW SHAPE
-  ========================= */}
-
-        <div
-          className="
-      absolute
-      left-[-280px]
-      bottom-[-240px]
-
-      h-[700px]
-      w-[700px]
-
-      rounded-full
-
-      border-[40px]
-      border-fuchsia-200/50
-
-      opacity-70
-
-      rotate-[28deg]
-
-      blur-[3px]
-    "
-        />
-
-        {/* =========================
-      RIGHT GLOW SHAPE
-  ========================= */}
-
-        <div
-          className="
-      absolute
-      right-[-280px]
-      bottom-[-240px]
-
-      h-[700px]
-      w-[700px]
-
-      rounded-full
-
-      border-[40px]
-      border-fuchsia-200/50
-
-      opacity-70
-
-      rotate-[-28deg]
-
-      blur-[3px]
-    "
-        />
-
-        {/* =========================
-      HERO CONTENT
-  ========================= */}
-
-        <div
-          className="
-      relative
-      z-10
-
-      mx-auto
-
-      flex
-      max-w-[1200px]
-      flex-col
-      items-center
-      justify-center
-
-      text-center
-    "
+          className=" pointer-events-none absolute inset-0 z-0 overflow-hidden "
+          aria-hidden="true"
         >
-          {/* =========================
-        BADGE
-    ========================= */}
+          <Image
+            src="/images/rigthside.avif"
+            alt=""
+            width={840}
+            height={900}
+            priority
+            className=" absolute bottom-[-9%] left-[-62%] h-[58%] w-auto max-w-none object-contain opacity-95 sm:left-[-38%] sm:h-[72%] md:left-[-24%] md:h-[82%] lg:bottom-[-16%] lg:left-[-11%] lg:h-[118%] xl:left-[-2%] 2xl:left-0 "
+          />
 
-          <div
-            className="
-        inline-flex
-        items-center
+          <Image
+            src="/images/leftside.avif"
+            alt=""
+            width={840}
+            height={900}
+            priority
+            className=" absolute bottom-[-9%] right-[-62%] h-[58%] w-auto max-w-none object-contain opacity-95 sm:right-[-38%] sm:h-[72%] md:right-[-24%] md:h-[82%] lg:bottom-[-16%] lg:right-[-11%] lg:h-[118%] xl:right-[-2%] 2xl:right-0 "
+          />
 
-        overflow-hidden
+          <div className=" absolute inset-x-[6%] top-0 h-32 rounded-full bg-white/80 blur-3xl sm:h-44 " />
+        </div>
 
-        rounded-full
-
-        border
-        border-[#e8dcef]
-
-        bg-white/70
-
-        shadow-sm
-
-        backdrop-blur-md
-      "
-          >
-            {/* NEW TAG */}
-
-            <div
-              className="
-          bg-gradient-to-b
-          from-fuchsia-500
-          to-pink-500
-
-          px-5
-          py-2.5
-
-          text-sm
-
-          font-bold
-
-          text-white
-        "
-            >
+        <div className=" relative z-10 mx-auto flex min-h-[inherit] max-w-[1120px] flex-col items-center justify-center text-center ">
+          <div className=" mb-8 flex max-w-full items-center overflow-hidden rounded-full border border-[#edf2eb] bg-white/75 p-1 text-xs font-bold uppercase text-[#7f7b85] shadow-[0_12px_35px_rgba(18,5,28,0.06)] backdrop-blur-xl sm:text-sm lg:mb-10 ">
+            <span className=" rounded-full bg-[var(--primary-color)] px-4 py-2 text-white ">
               New
-            </div>
-
-            {/* TEXT */}
-
-            <div
-              className="
-          px-6
-          py-2.5
-
-          text-sm
-          md:text-base
-
-          font-semibold
-
-          uppercase
-
-          tracking-[0.06em]
-
-          text-[#665d6d]
-        "
-            >
-              OPTIMIZE • AUTOMATE • SCALE
-            </div>
+            </span>
+            <ScrollText
+              items={["Optimize.", "Automate.", "Scale."]}
+              speed="5s"
+              direction="left"
+              containerClassName=" w-[min(17rem,calc(100vw-8rem))] sm:w-80 "
+              className=" items-center text-[#7f7b85] "
+            ></ScrollText>
           </div>
 
-          {/* =========================
-        TITLE
-    ========================= */}
-
-          <h1
-            className="
-        mt-10
-
-        max-w-[1100px]
-
-        text-5xl
-        md:text-7xl
-        lg:text-[92px]
-
-        font-black
-
-        leading-[0.95]
-
-        tracking-[-0.07em]
-
-        text-[#1b001f]
-      "
-          >
-            Optimize, Automate,
-            <br />
-            and Scale with Stakflo.
+          <h1 className="  max-w-[900px] text-5xl font-semibold leading-[0.95] tracking-tight text-[#16071B] sm:text-6xl md:text-7xl lg:text-[70px]">
+            Optimize, Automate, and Scale with Stakflo.
           </h1>
 
-          {/* =========================
-        DESCRIPTION
-    ========================= */}
-
-          <p
-            className="
-        mt-10
-
-        max-w-[850px]
-
-        text-lg
-        md:text-2xl
-
-        leading-[1.8]
-
-        text-[#665d70]
-      "
-          >
-            From simplifying compliance workflows
-            to automating operational security,
-            Stakflo adapts to the way modern teams
-            manage audits, risks, and scale securely.
+          <p className=" mt-8 max-w-[600px] text-lg font-medium leading-[1.3] text-[#5C4F5E] lg:text-xl ">
+            From simplifying operations to automating processes, Stakflo adapts
+            to the way modern teams work, grow, and scale.
           </p>
 
-          {/* =========================
-        BUTTON
-    ========================= */}
-
-          <button
-            className="
-        mt-14
-
-        flex
-        items-center
-        gap-3
-
-        rounded-full
-
-        bg-gradient-to-b
-        from-fuchsia-400
-        to-pink-500
-
-        px-10
-        py-5
-
-        text-xl
-
-        font-bold
-
-        text-white
-
-        shadow-[0px_12px_35px_rgba(217,70,239,0.4)]
-
-        transition-all
-        duration-300
-
-        hover:scale-[1.03]
-      "
-          >
-            Use Stakflo Free
-
-            <span className="text-2xl">
-              ↗
-            </span>
-          </button>
+          <AnimatedButton
+            href="/contact-us"
+            text="Use Stakflo Free"
+            className="  mt-12 min-w-[230px] bg-gradient-to-b from-[#2a093d] to-[#14001f] px-8 py-4 text-lg font-bold text-white shadow-[0_16px_35px_rgba(217,67,255,0.32)]  hover:from-green-300  hover:to-green-500 sm:min-w-[250px] sm:text-xl "
+          />
         </div>
       </section>
-      <div className="  p-10">
-        <ScrollText
-          items={[
-            "AI-Powered Compliance",
-            "SOC 2 Automation",
-            "Continuous Monitoring",
-            "Always Audit Ready",
-          ]}
-          speed="18s"
-          direction="left"
-          className="
-    text-6xl
-    font-black
-    uppercase
-    tracking-[-0.05em]
-    text-[var(--secondary-bg)]
-  "
-        />
-        <ScrollText
-          items={[
-            "Security",
-            "Compliance",
-            "Automation",
-          ]}
-          direction="left"
-        />
-        <ScrollText
-          items={[
-            "AI",
-            "Risk",
-            "Audit",
-          ]}
-          direction="right"
-        />
-
+      <section className=" relative isolate overflow-hidden bg-[#fbfffa] px-5 pb-12 pt-8 sm:px-8 sm:pb-16 lg:px-10 lg:pb-24 lg:pt-12  ">
         <div
           className="
-    grid
-    grid-cols-1
-    lg:grid-cols-[1.3fr_0.9fr]
-    gap-8 p-5
-  "
+            relative
+            z-10
+            mx-auto
+            max-w-[1320px]
+          "
         >
-          {/* LEFT CARD */}
-
-          <AnimationCard
-            animation="fade-right"
-            className="h-full"
+          <PortalRingCard
+            className="
+    w-full
+    max-w-[1200px]
+    mx-auto
+  "
+            innerClassName="
+    p-20
+  "
+          ><div
+            className="
+              mx-auto
+              overflow-hidden
+              rounded-[24px]
+              border-[10px]
+              border-[#f5e9fb]
+              bg-white
+              shadow-[0_30px_90px_rgba(114,45,154,0.18)]
+              sm:rounded-[30px]
+              sm:border-[14px]
+              lg:rounded-[36px]
+              lg:border-[22px]
+              max-w-[1300px]
+            "
           >
+
+              <Image
+                src="/images/Stakflo-Dashboard.webp"
+                alt="Stakflo dashboard interface"
+                width={1920}
+                height={900}
+                priority
+                className="
+                block
+                h-auto
+                w-full
+              "
+              />
+            </div></PortalRingCard>
+        </div>
+      </section>
+      <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_0.9fr] gap-8 p-5 ">
+        {/* LEFT CARD */}
+        <AnimationCard animation="fade-right" className="h-full">
+          <div className=" relative overflow-hidden rounded-[36px] border  border-[#efc7ff] bg-[#f9f4fb]p-8  md:p-10  min-h-[560px] ">
+            {/* BACKGROUND GLOW */}
+            <div className="  absolut  right-[-120px  top-[100px]  h-[420px  w-[420px]  rounded-full  bg-pink-300/20  blur-3xl " />
+            {/* ICON */}
+
             <div
               className="
-        relative
-        overflow-hidden
-
-        rounded-[36px]
-
-        border
-        border-[#efc7ff]
-
-        bg-[#f9f4fb]
-
-        p-8
-        md:p-10
-
-        min-h-[560px]
-      "
-            >
-              {/* BACKGROUND GLOW */}
-
-              <div
-                className="
-          absolute
-          right-[-120px]
-          top-[100px]
-
-          h-[420px]
-          w-[420px]
-
-          rounded-full
-
-          bg-pink-300/20
-
-          blur-3xl
-        "
-              />
-
-              {/* ICON */}
-
-              <div
-                className="
           relative
           z-10
 
@@ -387,32 +141,32 @@ export default function Home() {
 
           bg-[#efdaf7]
         "
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                  className="
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="
             h-8
             w-8
             text-fuchsia-500
           "
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M10.5 6h3m-7.5 6h15m-13.5 6h12"
-                  />
-                </svg>
-              </div>
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M10.5 6h3m-7.5 6h15m-13.5 6h12"
+                />
+              </svg>
+            </div>
 
-              {/* CONTENT */}
+            {/* CONTENT */}
 
-              <div className="relative z-10">
-                <h2
-                  className="
+            <div className="relative z-10">
+              <h2
+                className="
             mb-5
 
             text-2xl
@@ -425,13 +179,12 @@ export default function Home() {
 
             text-[#1a0826]
           "
-                >
-                  Smart Workflow
-                  Intelligence
-                </h2>
+              >
+                Smart Workflow Intelligence
+              </h2>
 
-                <p
-                  className="
+              <p
+                className="
             max-w-[620px]
 
             text-base
@@ -441,29 +194,26 @@ export default function Home() {
 
             text-[#655b69]
           "
-                >
-                  Organize, manage, and scale
-                  your team’s work through a
-                  structured, distraction-free
-                  workspace designed for
-                  clarity.
-                </p>
-              </div>
+              >
+                Organize, manage, and scale your team’s work through a
+                structured, distraction-free workspace designed for clarity.
+              </p>
+            </div>
 
-              {/* INNER CARD */}
+            {/* INNER CARD */}
 
-              <AnimationCard
-                animation="fade-up"
-                delay={0.2}
-                className="
+            <AnimationCard
+              animation="fade-up"
+              delay={0.2}
+              className="
           absolute
           bottom-6
           left-6
           right-6
         "
-              >
-                <div
-                  className="
+            >
+              <div
+                className="
             rounded-[28px]
 
             border
@@ -476,9 +226,9 @@ export default function Home() {
 
             shadow-[0px_20px_60px_rgba(0,0,0,0.06)]
           "
-                >
-                  <h3
-                    className="
+              >
+                <h3
+                  className="
               mb-8
 
               text-xl
@@ -488,25 +238,25 @@ export default function Home() {
 
               text-[#2d2331]
             "
-                  >
-                    Daily activities
-                  </h3>
+                >
+                  Daily activities
+                </h3>
 
-                  <div className="space-y-6">
-                    <div className="flex items-center gap-4">
-                      <span
-                        className="
+                <div className="space-y-6">
+                  <div className="flex items-center gap-4">
+                    <span
+                      className="
                   text-sm
                   md:text-base
 
                   text-[#7f7485]
                 "
-                      >
-                        09:46
-                      </span>
+                    >
+                      09:46
+                    </span>
 
-                      <div
-                        className="
+                    <div
+                      className="
                   h-4
                   w-4
 
@@ -515,35 +265,34 @@ export default function Home() {
                   border-2
                   border-blue-400
                 "
-                      />
+                    />
 
-                      <p
-                        className="
+                    <p
+                      className="
                   text-sm
                   md:text-base
 
                   text-[#6d6472]
                 "
-                      >
-                        Payment received from
-                        John Doe of $385.90
-                      </p>
-                    </div>
+                    >
+                      Payment received from John Doe of $385.90
+                    </p>
+                  </div>
 
-                    <div className="flex items-center gap-4">
-                      <span
-                        className="
+                  <div className="flex items-center gap-4">
+                    <span
+                      className="
                   text-sm
                   md:text-base
 
                   text-[#7f7485]
                 "
-                      >
-                        09:46
-                      </span>
+                    >
+                      09:46
+                    </span>
 
-                      <div
-                        className="
+                    <div
+                      className="
                   h-4
                   w-4
 
@@ -552,10 +301,10 @@ export default function Home() {
                   border-2
                   border-cyan-400
                 "
-                      />
+                    />
 
-                      <p
-                        className="
+                    <p
+                      className="
                   text-sm
                   md:text-base
 
@@ -563,28 +312,20 @@ export default function Home() {
 
                   text-[#2d2331]
                 "
-                      >
-                        New sale recorded
-                        <span className="text-blue-500">
-                          {" "}
-                          #ML-3467
-                        </span>
-                      </p>
-                    </div>
+                    >
+                      New sale recorded
+                      <span className="text-blue-500"> #ML-3467</span>
+                    </p>
                   </div>
                 </div>
-              </AnimationCard>
-            </div>
-          </AnimationCard>
-
-          {/* RIGHT CARD */}
-
-          <AnimationCard
-            animation="fade-left"
-            className="h-full"
-          >
-            <div
-              className="
+              </div>
+            </AnimationCard>
+          </div>
+        </AnimationCard>
+        {/* RIGHT CARD */}
+        <AnimationCard animation="fade-left" className="h-full">
+          <div
+            className="
         relative
         overflow-hidden
 
@@ -600,11 +341,11 @@ export default function Home() {
 
         min-h-[560px]
       "
-            >
-              {/* GLOW */}
+          >
+            {/* GLOW */}
 
-              <div
-                className="
+            <div
+              className="
           absolute
           bottom-[-80px]
           right-[-80px]
@@ -618,13 +359,13 @@ export default function Home() {
 
           blur-3xl
         "
-              />
+            />
 
-              {/* CONTENT */}
+            {/* CONTENT */}
 
-              <div className="relative z-10">
-                <h2
-                  className="
+            <div className="relative z-10">
+              <h2
+                className="
             mb-8
 
             text-[48px]
@@ -639,12 +380,12 @@ export default function Home() {
 
             text-[#18041f]
           "
-                >
-                  2x Faster
-                </h2>
+              >
+                2x Faster
+              </h2>
 
-                <h3
-                  className="
+              <h3
+                className="
             mb-6
 
             text-2xl
@@ -656,12 +397,12 @@ export default function Home() {
 
             text-[#1f1026]
           "
-                >
-                  Move Work Forward Faster
-                </h3>
+              >
+                Move Work Forward Faster
+              </h3>
 
-                <p
-                  className="
+              <p
+                className="
             mb-20
 
             text-base
@@ -671,20 +412,17 @@ export default function Home() {
 
             text-[#6c6170]
           "
-                >
-                  Accelerate planning,
-                  collaboration, and execution
-                  by reducing friction,
-                  confusion, and unnecessary
-                  back-and-forth.
-                </p>
+              >
+                Accelerate planning, collaboration, and execution by reducing
+                friction, confusion, and unnecessary back-and-forth.
+              </p>
 
-                {/* LIST */}
+              {/* LIST */}
 
-                <div className="space-y-7">
-                  <div className="flex items-center gap-4">
-                    <div
-                      className="
+              <div className="space-y-7">
+                <div className="flex items-center gap-4">
+                  <div
+                    className="
                 flex
                 h-7
                 w-7
@@ -698,26 +436,25 @@ export default function Home() {
 
                 text-sm
               "
-                    >
-                      ✦
-                    </div>
+                  >
+                    ✦
+                  </div>
 
-                    <p
-                      className="
+                  <p
+                    className="
                 text-lg
                 md:text-xl
 
                 text-[#352a39]
               "
-                    >
-                      Faster decision and
-                      approval cycles
-                    </p>
-                  </div>
+                  >
+                    Faster decision and approval cycles
+                  </p>
+                </div>
 
-                  <div className="flex items-center gap-4">
-                    <div
-                      className="
+                <div className="flex items-center gap-4">
+                  <div
+                    className="
                 flex
                 h-7
                 w-7
@@ -731,82 +468,277 @@ export default function Home() {
 
                 text-sm
               "
-                    >
-                      ✦
-                    </div>
+                  >
+                    ✦
+                  </div>
 
-                    <p
-                      className="
+                  <p
+                    className="
                 text-lg
                 md:text-xl
 
                 text-[#352a39]
               "
-                    >
-                      Real-time progress
-                      alignment
-                    </p>
-                  </div>
+                  >
+                    Real-time progress alignment
+                  </p>
                 </div>
               </div>
             </div>
-          </AnimationCard>
-        </div>
-        <div className="h-100 flex  items-center justify-center w-200 ">
-          <ActivityStackCards
-            cards={[
-              {
-                activities: [
-                  {
-                    time: "09:46",
-
-                    text:
-                      "Payment received from John Doe",
-
-                    dotColor:
-                      "border-blue-400",
-                  },
-                ],
-              },
-
-              {
-                activities: [
-                  {
-                    time: "10:12",
-
-                    text:
-                      "New sale recorded",
-
-                    tag: "#ML-3467",
-
-                    highlight: true,
-
-                    dotColor:
-                      "border-cyan-400",
-                  },
-                ],
-              },
-
-              {
-                activities: [
-                  {
-                    time: "11:20",
-
-                    text:
-                      "Invoice generated",
-
-                    tag: "#INV-920",
-
-                    dotColor:
-                      "border-purple-400",
-                  },
-                ],
-              },
-            ]}
-          /></div>
-        <div className="h-screen">
+          </div>
+        </AnimationCard>
+      </div>
+      <div className="mx-auto w-full max-w-[1400px]">
+        <section
+          className="
+            relative
+            isolate
+            mb-14
+            min-h-[540px]
+            overflow-hidden
+            rounded-[30px]
+            bg-[radial-gradient(circle_at_50%_20%,#78f09a_0%,#38c95c_42%,#16a642_100%)]
+            px-5
+            py-16
+            text-center
+            shadow-[0_30px_90px_rgba(56,201,92,0.28)]
+            sm:rounded-[36px]
+            sm:px-8
+            lg:min-h-[660px]
+            lg:px-12
+          "
+        >
           <div
             className="
+              pointer-events-none
+              absolute
+              inset-0
+              z-0
+              overflow-hidden
+            "
+            aria-hidden="true"
+          >
+            <ScrollText
+              items={["START TODAY IN STAKFLO", "STREAMLINE YOUR WORKFLOWS"]}
+              speed="22s"
+              direction="left"
+              containerClassName="
+                absolute
+                left-0
+                right-0
+                top-10
+                opacity-35
+                sm:top-12
+                lg:top-16
+              "
+              className="
+                items-center
+                gap-10
+                text-[72px]
+                font-black
+                uppercase
+                leading-none
+                text-white
+                sm:text-[104px]
+                md:text-[128px]
+                lg:text-[150px]
+              "
+            />
+
+            {/* <Image
+              src="/images/rigthside.avif"
+              alt=""
+              width={840}
+              height={900}
+              className="
+                absolute
+                bottom-[-12%]
+                left-[-54%]
+                h-[54%]
+                w-auto
+                max-w-none
+                object-contain
+                opacity-55
+                sm:left-[-34%]
+                sm:h-[70%]
+                md:left-[-24%]
+                lg:left-[-10%]
+                lg:h-[92%]
+                xl:left-[-2%]
+              "
+            />
+
+            <Image
+              src="/images/leftside.avif"
+              alt=""
+              width={840}
+              height={900}
+              className="
+                absolute
+                bottom-[-12%]
+                right-[-54%]
+                h-[54%]
+                w-auto
+                max-w-none
+                object-contain
+                opacity-55
+                sm:right-[-34%]
+                sm:h-[70%]
+                md:right-[-24%]
+                lg:right-[-10%]
+                lg:h-[92%]
+                xl:right-[-2%]
+              "
+            /> */}
+          </div>
+
+          <div
+            className="
+              relative
+              z-10
+              mx-auto
+              flex
+              min-h-[420px]
+              max-w-[760px]
+              flex-col
+              items-center
+              justify-center
+              pt-28
+              sm:pt-36
+              lg:pt-44
+              lg:min-h-[520px]
+            "
+          >
+            <h2
+              className="
+                max-w-[720px]
+                text-4xl
+                font-black
+                leading-tight
+                text-white
+                drop-shadow-[0_8px_24px_rgba(6,55,20,0.18)]
+                sm:text-5xl
+                md:text-6xl
+              "
+            >
+              Start Streamlining Your Workflows Today
+            </h2>
+
+            <p
+              className="
+                mt-7
+                max-w-[560px]
+                text-base
+                font-bold
+                leading-7
+                text-white/90
+                sm:text-lg
+              "
+            >
+              Simplify processes, improve visibility, and keep your team moving
+              with faster, more structured workflows.
+            </p>
+
+            <div
+              className="
+                mt-12
+                flex
+                w-full
+                flex-col
+                items-center
+                justify-center
+                gap-5
+                sm:w-auto
+                sm:flex-row
+              "
+            >
+              <AnimatedButton
+                href="/contact-us"
+                text="Use Stakflo Free"
+                className="
+                  w-full
+                  bg-white
+                  px-8
+                  py-4
+                  text-base
+                  font-black
+                  text-[#111827]
+                  shadow-[0_16px_34px_rgba(6,55,20,0.24)]
+                  hover:bg-[#f7fff8]
+                  sm:w-auto
+                "
+              />
+
+              <AnimatedButton
+                href="/contact-us"
+                text="View Plans"
+                className="
+                  w-full
+                  bg-[#070b14]
+                  px-8
+                  py-4
+                  text-base
+                  font-black
+                  text-white
+                  shadow-[0_16px_34px_rgba(6,55,20,0.32)]
+                  hover:bg-[#172033]
+                  sm:w-auto
+                "
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+      <div className="h-100 flex  items-center justify-center w-200 ">
+        <ActivityStackCards
+          cards={[
+            {
+              activities: [
+                {
+                  time: "09:46",
+
+                  text: "Payment received from John Doe",
+
+                  dotColor: "border-blue-400",
+                },
+              ],
+            },
+
+            {
+              activities: [
+                {
+                  time: "10:12",
+
+                  text: "New sale recorded",
+
+                  tag: "#ML-3467",
+
+                  highlight: true,
+
+                  dotColor: "border-cyan-400",
+                },
+              ],
+            },
+
+            {
+              activities: [
+                {
+                  time: "11:20",
+
+                  text: "Invoice generated",
+
+                  tag: "#INV-920",
+
+                  dotColor: "border-purple-400",
+                },
+              ],
+            },
+          ]}
+        />
+      </div>
+      <div className="h-screen">
+        <div
+          className="
     relative
 
     flex
@@ -820,13 +752,13 @@ export default function Home() {
     px-6
     py-20
   "
-          >
-            {/* =========================
+        >
+          {/* =========================
       SVG CONNECTIONS
   ========================= */}
 
-            <svg
-              className="
+          <svg
+            className="
       absolute
       inset-0
       z-0
@@ -834,108 +766,105 @@ export default function Home() {
       h-full
       w-full
     "
-              viewBox="0 0 1400 800"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <defs>
-                {/* ARROW */}
+            viewBox="0 0 1400 800"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              {/* ARROW */}
 
-                <marker
-                  id="arrow"
-                  markerWidth="12"
-                  markerHeight="12"
-                  refX="10"
-                  refY="6"
-                  orient="auto"
-                >
-                  <path
-                    d="M0,0 L12,6 L0,12"
-                    fill="#7f7485"
-                  />
-                </marker>
-              </defs>
+              <marker
+                id="arrow"
+                markerWidth="12"
+                markerHeight="12"
+                refX="10"
+                refY="6"
+                orient="auto"
+              >
+                <path d="M0,0 L12,6 L0,12" fill="#7f7485" />
+              </marker>
+            </defs>
 
-              {/* LEFT TOP */}
+            {/* LEFT TOP */}
 
-              <path
-                d="
+            <path
+              d="
         M 300 180
         V 260
         H 500
       "
-                stroke="#7f7485"
-                strokeWidth="2"
-                strokeDasharray="6 6"
-                fill="none"
-                markerStart="url(#arrow)"
-                strokeLinecap="round"
-              />
+              stroke="#7f7485"
+              strokeWidth="2"
+              strokeDasharray="6 6"
+              fill="none"
+              markerStart="url(#arrow)"
+              strokeLinecap="round"
+            />
 
-              {/* LEFT BOTTOM */}
+            {/* LEFT BOTTOM */}
 
-              <path
-                d="
+            <path
+              d="
         M 420 560
         V 450
         H 500
       "
-                stroke="#7f7485"
-                strokeWidth="2"
-                strokeDasharray="6 6"
-                fill="none"
-                markerEnd="url(#arrow)"
-                strokeLinecap="round"
-              />
+              stroke="#7f7485"
+              strokeWidth="2"
+              strokeDasharray="6 6"
+              fill="none"
+              markerEnd="url(#arrow)"
+              strokeLinecap="round"
+            />
 
-              {/* RIGHT TOP */}
+            {/* RIGHT TOP */}
 
-              <path
-                d="
+            <path
+              d="
         M 1100 180
         V 260
         H 900
       "
-                stroke="#7f7485"
-                strokeWidth="2"
-                strokeDasharray="6 6"
-                fill="none"
-                markerStart="url(#arrow)"
-                strokeLinecap="round"
-              />
+              stroke="#7f7485"
+              strokeWidth="2"
+              strokeDasharray="6 6"
+              fill="none"
+              markerStart="url(#arrow)"
+              strokeLinecap="round"
+            />
 
-              {/* RIGHT BOTTOM */}
+            {/* RIGHT BOTTOM */}
 
-              <path
-                d="
+            <path
+              d="
         M 1180 560
         V 450
         H 900
       "
-                stroke="#7f7485"
-                strokeWidth="2"
-                strokeDasharray="6 6"
-                fill="none"
-                markerEnd="url(#arrow)"
-                strokeLinecap="round"
-              />
-            </svg>
+              stroke="#7f7485"
+              strokeWidth="2"
+              strokeDasharray="6 6"
+              fill="none"
+              markerEnd="url(#arrow)"
+              strokeLinecap="round"
+            />
+          </svg>
 
-            {/* =========================
+          {/* =========================
       LEFT TOP CARD
   ========================= */}
 
-            <AnimationCard
-              animation="fade-right"
-              className="
+          <AnimationCard
+            animation="fade-right"
+            className="
       absolute
       left-[6%]
       top-[12%]
       z-20
     "
-            >
-              <div
-                className="
+          >
+            <div
+              className="
         rounded-[22px]
 
         bg-[#453646]
@@ -947,9 +876,9 @@ export default function Home() {
 
         shadow-[0px_8px_30px_rgba(0,0,0,0.18)]
       "
-              >
-                <h3
-                  className="
+            >
+              <h3
+                className="
           text-lg
           md:text-xl
 
@@ -959,30 +888,30 @@ export default function Home() {
 
           text-white
         "
-                >
-                  Workflow
-                  <br />
-                  Intelligence
-                </h3>
-              </div>
-            </AnimationCard>
+              >
+                Workflow
+                <br />
+                Intelligence
+              </h3>
+            </div>
+          </AnimationCard>
 
-            {/* =========================
+          {/* =========================
       LEFT BOTTOM CARD
   ========================= */}
 
-            <AnimationCard
-              animation="fade-right"
-              delay={0.2}
-              className="
+          <AnimationCard
+            animation="fade-right"
+            delay={0.2}
+            className="
       absolute
       bottom-[16%]
       left-[14%]
       z-20
     "
-            >
-              <div
-                className="
+          >
+            <div
+              className="
         rounded-[22px]
 
         bg-[#453646]
@@ -994,9 +923,9 @@ export default function Home() {
 
         shadow-[0px_8px_30px_rgba(0,0,0,0.18)]
       "
-              >
-                <h3
-                  className="
+            >
+              <h3
+                className="
           text-lg
           md:text-xl
 
@@ -1006,29 +935,29 @@ export default function Home() {
 
           text-white
         "
-                >
-                  System
-                  <br />
-                  Control
-                </h3>
-              </div>
-            </AnimationCard>
+              >
+                System
+                <br />
+                Control
+              </h3>
+            </div>
+          </AnimationCard>
 
-            {/* =========================
+          {/* =========================
       RIGHT TOP CARD
   ========================= */}
 
-            <AnimationCard
-              animation="fade-left"
-              className="
+          <AnimationCard
+            animation="fade-left"
+            className="
       absolute
       right-[6%]
       top-[12%]
       z-20
     "
-            >
-              <div
-                className="
+          >
+            <div
+              className="
         rounded-[22px]
 
         bg-[#453646]
@@ -1040,9 +969,9 @@ export default function Home() {
 
         shadow-[0px_8px_30px_rgba(0,0,0,0.18)]
       "
-              >
-                <h3
-                  className="
+            >
+              <h3
+                className="
           text-lg
           md:text-xl
 
@@ -1052,30 +981,30 @@ export default function Home() {
 
           text-white
         "
-                >
-                  Operational
-                  <br />
-                  Speed
-                </h3>
-              </div>
-            </AnimationCard>
+              >
+                Operational
+                <br />
+                Speed
+              </h3>
+            </div>
+          </AnimationCard>
 
-            {/* =========================
+          {/* =========================
       RIGHT BOTTOM CARD
   ========================= */}
 
-            <AnimationCard
-              animation="fade-left"
-              delay={0.2}
-              className="
+          <AnimationCard
+            animation="fade-left"
+            delay={0.2}
+            className="
       absolute
       bottom-[16%]
       right-[12%]
       z-20
     "
-            >
-              <div
-                className="
+          >
+            <div
+              className="
         rounded-[22px]
 
         bg-[#453646]
@@ -1087,9 +1016,9 @@ export default function Home() {
 
         shadow-[0px_8px_30px_rgba(0,0,0,0.18)]
       "
-              >
-                <h3
-                  className="
+            >
+              <h3
+                className="
           text-lg
           md:text-xl
 
@@ -1099,24 +1028,21 @@ export default function Home() {
 
           text-white
         "
-                >
-                  Scalable
-                  <br />
-                  Architecture
-                </h3>
-              </div>
-            </AnimationCard>
+              >
+                Scalable
+                <br />
+                Architecture
+              </h3>
+            </div>
+          </AnimationCard>
 
-            {/* =========================
+          {/* =========================
       CENTER CARD
   ========================= */}
 
-            <AnimationCard
-              animation="zoom-in"
-              className="relative z-10"
-            >
-              <div
-                className="
+          <AnimationCard animation="zoom-in" className="relative z-10">
+            <div
+              className="
         relative
 
         w-full
@@ -1136,21 +1062,21 @@ export default function Home() {
 
         shadow-[0px_0px_30px_rgba(45,29,48,0.35)]
       "
-              >
-                {/* HEADER */}
+            >
+              {/* HEADER */}
 
-                <div
-                  className="
+              <div
+                className="
           mb-7
 
           flex
           items-center
           justify-between
         "
-                >
-                  <div>
-                    <h2
-                      className="
+              >
+                <div>
+                  <h2
+                    className="
               text-xl
               md:text-2xl
 
@@ -1158,25 +1084,25 @@ export default function Home() {
 
               text-[#2f2132]
             "
-                    >
-                      Product Performances
-                    </h2>
+                  >
+                    Product Performances
+                  </h2>
 
-                    <p
-                      className="
+                  <p
+                    className="
               mt-1
 
               text-sm
 
               text-[#8c8291]
             "
-                    >
-                      How it performs
-                    </p>
-                  </div>
+                  >
+                    How it performs
+                  </p>
+                </div>
 
-                  <button
-                    className="
+                <button
+                  className="
             rounded-xl
 
             border
@@ -1189,15 +1115,15 @@ export default function Home() {
 
             text-[#7d7191]
           "
-                  >
-                    March 2022
-                  </button>
-                </div>
+                >
+                  March 2022
+                </button>
+              </div>
 
-                {/* TABLE HEADER */}
+              {/* TABLE HEADER */}
 
-                <div
-                  className="
+              <div
+                className="
           mb-5
 
           grid
@@ -1213,57 +1139,53 @@ export default function Home() {
 
           text-[#7d8ba3]
         "
-                >
-                  <p>Assigned</p>
-                  <p>Progress</p>
-                  <p>Priority</p>
-                  <p>Budget</p>
-                  <p>Chart</p>
-                </div>
+              >
+                <p>Assigned</p>
+                <p>Progress</p>
+                <p>Priority</p>
+                <p>Budget</p>
+                <p>Chart</p>
+              </div>
 
-                {/* ROWS */}
+              {/* ROWS */}
 
-                <div className="space-y-4">
-                  {[
-                    {
-                      name: "Minecraf App",
-                      person: "Jason Roy",
-                      progress: "73.2%",
-                      priority: "Low",
-                      priorityColor:
-                        "bg-green-100 text-green-500",
-                    },
+              <div className="space-y-4">
+                {[
+                  {
+                    name: "Minecraf App",
+                    person: "Jason Roy",
+                    progress: "73.2%",
+                    priority: "Low",
+                    priorityColor: "bg-green-100 text-green-500",
+                  },
 
-                    {
-                      name: "Web App Project",
-                      person: "Mathew Flintoff",
-                      progress: "56.8%",
-                      priority: "Medium",
-                      priorityColor:
-                        "bg-yellow-100 text-yellow-500",
-                    },
+                  {
+                    name: "Web App Project",
+                    person: "Mathew Flintoff",
+                    progress: "56.8%",
+                    priority: "Medium",
+                    priorityColor: "bg-yellow-100 text-yellow-500",
+                  },
 
-                    {
-                      name: "Modernize Dashboard",
-                      person: "Anil Kumar",
-                      progress: "25%",
-                      priority: "Very high",
-                      priorityColor:
-                        "bg-blue-100 text-blue-500",
-                    },
+                  {
+                    name: "Modernize Dashboard",
+                    person: "Anil Kumar",
+                    progress: "25%",
+                    priority: "Very high",
+                    priorityColor: "bg-blue-100 text-blue-500",
+                  },
 
-                    {
-                      name: "Dashboard Co",
-                      person: "George Cruize",
-                      progress: "96.3%",
-                      priority: "High",
-                      priorityColor:
-                        "bg-red-100 text-red-500",
-                    },
-                  ].map((item, index) => (
-                    <div
-                      key={index}
-                      className="
+                  {
+                    name: "Dashboard Co",
+                    person: "George Cruize",
+                    progress: "96.3%",
+                    priority: "High",
+                    priorityColor: "bg-red-100 text-red-500",
+                  },
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className="
               grid
               grid-cols-[2fr_1fr_1fr_1fr_1fr]
 
@@ -1274,12 +1196,12 @@ export default function Home() {
 
               pb-4
             "
-                    >
-                      {/* USER */}
+                  >
+                    {/* USER */}
 
-                      <div className="flex items-center gap-3">
-                        <div
-                          className="
+                    <div className="flex items-center gap-3">
+                      <div
+                        className="
                   h-10
                   w-10
 
@@ -1289,11 +1211,11 @@ export default function Home() {
                   from-pink-200
                   to-cyan-200
                 "
-                        />
+                      />
 
-                        <div>
-                          <h4
-                            className="
+                      <div>
+                        <h4
+                          className="
                     text-sm
                     md:text-base
 
@@ -1301,40 +1223,40 @@ export default function Home() {
 
                     text-[#35283b]
                   "
-                          >
-                            {item.name}
-                          </h4>
+                        >
+                          {item.name}
+                        </h4>
 
-                          <p
-                            className="
+                        <p
+                          className="
                     text-[11px]
 
                     text-[#94889b]
                   "
-                          >
-                            {item.person}
-                          </p>
-                        </div>
+                        >
+                          {item.person}
+                        </p>
                       </div>
+                    </div>
 
-                      {/* PROGRESS */}
+                    {/* PROGRESS */}
 
-                      <p
-                        className="
+                    <p
+                      className="
                 text-xs
                 md:text-sm
 
                 text-[#6e7c92]
               "
-                      >
-                        {item.progress}
-                      </p>
+                    >
+                      {item.progress}
+                    </p>
 
-                      {/* PRIORITY */}
+                    {/* PRIORITY */}
 
-                      <div>
-                        <span
-                          className={`
+                    <div>
+                      <span
+                        className={`
                   rounded-md
 
                   px-3
@@ -1347,28 +1269,28 @@ export default function Home() {
 
                   ${item.priorityColor}
                 `}
-                        >
-                          {item.priority}
-                        </span>
-                      </div>
+                      >
+                        {item.priority}
+                      </span>
+                    </div>
 
-                      {/* BUDGET */}
+                    {/* BUDGET */}
 
-                      <p
-                        className="
+                    <p
+                      className="
                 text-xs
                 md:text-sm
 
                 text-[#52445d]
               "
-                      >
-                        $3.5k
-                      </p>
+                    >
+                      $3.5k
+                    </p>
 
-                      {/* CHART */}
+                    {/* CHART */}
 
-                      <div
-                        className="
+                    <div
+                      className="
                 h-6
                 w-14
 
@@ -1380,1057 +1302,14 @@ export default function Home() {
 
                 opacity-70
               "
-                      />
-                    </div>
-                  ))}
-                </div>
+                    />
+                  </div>
+                ))}
               </div>
-            </AnimationCard>
-          </div>
-
-
-
+            </div>
+          </AnimationCard>
         </div>
-        <div className="h-screen bg-green-200" ><div
-          className="
-    relative
-
-    mx-auto
-
-    flex
-    items-center
-    justify-center
-
-    min-h-[850px]
-
-    max-w-[1400px]
-
-    px-6
-    py-20
-  "
-        >
-          {/* =======================================
-      LEFT TOP SMALL CARD
-  ======================================= */}
-
-          <AnimationCard
-            animation="fade-right"
-            className="
-      absolute
-      left-[4%]
-      top-[8%]
-      z-20
-    "
-          >
-            <div
-              className="
-        flex
-        items-center
-        justify-between
-
-        w-[320px]
-
-        rounded-[32px]
-
-        border
-        border-[#efcfff]
-
-        bg-[#fcf7ff]
-
-        px-9
-        py-8
-      "
-            >
-              <div>
-                <h2
-                  className="
-            text-5xl
-
-            font-black
-
-            text-[#1d1023]
-          "
-                >
-                  125K+
-                </h2>
-
-                <p
-                  className="
-            mt-5
-
-            text-2xl
-
-            font-medium
-
-            leading-[1.5]
-
-            text-[#665a6d]
-          "
-                >
-                  Workflow Executions
-                </p>
-              </div>
-
-              <div
-                className="
-          flex
-          h-24
-          w-24
-          items-center
-          justify-center
-
-          rounded-[24px]
-
-          bg-[#f2def8]
-        "
-              >
-                <div
-                  className="
-            text-5xl
-
-            text-fuchsia-500
-          "
-                >
-                  ⛓
-                </div>
-              </div>
-            </div>
-          </AnimationCard>
-
-          {/* =======================================
-      LEFT BOTTOM BIG CARD
-  ======================================= */}
-
-          <AnimationCard
-            animation="fade-right"
-            delay={0.15}
-            className="
-      absolute
-      bottom-[8%]
-      left-[4%]
-      z-20
-    "
-          >
-            <div
-              className="
-        relative
-
-        h-[520px]
-        w-[460px]
-
-        overflow-hidden
-
-        rounded-[36px]
-
-        border
-        border-[#efcfff]
-
-        bg-[#fcf7ff]
-
-        p-10
-      "
-            >
-              <h2
-                className="
-          text-5xl
-
-          font-black
-
-          leading-[1.3]
-
-          text-[#1d1023]
-        "
-              >
-                Smart Execution System
-              </h2>
-
-              <p
-                className="
-          mt-8
-
-          max-w-[320px]
-
-          text-2xl
-
-          leading-[1.7]
-
-          text-[#6b5e73]
-        "
-              >
-                Automate tasks and execute workflows
-                with speed and accuracy.
-              </p>
-
-              {/* GLOW RING */}
-
-              <div
-                className="
-          absolute
-          bottom-[-30px]
-          left-[40px]
-
-          h-[240px]
-          w-[340px]
-
-          rotate-[-20deg]
-
-          rounded-full
-
-          border-[22px]
-          border-pink-200
-
-          opacity-70
-
-          blur-[2px]
-        "
-              />
-            </div>
-          </AnimationCard>
-
-          {/* =======================================
-      RIGHT TOP BIG CARD
-  ======================================= */}
-
-          <AnimationCard
-            animation="fade-left"
-            className="
-      absolute
-      right-[4%]
-      top-[8%]
-      z-20
-    "
-          >
-            <div
-              className="
-        relative
-
-        h-[420px]
-        w-[460px]
-
-        overflow-hidden
-
-        rounded-[36px]
-
-        border
-        border-[#efcfff]
-
-        bg-[#fcf7ff]
-
-        p-10
-      "
-            >
-              <h2
-                className="
-          text-5xl
-
-          font-black
-
-          leading-[1.3]
-
-          text-[#1d1023]
-        "
-              >
-                Execute Work With Speed
-              </h2>
-
-              <p
-                className="
-          mt-8
-
-          max-w-[330px]
-
-          text-2xl
-
-          leading-[1.7]
-
-          text-[#6b5e73]
-        "
-              >
-                Keep teams aligned and execution
-                fast—without the back-and-forth.
-              </p>
-
-              {/* GLOW SHAPE */}
-
-              <div
-                className="
-          absolute
-          bottom-[20px]
-          right-[10px]
-
-          h-[220px]
-          w-[220px]
-
-          rotate-[30deg]
-
-          rounded-full
-
-          border-[18px]
-          border-pink-200
-
-          opacity-60
-
-          blur-[2px]
-        "
-              />
-            </div>
-          </AnimationCard>
-
-          {/* =======================================
-      RIGHT BOTTOM SMALL CARD
-  ======================================= */}
-
-          <AnimationCard
-            animation="fade-left"
-            delay={0.15}
-            className="
-      absolute
-      bottom-[7%]
-      right-[4%]
-      z-20
-    "
-          >
-            <div
-              className="
-        flex
-        items-center
-        justify-between
-
-        w-[320px]
-
-        rounded-[32px]
-
-        border
-        border-[#efcfff]
-
-        bg-[#fcf7ff]
-
-        px-9
-        py-8
-      "
-            >
-              <div>
-                <h2
-                  className="
-            text-5xl
-
-            font-black
-
-            text-[#1d1023]
-          "
-                >
-                  85K+
-                </h2>
-
-                <p
-                  className="
-            mt-5
-
-            text-2xl
-
-            font-medium
-
-            text-[#665a6d]
-          "
-                >
-                  Automated Actions
-                </p>
-              </div>
-
-              <div
-                className="
-          flex
-          h-24
-          w-24
-          items-center
-          justify-center
-
-          rounded-[24px]
-
-          bg-[#f2def8]
-        "
-              >
-                <div
-                  className="
-            text-5xl
-
-            text-fuchsia-500
-          "
-                >
-                  ▣
-                </div>
-              </div>
-            </div>
-          </AnimationCard>
-
-          {/* =======================================
-      CENTER CARD
-  ======================================= */}
-
-          <AnimationCard
-            animation="zoom-in"
-            className="relative z-10"
-          >
-            <div
-              className="
-        relative
-
-        h-[720px]
-        w-[500px]
-
-        overflow-hidden
-
-        rounded-[42px]
-
-        border-[14px]
-        border-[#efc8ff]
-
-        bg-[#fcf8ff]
-
-        p-10
-
-        shadow-[0px_25px_60px_rgba(233,190,255,0.45)]
-      "
-            >
-              {/* HEADER */}
-
-              <div
-                className="
-          flex
-          items-center
-          justify-between
-        "
-              >
-                <h2
-                  className="
-            text-4xl
-
-            font-black
-
-            text-[#1e1124]
-          "
-                >
-                  Projects of the Month
-                </h2>
-
-                <button
-                  className="
-            rounded-2xl
-
-            border
-            border-[#ead6f5]
-
-            px-6
-            py-4
-
-            text-xl
-
-            text-[#7a6d82]
-          "
-                >
-                  January
-                </button>
-              </div>
-
-              {/* TABLE HEAD */}
-
-              <div
-                className="
-          mt-12
-
-          grid
-          grid-cols-[2fr_1fr]
-
-          text-2xl
-
-          text-[#786d80]
-        "
-              >
-                <p>Assigned</p>
-                <p>Name</p>
-              </div>
-
-              {/* LIST */}
-
-              <div className="mt-10 space-y-7">
-                {[
-                  "Micheal Doe",
-                  "Nirav Joshi",
-                  "Bhavesh patel",
-                  "Sunil Joshi",
-                  "Andrew",
-                  "Bhavesh patel",
-                  "Nirav Joshi",
-                  "Micheal Doe",
-                ].map((item, index) => (
-                  <div
-                    key={index}
-                    className="
-              grid
-              grid-cols-[2fr_1fr]
-              items-center
-            "
-                  >
-                    <div className="flex items-center gap-5">
-                      <div
-                        className="
-                  flex
-                  h-14
-                  w-14
-                  items-center
-                  justify-center
-
-                  rounded-full
-
-                  bg-gradient-to-br
-                  from-cyan-300
-                  to-pink-300
-
-                  text-xl
-
-                  font-bold
-
-                  text-white
-                "
-                      >
-                        {item.charAt(0)}
-                      </div>
-
-                      <div>
-                        <h4
-                          className="
-                    text-2xl
-
-                    font-semibold
-
-                    text-[#2c2032]
-                  "
-                        >
-                          {item}
-                        </h4>
-
-                        <p
-                          className="
-                    text-lg
-
-                    text-[#8a7f92]
-                  "
-                        >
-                          Content Writer
-                        </p>
-                      </div>
-                    </div>
-
-                    <p
-                      className="
-                text-xl
-
-                text-[#93859c]
-              "
-                    >
-                      Helping Hands
-                    </p>
-                  </div>
-                ))}
-              </div>
-
-              {/* PLAY BUTTON */}
-
-              <div
-                className="
-          absolute
-          bottom-[35px]
-          left-1/2
-
-          flex
-          h-[140px]
-          w-[140px]
-          -translate-x-1/2
-          items-center
-          justify-center
-
-          rounded-full
-
-          bg-gradient-to-b
-          from-fuchsia-500
-          to-pink-500
-
-          shadow-[0px_20px_40px_rgba(236,72,153,0.35)]
-        "
-              >
-                <span
-                  className="
-            text-4xl
-
-            font-black
-
-            text-white
-          "
-                >
-                  Play
-                </span>
-              </div>
-            </div>
-          </AnimationCard>
-        </div></div>
-        <section
-          className="
-    relative
-
-    overflow-hidden
-
-    rounded-[40px]
-
-    bg-[#fcf7ff]
-
-    px-10
-    py-20
-    md:px-16
-
-    border
-    border-[#efccff] 
-  "
-        >
-          {/* =========================
-      TOP GLOW
-  ========================= */}
-
-          <div
-            className="
-      absolute
-      left-0
-      top-0
-
-      h-[220px]
-      w-full
-
-      bg-gradient-to-b
-      from-fuchsia-400/50
-      to-transparent
-
-      blur-3xl
-    "
-          />
-
-          {/* =========================
-      MOVING TEXT
-  ========================= */}
-
-          <div
-            className="
-      absolute
-      top-[20px]
-      left-0
-
-      flex
-      whitespace-nowrap
-
-      opacity-[0.18]
-    "
-          >
-            <div
-              className="
-        seamless-marquee
-
-        flex
-        items-center
-        gap-20
-      "
-            >
-              <h2
-                className="
-          text-[120px]
-
-          font-black
-
-          uppercase
-
-          tracking-[-0.06em]
-
-          text-[#2a012f]
-        "
-              >
-                SEAMLESS INTEGRATION
-              </h2>
-
-              <h2
-                className="
-          text-[120px]
-
-          font-black
-
-          uppercase
-
-          tracking-[-0.06em]
-
-          text-[#2a012f]
-        "
-              >
-                SEAMLESS INTEGRATION
-              </h2>
-            </div>
-          </div>
-
-          {/* =========================
-      CONTENT
-  ========================= */}
-
-          <div
-            className="
-      relative
-      z-10
-
-      mt-32
-
-      grid
-      grid-cols-1
-      items-center
-      gap-16
-
-      lg:grid-cols-2
-    "
-          >
-            {/* =========================
-        LEFT CONTENT
-    ========================= */}
-
-            <div className="max-w-[480px]">
-              <h2
-                className="
-          text-5xl
-          md:text-6xl
-
-          font-black
-
-          leading-[1.15]
-
-          tracking-[-0.04em]
-
-          text-[#1b001f]
-        "
-              >
-                Seamless Tool
-                <br />
-                Sync Integration
-              </h2>
-
-              <p
-                className="
-          mt-8
-
-          max-w-[420px]
-
-          text-xl
-
-          leading-[1.8]
-
-          text-[#685d70]
-        "
-              >
-                Connect and synchronize your
-                essential tools effortlessly for
-                seamless operational continuity.
-              </p>
-
-              {/* BUTTON */}
-
-              <button
-                className="
-          mt-10
-
-          flex
-          items-center
-          gap-3
-
-          rounded-full
-
-          bg-gradient-to-b
-          from-fuchsia-400
-          to-pink-500
-
-          px-8
-          py-4
-
-          text-xl
-
-          font-bold
-
-          text-white
-
-          shadow-[0px_10px_30px_rgba(217,70,239,0.45)]
-
-          transition-all
-          duration-300
-
-          hover:scale-[1.03]
-        "
-              >
-                Get Started Now
-
-                <span className="text-2xl">
-                  ↗
-                </span>
-              </button>
-            </div>
-
-            {/* =========================
-        RIGHT INTEGRATION
-    ========================= */}
-
-            <div
-              className="
-        relative
-
-        flex
-        items-center
-        justify-center
-
-        min-h-[500px]
-      "
-            >
-              {/* =========================
-          CENTER LOGO
-      ========================= */}
-
-              <div
-                className="
-          relative
-          z-20
-
-          flex
-          h-[180px]
-          w-[180px]
-          items-center
-          justify-center
-
-          rounded-[36px]
-
-          bg-[#f4e2fb]
-
-          shadow-[0px_15px_40px_rgba(217,70,239,0.15)]
-        "
-              >
-                <div
-                  className="
-            text-[90px]
-
-            font-black
-
-            text-fuchsia-500
-          "
-                >
-                  ⬢
-                </div>
-              </div>
-
-              {/* =========================
-          SVG CONNECTIONS
-      ========================= */}
-
-              <svg
-                className="
-          absolute
-          inset-0
-
-          h-full
-          w-full
-        "
-                viewBox="0 0 700 500"
-                fill="none"
-              >
-                {/* LINE 1 */}
-
-                <path
-                  d="
-            M 220 80
-            H 520
-            Q 590 80 590 150
-            V 180
-          "
-                  className="integration-line"
-                />
-
-                {/* LINE 2 */}
-
-                <path
-                  d="
-            M 180 170
-            H 520
-            Q 590 170 590 220
-          "
-                  className="integration-line"
-                />
-
-                {/* LINE 3 */}
-
-                <path
-                  d="
-            M 220 260
-            H 520
-          "
-                  className="integration-line"
-                />
-
-                {/* LINE 4 */}
-
-                <path
-                  d="
-            M 220 350
-            H 520
-          "
-                  className="integration-line"
-                />
-
-                {/* LINE 5 */}
-
-                <path
-                  d="
-            M 220 440
-            H 520
-            Q 590 440 590 360
-            V 320
-          "
-                  className="integration-line"
-                />
-              </svg>
-
-              {/* =========================
-          LEFT ICONS
-      ========================= */}
-
-              <div
-                className="
-          absolute
-          left-[80px]
-          top-[30px]
-
-          flex
-          flex-col
-          gap-10
-        "
-              >
-                {[
-                  {
-                    bg: "bg-cyan-400",
-                    text: "◈",
-                  },
-
-                  {
-                    bg: "bg-[#1a001f]",
-                    text: "✕",
-                  },
-
-                  {
-                    bg: "bg-lime-500",
-                    text: "P",
-                  },
-
-                  {
-                    bg: "bg-orange-400",
-                    text: "$",
-                  },
-
-                  {
-                    bg: "bg-cyan-400",
-                    text: "N",
-                  },
-                ].map((item, index) => (
-                  <div
-                    key={index}
-                    className={`
-              flex
-              h-[64px]
-              w-[64px]
-              items-center
-              justify-center
-
-              rounded-full
-
-              text-3xl
-
-              font-black
-
-              text-white
-
-              shadow-lg
-
-              ${item.bg}
-            `}
-                  >
-                    {item.text}
-                  </div>
-                ))}
-              </div>
-
-              {/* RIGHT ICONS */}
-
-              <div
-                className="
-          absolute
-          left-[260px]
-          top-[120px]
-
-          flex
-          flex-col
-          gap-10
-        "
-              >
-                {[
-                  {
-                    bg: "bg-pink-500",
-                    text: "◉",
-                  },
-
-                  {
-                    bg: "bg-fuchsia-500",
-                    text: "△",
-                  },
-                ].map((item, index) => (
-                  <div
-                    key={index}
-                    className={`
-              flex
-              h-[64px]
-              w-[64px]
-              items-center
-              justify-center
-
-              rounded-full
-
-              text-3xl
-
-              font-black
-
-              text-white
-
-              shadow-lg
-
-              ${item.bg}
-            `}
-                  >
-                    {item.text}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-      </div >
-      {/* USAGE */}
-
-      <PortalRingCard
-        className="
-    w-full
-    max-w-[1200px]
-    mx-auto
-  "
-        innerClassName="
-    p-20
-  "
-      >
-        <div className="h-[200px]">
-          YOUR CONTENT
-        </div>
-      </PortalRingCard></>
+      </div>{" "}
+    </main>
   );
 }
