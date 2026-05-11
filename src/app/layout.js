@@ -6,6 +6,7 @@ import Footer from "@/components/footer/Footer";
 import AosProvider from "@/components/animations/AosProvider";
 import "aos/dist/aos.css";
 import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
+import CookieBanner from "@/components/ui/CookieBanner";
 // import Navbar from "@/components/navbar/Navbar";
 // import Footer from "@/components/footer/Footer";
 
@@ -62,8 +63,8 @@ export default function RootLayout({ children }) {
           <Navbar />
 
           <main className="flex-1">{children}</main>
+          <CookieBanner />
           <ScrollToTopButton />
-
           <Footer />
         </AosProvider>
       </body>

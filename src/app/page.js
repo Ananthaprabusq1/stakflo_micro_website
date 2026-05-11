@@ -24,7 +24,7 @@ export default function Home() {
             w-[320px]
             bg-green-400/30
             blur-3xl
-           
+
           "
         />
 
@@ -37,7 +37,7 @@ export default function Home() {
             w-[320px]
             bg-green-400/30
             blur-3xl
-            
+
           "
         /> */}
         <div
@@ -76,7 +76,7 @@ export default function Home() {
               direction="left"
               containerClassName=" w-[min(17rem,calc(100vw-8rem))] sm:w-80 "
               className=" items-center text-black font-light "
-            // className=" items-center text-[#7f7b85] "
+              // className=" items-center text-[#7f7b85] "
             ></ScrollText>
           </div>
 
@@ -112,8 +112,9 @@ export default function Home() {
     mx-auto
   "
             innerClassName=""
-          ><div
-            className="
+          >
+            <div
+              className="
   mx-auto
   overflow-hidden
   rounded-[24px]
@@ -133,8 +134,7 @@ export default function Home() {
 
   max-w-[1300px]
 "
-          >
-
+            >
               <Image
                 src="/images/Stakflo-Dashboard.webp"
                 alt="Stakflo dashboard interface"
@@ -147,11 +147,12 @@ export default function Home() {
                 w-full
               "
               />
-            </div></PortalRingCard>
+            </div>
+          </PortalRingCard>
         </div>
       </section>
       <section className="   bg-[#fbfffa] pb-50 ">
-        <div className="w-full isolate lg:max-w-[1400px] mx-auto  grid grid-cols-1 lg:grid-cols-[1.3fr_0.9fr] gap-8 p-5 ">
+        <div className="w-full isolate lg:max-w-[1300px] mx-auto  grid grid-cols-1 lg:grid-cols-[1.3fr_0.9fr] gap-8 p-5 ">
           {/* LEFT CARD */}
           <AnimationCard animation="fade-right" className="h-full ">
             <div className=" relative overflow-hidden rounded-[20px] border border-dashed   border-green-500 bg-green-50 p-8  md:p-10  min-h-[560px] ">
@@ -175,10 +176,9 @@ export default function Home() {
 
           rounded-[20px]
 
-         bg-white 
+         bg-white
         "
               >
-
                 <IoSettingsOutline className="text-4xl text-green-400" />
               </div>
 
@@ -222,8 +222,6 @@ export default function Home() {
 
               {/* INNER CARD */}
               <div className=" relative ">
-
-
                 <AnimationCard
                   animation="fade-up"
                   delay={0.2}
@@ -233,7 +231,6 @@ export default function Home() {
           right-0
         "
                 >
-
                   <ActivityStackCards
                     cards={[
                       {
@@ -279,9 +276,9 @@ export default function Home() {
                       },
                     ]}
                   />
-
                 </AnimationCard>
-              </div></div>
+              </div>
+            </div>
           </AnimationCard>
           {/* RIGHT CARD */}
           <AnimationCard animation="fade-left" className="h-full">
@@ -381,14 +378,16 @@ export default function Home() {
 
                 <div className="space-y-7">
                   <div className="flex items-center gap-4">
-                    <LuCircleCheck className="
+                    <LuCircleCheck
+                      className="
                 flex
                 h-7
                 w-7
                 items-center
                 justify-center
                 font-thin
-              "/>
+              "
+                    />
 
                     <p
                       className="
@@ -403,16 +402,16 @@ export default function Home() {
                   </div>
 
                   <div className="flex items-center gap-4">
-
-                    <LuCircleCheck className="
+                    <LuCircleCheck
+                      className="
                 flex
                 h-7
                 w-7
                 items-center
                 justify-center
                 font-thin
-              "/>
-
+              "
+                    />
 
                     <p
                       className="
@@ -429,8 +428,9 @@ export default function Home() {
               </div>
             </div>
           </AnimationCard>
-        </div></section>
-      <section className="mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-0">
+        </div>
+      </section>
+      <div className="mx-auto w-full max-w-[1300px] px-4 sm:px-6 lg:px-0">
         <section
           className="
       relative
@@ -449,7 +449,6 @@ export default function Home() {
 
       text-center
 
-      shadow-[0_30px_90px_rgba(56,201,92,0.28)]
 
       sm:min-h-[650px]
       sm:rounded-[32px]
@@ -715,8 +714,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-      </section>
-      <section className="mx-auto mb-16 w-full max-w-[1400px] px-5 sm:px-8 lg:px-0">
+      </div>
+      <div className="mx-auto mb-16 w-full max-w-[1300px] px-5 sm:px-8 lg:px-0">
         <section className="relative isolate min-h-[760px] overflow-hidden rounded-[30px] px-4 py-14 sm:rounded-[36px] sm:px-8 lg:min-h-[820px] lg:px-12 lg:py-20">
           {/* Background layer */}
           <div
@@ -865,7 +864,7 @@ export default function Home() {
               <div className="relative w-full overflow-hidden rounded-[28px] border-[4px] border-[#2d1d30] bg-[#faf7fc] p-5 md:p-6 shadow-[0px_0px_30px_rgba(45,29,48,0.35)]">
                 <div className="overflow-hidden rounded-[24px] border border-[#e5ddeb] bg-white p-3 shadow-[0px_14px_40px_rgba(0,0,0,0.08)]">
                   <Image
-                    src="/product-performance.avif"
+                    src="/images/product-performance.avif"
                     alt="Stakflo product dashboard"
                     width={1400}
                     height={900}
@@ -877,8 +876,8 @@ export default function Home() {
             </AnimationCard>
           </div>
         </section>
-      </section>
-      <section className="mx-auto mb-16 w-full max-w-[1400px] px-5 sm:px-8 lg:px-0">
+      </div>
+      <div className="mx-auto mb-16 w-full max-w-[1300px] px-5 sm:px-8 lg:px-0">
         <section className="relative isolate min-h-[760px] overflow-hidden rounded-[30px] px-5 py-14 sm:rounded-[36px] sm:px-8 lg:min-h-[820px] lg:px-12 lg:py-20">
           {/* Background layer */}
           <div
@@ -999,159 +998,202 @@ export default function Home() {
 
             <div
               className="
-          relative
-          mx-auto
+    relative
+    mx-auto
 
-          h-[420px]
-          w-full
-          max-w-[340px]
+    h-[420px]
+    w-full
+    max-w-[340px]
 
-          sm:h-[560px]
-          sm:max-w-[520px]
+    sm:h-[560px]
+    sm:max-w-[520px]
 
-          md:h-[640px]
-          md:max-w-[620px]
+    md:h-[640px]
+    md:max-w-[620px]
 
-          lg:h-[760px]
-          lg:max-w-[760px]
-        "
+    lg:h-[760px]
+    lg:max-w-[760px]
+  "
             >
               {/* CENTER BOX */}
 
               <div
                 className="
-            absolute
-            right-0
-            top-1/2
-            z-20
+      absolute
+      right-0
+      top-1/2
+      z-20
 
-            flex
-            h-[110px]
-            w-[110px]
+      flex
+      h-[110px]
+      w-[110px]
 
-            -translate-y-1/2
+      -translate-y-1/2
 
-            items-center
-            justify-center
+      items-center
+      justify-center
 
-            rounded-[22px]
+      rounded-[22px]
 
-            bg-[#ecfdf3]
+      bg-[#ecfdf3]
 
-            shadow-[0_20px_60px_rgba(34,197,94,0.16)]
+      shadow-[0_20px_60px_rgba(34,197,94,0.16)]
 
-            sm:h-[150px]
-            sm:w-[150px]
-            sm:rounded-[28px]
+      sm:h-[150px]
+      sm:w-[150px]
+      sm:rounded-[28px]
 
-            lg:h-[190px]
-            lg:w-[190px]
-            lg:rounded-[34px]
-          "
+      lg:h-[190px]
+      lg:w-[190px]
+      lg:rounded-[34px]
+    "
               >
                 <div
                   className="
-              flex
-              h-[60px]
-              w-[60px]
+        flex
+        h-[60px]
+        w-[60px]
 
-              items-center
-              justify-center
+        items-center
+        justify-center
 
-              rounded-[18px]
+        rounded-[18px]
 
-              bg-[linear-gradient(180deg,#4ade80_0%,#16a34a_100%)]
+        bg-[linear-gradient(180deg,#4ade80_0%,#16a34a_100%)]
 
-              text-3xl
-              font-black
-              text-white
+        text-3xl
+        font-black
+        text-white
 
-              sm:h-[80px]
-              sm:w-[80px]
-              sm:text-4xl
+        sm:h-[80px]
+        sm:w-[80px]
+        sm:text-4xl
 
-              lg:h-[100px]
-              lg:w-[100px]
-              lg:rounded-[30px]
-              lg:text-5xl
-            "
+        lg:h-[100px]
+        lg:w-[100px]
+        lg:rounded-[30px]
+        lg:text-5xl
+      "
                 >
                   S
                 </div>
               </div>
 
-              {/* SVG LINES */}
+              {/* SVG CONNECTIONS */}
 
               <svg
                 className="
-            absolute
-            inset-0
-            z-10
+      absolute
+      inset-0
+      z-10
 
-            h-full
-            w-full
-          "
+      h-full
+      w-full
+    "
                 viewBox="0 0 760 760"
                 fill="none"
                 preserveAspectRatio="xMidYMid meet"
               >
+                {/* TOP 1 */}
+
                 <path
                   id="path1"
-                  d="M 430 90 H 620 Q 660 90 660 135 V 160"
+                  d="
+        M 320 90
+        H 610
+        Q 650 90 650 130
+        V 240
+      "
                   stroke="#a7f3d0"
                   strokeWidth="3"
                   fill="none"
                   strokeLinecap="round"
                 />
+
+                {/* TOP 2 */}
 
                 <path
                   id="path2"
-                  d="M 300 170 H 590 Q 615 170 615 210 V 245"
+                  d="
+        M 90 190
+        H 560
+        Q 590 190 590 220
+        V 275
+      "
                   stroke="#a7f3d0"
                   strokeWidth="3"
                   fill="none"
                   strokeLinecap="round"
                 />
+
+                {/* CENTER 1 */}
 
                 <path
                   id="path3"
-                  d="M 350 255 H 590"
+                  d="
+        M 320 300
+        H 565
+      "
                   stroke="#a7f3d0"
                   strokeWidth="3"
                   fill="none"
                   strokeLinecap="round"
                 />
+
+                {/* CENTER 2 */}
 
                 <path
                   id="path4"
-                  d="M 260 340 H 590"
+                  d="
+        M 60 390
+        H 565
+      "
                   stroke="#a7f3d0"
                   strokeWidth="3"
                   fill="none"
                   strokeLinecap="round"
                 />
+
+                {/* CENTER 3 */}
 
                 <path
                   id="path5"
-                  d="M 340 425 H 590"
+                  d="
+        M 320 480
+        H 565
+      "
                   stroke="#a7f3d0"
                   strokeWidth="3"
                   fill="none"
                   strokeLinecap="round"
                 />
+
+                {/* BOTTOM 1 */}
 
                 <path
                   id="path6"
-                  d="M 300 515 H 615 Q 615 515 615 470 V 450"
+                  d="
+        M 90 585
+        H 590
+        Q 590 585 590 540
+        V 450
+      "
                   stroke="#a7f3d0"
                   strokeWidth="3"
                   fill="none"
                   strokeLinecap="round"
                 />
 
+                {/* BOTTOM 2 */}
+
                 <path
                   id="path7"
-                  d="M 430 610 H 660 Q 690 610 690 550 V 430"
+                  d="
+        M 320 690
+        H 650
+        Q 690 690 690 620
+        V 390
+      "
                   stroke="#a7f3d0"
                   strokeWidth="3"
                   fill="none"
@@ -1174,86 +1216,29 @@ export default function Home() {
 
               {/* ICONS */}
 
-              <div
-                className="
-            absolute
-            left-[34%]
-            top-[5%]
-            z-20
-          "
-              >
-                1
-              </div>
+              {/* TOP */}
 
-              <div
-                className="
-            absolute
-            left-[16%]
-            top-[18%]
-            z-20
-          "
-              >
-                2
-              </div>
+              <div className="absolute left-[38%] top-[6%] z-20">1</div>
 
-              <div
-                className="
-            absolute
-            left-[25%]
-            top-[31%]
-            z-20
-          "
-              >
-                3
-              </div>
+              <div className="absolute left-[0%] top-[18%] z-20">2</div>
 
-              <div
-                className="
-            absolute
-            left-[8%]
-            top-[43%]
-            z-20
-          "
-              >
-                4
-              </div>
+              {/* CENTER */}
 
-              <div
-                className="
-            absolute
-            left-[25%]
-            top-[56%]
-            z-20
-          "
-              >
-                5
-              </div>
+              <div className="absolute left-[38%] top-[33%] z-20">3</div>
 
-              <div
-                className="
-            absolute
-            left-[16%]
-            top-[69%]
-            z-20
-          "
-              >
-                6
-              </div>
+              <div className="absolute left-[0%] top-[45%] z-20">4</div>
 
-              <div
-                className="
-            absolute
-            left-[34%]
-            top-[82%]
-            z-20
-          "
-              >
-                7
-              </div>
+              <div className="absolute left-[38%] top-[57%] z-20">5</div>
+
+              {/* BOTTOM */}
+
+              <div className="absolute left-[0%] top-[71%] z-20">6</div>
+
+              <div className="absolute left-[38%] top-[85%] z-20">7</div>
             </div>
           </div>
         </section>
-      </section>
+      </div>
     </main>
   );
 }

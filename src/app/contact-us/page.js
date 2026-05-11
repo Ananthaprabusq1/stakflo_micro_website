@@ -32,7 +32,7 @@ export default function ContactUsPage() {
   return (
     <div>
       {/* <ParallaxSection speed={0.45}> */}
-      <section className="relative overflow-hidden bg-[linear-gradient(#FFFFFF_0%,_#dcfce7_43.4474%,_#86efac_100%)]  py-12 md:min-h-[calc(100svh-104px)] md:py-12">
+      <section className="relative overflow-hidden bg-[linear-gradient(#FFFFFF_0%,_#dcfce7_43.4474%,_#86efac_100%)]  py-12 md:min-h-[calc(100svh-104px)] md:py-30">
         <div className="relative z-10 mx-auto w-full max-w-[1200px] px-4 sm:px-6">
           <div className="mx-auto  grid gap-20 lg:gap-44 lg:grid-cols-[0.95fr_1.25fr] lg:items-center">
             <div>

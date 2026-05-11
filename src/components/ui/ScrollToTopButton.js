@@ -76,7 +76,7 @@ export default function ScrollToTopButton() {
     ? "bg-[#111111] text-[#ffff00] border border-[#ffff00] shadow-none"
     : accessibilityMode.grayscale
       ? "bg-white text-black border border-black shadow-lg"
-      : "bg-[#145834] text-white border border-transparent shadow-lg";
+      : "bg-[#12C951] text-white border border-transparent shadow-lg";
 
   return createPortal(
     <button

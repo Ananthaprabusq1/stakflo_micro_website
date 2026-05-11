@@ -307,9 +307,9 @@ const Footer = () => {
           text-[var(--primary-text-light)]
         "
         >
-          <p>© 2026 Stakflo. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Stakflo. All rights reserved.</p>
 
-          <p>Designed with Next.js & Tailwind CSS</p>
+          <p>Terms & Conditions.Privacy Policy.Cookie Settings.</p>
         </div>
       </div>
     </footer>
