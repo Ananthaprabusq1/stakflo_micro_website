@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 import AosProvider from "@/components/animations/AosProvider";
 import "aos/dist/aos.css";
+import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
 // import Navbar from "@/components/navbar/Navbar";
 // import Footer from "@/components/footer/Footer";
 
@@ -37,9 +38,7 @@ export const metadata = {
   ],
 };
 
-export default function RootLayout({
-  children,
-}) {
+export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
@@ -57,16 +56,17 @@ export default function RootLayout({
           flex
           flex-col
         "
-      > <AosProvider>
+      >
+        {" "}
+        <AosProvider>
           <Navbar />
 
-          <main className="flex-1">
-            {children}
-          </main>
+          <main className="flex-1">{children}</main>
+          <ScrollToTopButton />
 
           <Footer />
         </AosProvider>
       </body>
-    </html >
+    </html>
   );
 }
