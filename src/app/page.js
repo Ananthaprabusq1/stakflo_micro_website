@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <main>
       <section className="  relative isolate min-h-screen overflow-hidden bg-[#fbfffa] px-2  sm:px-8 sm:py-12 lg:px-10   lg:py-0 ">
-        {/* <section className="  relative isolate min-h-[calc(100svh-200px)] overflow-hidden bg-[#fbfffa] px-5 py-10 sm:px-8 sm:py-12 lg:px-10 lg:min-h-[calc(100svh-138px)]  lg:py-0 "> */}
+
         {/* BACKGROUND GLOW */}
 
         {/* <div
@@ -121,7 +121,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className=" relative isolate overflow-hidden bg-[#fbfffa] px-5 pb-12  sm:px-8 sm:pb-16 lg:px-10 lg:pb-24 lg:pt-12  ">
+      <section className="  relative isolate overflow-hidden bg-[#fbfffa] px-5   lg:px-10 lg:py-20 py-10 ">
         <div
           className="
             relative
@@ -175,7 +175,7 @@ export default function Home() {
             </div></PortalRingCard>
         </div>
       </section>
-      <section className="   bg-[#fbfffa] pb-50 overflow-x-hidden" id="company">
+      <section className="   bg-[#fbfffa]  overflow-x-hidden" id="company">
         <div className="w-full overflow-hidden isolate lg:max-w-[1400px] mx-auto  grid grid-cols-1 lg:grid-cols-[1.3fr_0.9fr] gap-8 p-5 ">
           {/* LEFT CARD */}
           <AnimationCard animation="fade-right" className="h-full ">
@@ -456,7 +456,7 @@ export default function Home() {
           </AnimationCard>
         </div></section>
       <section className="w-full bg-green-50 py-24 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="lg:max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* LEFT CONTENT */}
             <div>
@@ -663,23 +663,32 @@ export default function Home() {
 
             {/* RIGHT CARD */}
             {/* RIGHT CARD */}
-            <div className="relative flex justify-center items-center min-h-[500px] lg:min-h-[620px] isolate mt-10 lg:mt-0">
+            <div className="relative flex justify-center items-center min-h-[380px] lg:min-h-[620px] isolate mt-10 lg:mt-0 px-4 sm:px-6">
 
               {/* BACK DASHED CARD 1 */}
               <div
                 key={`back-left-${active}`}
                 className="
       absolute
-      w-[92%]
-      max-w-[570px]
-      h-[500px]
+
+      w-[95%]
+      max-w-[540px]
+
+      h-[360px]
+      sm:h-[430px]
       lg:h-[610px]
-      rounded-[32px]
+
+      rounded-[26px]
+      lg:rounded-[32px]
+
       border
       border-dashed
       border-[#9fe3b5]
+
       opacity-100
+
       pointer-events-none
+
       animate-backLeft
     "
               />
@@ -689,16 +698,25 @@ export default function Home() {
                 key={`back-right-${active}`}
                 className="
       absolute
-      w-[92%]
-      max-w-[570px]
-      h-[500px]
+
+      w-[95%]
+      max-w-[540px]
+
+      h-[360px]
+      sm:h-[430px]
       lg:h-[610px]
-      rounded-[32px]
+
+      rounded-[26px]
+      lg:rounded-[32px]
+
       border
       border-dashed
       border-[#7fd89d]
+
       opacity-70
+
       pointer-events-none
+
       animate-backRight
     "
               />
@@ -709,32 +727,81 @@ export default function Home() {
                 className="
       relative
       z-20
+
       w-full
-      max-w-[540px]
-      rounded-[30px]
+      max-w-[500px]
+
+      rounded-[24px]
+      lg:rounded-[30px]
+
       bg-white
-      p-4 sm:p-5
+
+      p-3
+      sm:p-4
+
       shadow-[0_10px_40px_rgba(16,185,129,0.10)]
+
       animate-frontCard
     "
               >
                 {/* INNER CARD */}
-                <div className="bg-[#f6fff8] border border-[#d8f3df] rounded-[26px] p-5 sm:p-7">
+                <div
+                  className="
+        bg-[#f6fff8]
 
+        border
+        border-[#d8f3df]
+
+        rounded-[20px]
+        lg:rounded-[26px]
+
+        p-4
+        sm:p-5
+        lg:p-7
+      "
+                >
                   {/* HEADER */}
+
                   <div className="flex items-center justify-between">
-                    <h3 className="text-[18px] sm:text-[22px] font-semibold text-[#123524]">
+                    <h3
+                      className="
+            text-[16px]
+            sm:text-[18px]
+            lg:text-[22px]
+
+            font-semibold
+
+            text-[#123524]
+          "
+                    >
                       {cards[active].title}
                     </h3>
 
-                    <button className="text-[24px] text-[#4f7a61]">
+                    <button className="text-[20px] lg:text-[24px] text-[#4f7a61]">
                       ⋮
                     </button>
                   </div>
 
                   {/* GRAPH */}
-                  <div className="mt-6 sm:mt-8 h-[180px] sm:h-[210px] rounded-[24px] bg-[#dcfce7] relative overflow-hidden">
 
+                  <div
+                    className="
+          mt-5
+          lg:mt-8
+
+          h-[120px]
+          sm:h-[150px]
+          lg:h-[210px]
+
+          rounded-[18px]
+          lg:rounded-[24px]
+
+          bg-[#dcfce7]
+
+          relative
+          overflow-hidden
+        "
+                  >
                     <svg
                       viewBox="0 0 500 200"
                       className="absolute inset-0 w-full h-full"
@@ -749,15 +816,34 @@ export default function Home() {
                   </div>
 
                   {/* LINES */}
-                  <div className="mt-6 sm:mt-8 space-y-4">
-                    <div className="h-[14px] rounded-full bg-[#bbf7d0] w-full" />
 
-                    <div className="h-[14px] rounded-full bg-[#bbf7d0] w-[74%]" />
+                  <div className="mt-5 lg:mt-8 space-y-3">
+                    <div className="h-[10px] lg:h-[14px] rounded-full bg-[#bbf7d0] w-full" />
+
+                    <div className="h-[10px] lg:h-[14px] rounded-full bg-[#bbf7d0] w-[74%]" />
                   </div>
                 </div>
 
                 {/* DESCRIPTION */}
-                <p className="mt-6 sm:mt-8 px-2 text-[15px] sm:text-[17px] leading-[30px] sm:leading-[34px] text-[#4b6353]">
+
+                <p
+                  className="
+        mt-5
+        lg:mt-8
+
+        px-1
+
+        text-[13px]
+        sm:text-[14px]
+        lg:text-[17px]
+
+        leading-[24px]
+        sm:leading-[28px]
+        lg:leading-[34px]
+
+        text-[#4b6353]
+      "
+                >
                   {cards[active].description}
                 </p>
               </div>
@@ -767,7 +853,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-0">
+      <div className="mx-auto w-full max-w-[1300px] px-4 sm:px-6 lg:px-0">
         <section
           className="
       relative
@@ -786,7 +872,6 @@ export default function Home() {
 
       text-center
 
-      shadow-[0_30px_90px_rgba(56,201,92,0.28)]
 
       sm:min-h-[650px]
       sm:rounded-[32px]
@@ -1052,8 +1137,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-      </section>
-      <section className="mx-auto mb-16 w-full max-w-[1400px] px-5 sm:px-8 lg:px-0">
+      </div>
+      <div className="mx-auto mb-16 w-full max-w-[1300px] px-5 sm:px-8 lg:px-0">
         <section className="relative isolate min-h-[760px] overflow-hidden rounded-[30px] px-4 py-14 sm:rounded-[36px] sm:px-8 lg:min-h-[820px] lg:px-12 lg:py-20">
           {/* Background layer */}
           <div
@@ -1202,7 +1287,7 @@ export default function Home() {
               <div className="relative w-full overflow-hidden rounded-[28px] border-[4px] border-[#2d1d30] bg-[#faf7fc] p-5 md:p-6 shadow-[0px_0px_30px_rgba(45,29,48,0.35)]">
                 <div className="overflow-hidden rounded-[24px] border border-[#e5ddeb] bg-white p-3 shadow-[0px_14px_40px_rgba(0,0,0,0.08)]">
                   <Image
-                    src="/product-performance.avif"
+                    src="/images/product-performance.avif"
                     alt="Stakflo product dashboard"
                     width={1400}
                     height={900}
@@ -1214,8 +1299,8 @@ export default function Home() {
             </AnimationCard>
           </div>
         </section>
-      </section>
-      <section className="mx-auto mb-16 w-full max-w-[1400px] px-5 sm:px-8 lg:px-0">
+      </div>
+      <div className="mx-auto mb-16 w-full max-w-[1300px] px-5 sm:px-8 lg:px-0">
         <section className="relative isolate min-h-[760px] overflow-hidden rounded-[30px] px-5 py-14 sm:rounded-[36px] sm:px-8 lg:min-h-[820px] lg:px-12 lg:py-20">
           {/* Background layer */}
           <div
@@ -1336,159 +1421,202 @@ export default function Home() {
 
             <div
               className="
-          relative
-          mx-auto
+    relative
+    mx-auto
 
-          h-[420px]
-          w-full
-          max-w-[340px]
+    h-[420px]
+    w-full
+    max-w-[340px]
 
-          sm:h-[560px]
-          sm:max-w-[520px]
+    sm:h-[560px]
+    sm:max-w-[520px]
 
-          md:h-[640px]
-          md:max-w-[620px]
+    md:h-[640px]
+    md:max-w-[620px]
 
-          lg:h-[760px]
-          lg:max-w-[760px]
-        "
+    lg:h-[760px]
+    lg:max-w-[760px]
+  "
             >
               {/* CENTER BOX */}
 
               <div
                 className="
-            absolute
-            right-0
-            top-1/2
-            z-20
+      absolute
+      right-0
+      top-1/2
+      z-20
 
-            flex
-            h-[110px]
-            w-[110px]
+      flex
+      h-[110px]
+      w-[110px]
 
-            -translate-y-1/2
+      -translate-y-1/2
 
-            items-center
-            justify-center
+      items-center
+      justify-center
 
-            rounded-[22px]
+      rounded-[22px]
 
-            bg-[#ecfdf3]
+      bg-[#ecfdf3]
 
-            shadow-[0_20px_60px_rgba(34,197,94,0.16)]
+      shadow-[0_20px_60px_rgba(34,197,94,0.16)]
 
-            sm:h-[150px]
-            sm:w-[150px]
-            sm:rounded-[28px]
+      sm:h-[150px]
+      sm:w-[150px]
+      sm:rounded-[28px]
 
-            lg:h-[190px]
-            lg:w-[190px]
-            lg:rounded-[34px]
-          "
+      lg:h-[190px]
+      lg:w-[190px]
+      lg:rounded-[34px]
+    "
               >
                 <div
                   className="
-              flex
-              h-[60px]
-              w-[60px]
+        flex
+        h-[60px]
+        w-[60px]
 
-              items-center
-              justify-center
+        items-center
+        justify-center
 
-              rounded-[18px]
+        rounded-[18px]
 
-              bg-[linear-gradient(180deg,#4ade80_0%,#16a34a_100%)]
+        bg-[linear-gradient(180deg,#4ade80_0%,#16a34a_100%)]
 
-              text-3xl
-              font-black
-              text-white
+        text-3xl
+        font-black
+        text-white
 
-              sm:h-[80px]
-              sm:w-[80px]
-              sm:text-4xl
+        sm:h-[80px]
+        sm:w-[80px]
+        sm:text-4xl
 
-              lg:h-[100px]
-              lg:w-[100px]
-              lg:rounded-[30px]
-              lg:text-5xl
-            "
+        lg:h-[100px]
+        lg:w-[100px]
+        lg:rounded-[30px]
+        lg:text-5xl
+      "
                 >
                   S
                 </div>
               </div>
 
-              {/* SVG LINES */}
+              {/* SVG CONNECTIONS */}
 
               <svg
                 className="
-            absolute
-            inset-0
-            z-10
+      absolute
+      inset-0
+      z-10
 
-            h-full
-            w-full
-          "
+      h-full
+      w-full
+    "
                 viewBox="0 0 760 760"
                 fill="none"
                 preserveAspectRatio="xMidYMid meet"
               >
+                {/* TOP 1 */}
+
                 <path
                   id="path1"
-                  d="M 430 90 H 620 Q 660 90 660 135 V 160"
+                  d="
+        M 320 90
+        H 610
+        Q 650 90 650 130
+        V 240
+      "
                   stroke="#a7f3d0"
                   strokeWidth="3"
                   fill="none"
                   strokeLinecap="round"
                 />
+
+                {/* TOP 2 */}
 
                 <path
                   id="path2"
-                  d="M 300 170 H 590 Q 615 170 615 210 V 245"
+                  d="
+        M 90 190
+        H 560
+        Q 590 190 590 220
+        V 275
+      "
                   stroke="#a7f3d0"
                   strokeWidth="3"
                   fill="none"
                   strokeLinecap="round"
                 />
+
+                {/* CENTER 1 */}
 
                 <path
                   id="path3"
-                  d="M 350 255 H 590"
+                  d="
+        M 320 300
+        H 565
+      "
                   stroke="#a7f3d0"
                   strokeWidth="3"
                   fill="none"
                   strokeLinecap="round"
                 />
+
+                {/* CENTER 2 */}
 
                 <path
                   id="path4"
-                  d="M 260 340 H 590"
+                  d="
+        M 60 390
+        H 565
+      "
                   stroke="#a7f3d0"
                   strokeWidth="3"
                   fill="none"
                   strokeLinecap="round"
                 />
+
+                {/* CENTER 3 */}
 
                 <path
                   id="path5"
-                  d="M 340 425 H 590"
+                  d="
+        M 320 480
+        H 565
+      "
                   stroke="#a7f3d0"
                   strokeWidth="3"
                   fill="none"
                   strokeLinecap="round"
                 />
+
+                {/* BOTTOM 1 */}
 
                 <path
                   id="path6"
-                  d="M 300 515 H 615 Q 615 515 615 470 V 450"
+                  d="
+        M 90 585
+        H 590
+        Q 590 585 590 540
+        V 450
+      "
                   stroke="#a7f3d0"
                   strokeWidth="3"
                   fill="none"
                   strokeLinecap="round"
                 />
 
+                {/* BOTTOM 2 */}
+
                 <path
                   id="path7"
-                  d="M 430 610 H 660 Q 690 610 690 550 V 430"
+                  d="
+        M 320 690
+        H 650
+        Q 690 690 690 620
+        V 390
+      "
                   stroke="#a7f3d0"
                   strokeWidth="3"
                   fill="none"
@@ -1511,86 +1639,29 @@ export default function Home() {
 
               {/* ICONS */}
 
-              <div
-                className="
-            absolute
-            left-[34%]
-            top-[5%]
-            z-20
-          "
-              >
-                1
-              </div>
+              {/* TOP */}
 
-              <div
-                className="
-            absolute
-            left-[16%]
-            top-[18%]
-            z-20
-          "
-              >
-                2
-              </div>
+              <div className="absolute left-[38%] top-[6%] z-20">1</div>
 
-              <div
-                className="
-            absolute
-            left-[25%]
-            top-[31%]
-            z-20
-          "
-              >
-                3
-              </div>
+              <div className="absolute left-[0%] top-[18%] z-20">2</div>
 
-              <div
-                className="
-            absolute
-            left-[8%]
-            top-[43%]
-            z-20
-          "
-              >
-                4
-              </div>
+              {/* CENTER */}
 
-              <div
-                className="
-            absolute
-            left-[25%]
-            top-[56%]
-            z-20
-          "
-              >
-                5
-              </div>
+              <div className="absolute left-[38%] top-[33%] z-20">3</div>
 
-              <div
-                className="
-            absolute
-            left-[16%]
-            top-[69%]
-            z-20
-          "
-              >
-                6
-              </div>
+              <div className="absolute left-[0%] top-[45%] z-20">4</div>
 
-              <div
-                className="
-            absolute
-            left-[34%]
-            top-[82%]
-            z-20
-          "
-              >
-                7
-              </div>
+              <div className="absolute left-[38%] top-[57%] z-20">5</div>
+
+              {/* BOTTOM */}
+
+              <div className="absolute left-[0%] top-[71%] z-20">6</div>
+
+              <div className="absolute left-[38%] top-[85%] z-20">7</div>
             </div>
           </div>
         </section>
-      </section>
+      </div>
     </main>
   );
 }
