@@ -40,7 +40,7 @@ export default function Home() {
 
         {/* BACKGROUND GLOW */}
 
-        {/* <div
+        <div
           className="
             absolute
             left-0
@@ -49,7 +49,7 @@ export default function Home() {
             w-[320px]
             bg-green-400/30
             blur-3xl
-           
+           z-50
           "
         />
 
@@ -62,15 +62,15 @@ export default function Home() {
             w-[320px]
             bg-green-400/30
             blur-3xl
-            
+            z-50
           "
-        /> */}
+        />
         <div
           className=" pointer-events-none absolute inset-0 z-0 overflow-hidden "
           aria-hidden="true"
         >
           <Image
-            src="/images/rigthside.avif"
+            src="/images/leftside.png"
             alt=""
             width={840}
             height={900}
@@ -79,7 +79,7 @@ export default function Home() {
           />
 
           <Image
-            src="/images/leftside.avif"
+            src="/images/rightside.png"
             alt=""
             width={840}
             height={900}
@@ -92,7 +92,8 @@ export default function Home() {
 
         <div className=" relative z-10 mx-auto flex min-h-[inherit] max-w-[1120px] flex-col items-center justify-center text-center lg:pt-[140px] lg:pb-20 ">
           <div className="lg:mt-[30px] mb-8 flex w-full max-w-[300px] items-center overflow-hidden rounded-full border border-[#edf2eb] bg-white/75  text-xs font-bold uppercase text-[#7f7b85] shadow-[0_12px_35px_rgba(18,5,28,0.06)] backdrop-blur-xl sm:text-sm lg:mb-10 ">
-            <span className="text-md rounded-full  btn-glow btn-pink-glow hover px-3 py-[6px]  text-white font-medium ">
+            <span className="text-md rounded-full  
+      btn-green-light pointer-events-none  px-3 py-[6px]  text-white font-medium ">
               New
             </span>
             <ScrollText
@@ -117,10 +118,12 @@ export default function Home() {
           <AnimatedButton
             href="/contact-us"
             text="Use Stakflo Free"
-            className="  mt-12 min-w-[230px]  px-8 py-4 text-lg font-bold text-white    sm:min-w-[250px] sm:text-xl  btn-glow btn-pink-glow "
+            className="  mt-12 min-w-[230px]  px-8 py-4 text-lg font-bold text-white    sm:min-w-[250px] sm:text-xl  btn-green-glow
+      btn-green-light "
           />
         </div>
       </section>
+
       <section className="  relative isolate overflow-hidden bg-[#fbfffa] px-5   lg:px-10 lg:py-20 py-10 ">
         <div
           className="

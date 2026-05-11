@@ -224,7 +224,8 @@ const DesktopNavbar = () => {
               <AnimatedButton
                 text="Contact Us"
                 href="/contact-us"
-                className="btn-glow btn-dark-glow"
+                className="btn-green-glow
+      btn-green-dark"
               />
             </div>
           </div>
