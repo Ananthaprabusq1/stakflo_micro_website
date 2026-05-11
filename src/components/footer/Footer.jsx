@@ -9,8 +9,7 @@ const Footer = () => {
   return (
     <footer
       className="
-        bg-[var(--primary-bg)]
-        pt-20
+        bg-[linear-gradient(180deg,#FFFFFF_9%,#ECFDF3_41.3996%,#D1FAE5_82%)]
       "
     >
       {/* TOP TITLE */}
@@ -50,18 +49,6 @@ const Footer = () => {
     py-10
   "
         >
-          {/* BACKGROUND GLOW */}
-
-          <div
-            className="
-      absolute
-      inset-0
-      bg-green-400/20
-      blur-3xl
-      opacity-60
-    "
-          />
-
           {/* TEXT */}
 
           <h2
@@ -91,7 +78,6 @@ const Footer = () => {
 
       whitespace-nowrap
 
-      drop-shadow-[0px_0px_20px_rgba(60,0,80,0.45)]
 
       select-none
     "

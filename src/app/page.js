@@ -430,628 +430,830 @@ export default function Home() {
             </div>
           </AnimationCard>
         </div></section>
-
-      <div className="h-100 flex  items-center justify-center w-200 ">
-        <ActivityStackCards
-          cards={[
-            {
-              activities: [
-                {
-                  time: "09:46",
-
-                  text: "Payment received from John Doe",
-
-                  dotColor: "border-blue-400",
-                },
-              ],
-            },
-
-            {
-              activities: [
-                {
-                  time: "10:12",
-
-                  text: "New sale recorded",
-
-                  tag: "#ML-3467",
-
-                  highlight: true,
-
-                  dotColor: "border-cyan-400",
-                },
-              ],
-            },
-
-            {
-              activities: [
-                {
-                  time: "11:20",
-
-                  text: "Invoice generated",
-
-                  tag: "#INV-920",
-
-                  dotColor: "border-purple-400",
-                },
-              ],
-            },
-          ]}
-        />
-      </div>
-      <div className="h-screen">
-        <div
+      <section className="mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-0">
+        <section
           className="
-    relative
+      relative
+      isolate
+      mb-14
 
-    flex
-    items-center
-    justify-center
+      min-h-[560px]
 
-    min-h-[720px]
+      overflow-hidden
+      rounded-[26px]
 
-    overflow-hidden
+      bg-[radial-gradient(circle_at_50%_20%,#78f09a_0%,#38c95c_42%,#16a642_100%)]
 
-    px-6
-    py-20
-  "
+      px-5
+      py-14
+
+      text-center
+
+      shadow-[0_30px_90px_rgba(56,201,92,0.28)]
+
+      sm:min-h-[650px]
+      sm:rounded-[32px]
+      sm:px-8
+      sm:py-16
+
+      lg:min-h-[800px]
+      lg:rounded-[36px]
+      lg:px-12
+      lg:py-20
+    "
         >
-          {/* =========================
-      SVG CONNECTIONS
-  ========================= */}
+          {/* BACKGROUND */}
 
-          <svg
+          <div
             className="
-      absolute
-      inset-0
-      z-0
-
-      h-full
-      w-full
-    "
-            viewBox="0 0 1400 800"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs>
-              {/* ARROW */}
-
-              <marker
-                id="arrow"
-                markerWidth="12"
-                markerHeight="12"
-                refX="10"
-                refY="6"
-                orient="auto"
-              >
-                <path d="M0,0 L12,6 L0,12" fill="#7f7485" />
-              </marker>
-            </defs>
-
-            {/* LEFT TOP */}
-
-            <path
-              d="
-        M 300 180
-        V 260
-        H 500
-      "
-              stroke="#7f7485"
-              strokeWidth="2"
-              strokeDasharray="6 6"
-              fill="none"
-              markerStart="url(#arrow)"
-              strokeLinecap="round"
-            />
-
-            {/* LEFT BOTTOM */}
-
-            <path
-              d="
-        M 420 560
-        V 450
-        H 500
-      "
-              stroke="#7f7485"
-              strokeWidth="2"
-              strokeDasharray="6 6"
-              fill="none"
-              markerEnd="url(#arrow)"
-              strokeLinecap="round"
-            />
-
-            {/* RIGHT TOP */}
-
-            <path
-              d="
-        M 1100 180
-        V 260
-        H 900
-      "
-              stroke="#7f7485"
-              strokeWidth="2"
-              strokeDasharray="6 6"
-              fill="none"
-              markerStart="url(#arrow)"
-              strokeLinecap="round"
-            />
-
-            {/* RIGHT BOTTOM */}
-
-            <path
-              d="
-        M 1180 560
-        V 450
-        H 900
-      "
-              stroke="#7f7485"
-              strokeWidth="2"
-              strokeDasharray="6 6"
-              fill="none"
-              markerEnd="url(#arrow)"
-              strokeLinecap="round"
-            />
-          </svg>
-
-          {/* =========================
-      LEFT TOP CARD
-  ========================= */}
-
-          <AnimationCard
-            animation="fade-right"
-            className="
-      absolute
-      left-[6%]
-      top-[12%]
-      z-20
-    "
-          >
-            <div
-              className="
-        rounded-[22px]
-
-        bg-[#453646]
-
-        px-6
-        py-5
-
-        text-center
-
-        shadow-[0px_8px_30px_rgba(0,0,0,0.18)]
-      "
-            >
-              <h3
-                className="
-          text-lg
-          md:text-xl
-
-          font-bold
-
-          leading-[1.6]
-
-          text-white
-        "
-              >
-                Workflow
-                <br />
-                Intelligence
-              </h3>
-            </div>
-          </AnimationCard>
-
-          {/* =========================
-      LEFT BOTTOM CARD
-  ========================= */}
-
-          <AnimationCard
-            animation="fade-right"
-            delay={0.2}
-            className="
-      absolute
-      bottom-[16%]
-      left-[14%]
-      z-20
-    "
-          >
-            <div
-              className="
-        rounded-[22px]
-
-        bg-[#453646]
-
-        px-6
-        py-5
-
-        text-center
-
-        shadow-[0px_8px_30px_rgba(0,0,0,0.18)]
-      "
-            >
-              <h3
-                className="
-          text-lg
-          md:text-xl
-
-          font-bold
-
-          leading-[1.6]
-
-          text-white
-        "
-              >
-                System
-                <br />
-                Control
-              </h3>
-            </div>
-          </AnimationCard>
-
-          {/* =========================
-      RIGHT TOP CARD
-  ========================= */}
-
-          <AnimationCard
-            animation="fade-left"
-            className="
-      absolute
-      right-[6%]
-      top-[12%]
-      z-20
-    "
-          >
-            <div
-              className="
-        rounded-[22px]
-
-        bg-[#453646]
-
-        px-6
-        py-5
-
-        text-center
-
-        shadow-[0px_8px_30px_rgba(0,0,0,0.18)]
-      "
-            >
-              <h3
-                className="
-          text-lg
-          md:text-xl
-
-          font-bold
-
-          leading-[1.6]
-
-          text-white
-        "
-              >
-                Operational
-                <br />
-                Speed
-              </h3>
-            </div>
-          </AnimationCard>
-
-          {/* =========================
-      RIGHT BOTTOM CARD
-  ========================= */}
-
-          <AnimationCard
-            animation="fade-left"
-            delay={0.2}
-            className="
-      absolute
-      bottom-[16%]
-      right-[12%]
-      z-20
-    "
-          >
-            <div
-              className="
-        rounded-[22px]
-
-        bg-[#453646]
-
-        px-6
-        py-5
-
-        text-center
-
-        shadow-[0px_8px_30px_rgba(0,0,0,0.18)]
-      "
-            >
-              <h3
-                className="
-          text-lg
-          md:text-xl
-
-          font-bold
-
-          leading-[1.6]
-
-          text-white
-        "
-              >
-                Scalable
-                <br />
-                Architecture
-              </h3>
-            </div>
-          </AnimationCard>
-
-          {/* =========================
-      CENTER CARD
-  ========================= */}
-
-          <AnimationCard animation="zoom-in" className="relative z-10">
-            <div
-              className="
-        relative
-
-        w-full
-        max-w-[620px]
-
+        pointer-events-none
+        absolute
+        inset-0
+        z-0
         overflow-hidden
-
-        rounded-[28px]
-
-        border-[4px]
-        border-[#2d1d30]
-
-        bg-[#faf7fc]
-
-        p-5
-        md:p-6
-
-        shadow-[0px_0px_30px_rgba(45,29,48,0.35)]
       "
-            >
-              {/* HEADER */}
+            aria-hidden="true"
+          >
+            <ScrollText
+              items={["START TODAY IN STAKFLO", "STREAMLINE YOUR WORKFLOWS"]}
+              speed="22s"
+              direction="left"
+              containerClassName="
+          absolute
+          left-0
+          right-0
 
-              <div
-                className="
-          mb-7
+          top-6
+
+          sm:top-10
+          lg:top-16
+        "
+              className="
+          items-center
+          gap-8
+
+          text-[42px]
+          sm:text-[72px]
+          md:text-[100px]
+          lg:text-[140px]
+
+          font-semibold
+          uppercase
+          leading-none
+
+          text-white/90
+        "
+            />
+
+            {/* LEFT IMAGE */}
+
+            {/* <Image
+        src="/images/rigthside.avif"
+        alt=""
+        width={840}
+        height={900}
+        className="
+          absolute
+
+          bottom-[-6%]
+          left-[-70%]
+
+          h-[40%]
+          w-auto
+          max-w-none
+
+          object-contain
+          opacity-40
+
+          sm:left-[-42%]
+          sm:h-[58%]
+
+          md:left-[-26%]
+          md:h-[68%]
+
+          lg:bottom-[-12%]
+          lg:left-[-10%]
+          lg:h-[92%]
+
+          xl:left-[-2%]
+        "
+      /> */}
+
+            {/* RIGHT IMAGE */}
+
+            {/* <Image
+        src="/images/leftside.avif"
+        alt=""
+        width={840}
+        height={900}
+        className="
+          absolute
+
+          bottom-[-6%]
+          right-[-70%]
+
+          h-[40%]
+          w-auto
+          max-w-none
+
+          object-contain
+          opacity-40
+
+          sm:right-[-42%]
+          sm:h-[58%]
+
+          md:right-[-26%]
+          md:h-[68%]
+
+          lg:bottom-[-12%]
+          lg:right-[-10%]
+          lg:h-[92%]
+
+          xl:right-[-2%]
+        "
+      /> */}
+          </div>
+
+          {/* CONTENT */}
+
+          <div
+            className="
+        relative
+        z-10
+
+        mx-auto
+
+        flex
+        min-h-[420px]
+        max-w-[860px]
+
+        flex-col
+        items-center
+        justify-center
+
+        pt-20
+
+        sm:min-h-[500px]
+        sm:pt-28
+
+        lg:min-h-[650px]
+        lg:pt-40
+      "
+          >
+            <h2
+              className="
+          max-w-[820px]
+
+          text-3xl
+          font-semibold
+          leading-[1.15]
+
+          text-white
+
+          drop-shadow-[0_8px_24px_rgba(6,55,20,0.18)]
+
+          sm:text-5xl
+          sm:leading-tight
+
+          lg:text-[60px]
+        "
+            >
+              Start Streamlining Your Workflows Today
+            </h2>
+
+            <p
+              className="
+          mt-6
+          max-w-[620px]
+
+          text-base
+          font-medium
+          leading-7
+
+          text-white/95
+
+          sm:mt-8
+          sm:text-lg
+          sm:leading-8
+
+          lg:mt-10
+          lg:text-xl
+        "
+            >
+              Simplify processes, improve visibility, and keep your team moving
+              with faster, more structured workflows.
+            </p>
+
+            {/* BUTTONS */}
+
+            <div
+              className="
+          mt-10
 
           flex
+          w-full
+          max-w-[420px]
+
+          flex-col
           items-center
-          justify-between
+          justify-center
+
+          gap-4
+
+          sm:mt-14
+          sm:max-w-none
+          sm:flex-row
+
+          lg:mt-20
         "
-              >
-                <div>
-                  <h2
-                    className="
-              text-xl
-              md:text-2xl
+            >
+              <AnimatedButton
+                href="/contact-us"
+                text="Use Stakflo Free"
+                className="
+            w-full
 
-              font-bold
+            bg-white
 
-              text-[#2f2132]
-            "
-                  >
-                    Product Performances
-                  </h2>
+            px-8
+            py-4
 
-                  <p
-                    className="
-              mt-1
+            text-base
+            font-black
+            text-[#111827]
 
-              text-sm
+            shadow-[0_16px_34px_rgba(6,55,20,0.24)]
 
-              text-[#8c8291]
-            "
-                  >
-                    How it performs
-                  </p>
-                </div>
+            hover:bg-[#f7fff8]
 
-                <button
-                  className="
-            rounded-xl
-
-            border
-            border-[#e5ddeb]
-
-            px-4
-            py-2
-
-            text-xs
-
-            text-[#7d7191]
+            sm:w-auto
           "
-                >
-                  March 2022
-                </button>
-              </div>
+              />
 
-              {/* TABLE HEADER */}
+              <AnimatedButton
+                href="/contact-us"
+                text="View Plans"
+                className="
+            w-full
+
+            bg-[#070b14]
+
+            px-8
+            py-4
+
+            text-base
+            font-black
+            text-white
+
+            shadow-[0_16px_34px_rgba(6,55,20,0.32)]
+
+            hover:bg-[#172033]
+
+            sm:w-auto
+          "
+              />
+            </div>
+          </div>
+        </section>
+      </section>
+      <section className="mx-auto mb-16 w-full max-w-[1400px] px-5 sm:px-8 lg:px-0">
+        <section className="relative isolate min-h-[760px] overflow-hidden rounded-[30px] px-4 py-14 sm:rounded-[36px] sm:px-8 lg:min-h-[820px] lg:px-12 lg:py-20">
+          {/* Background layer */}
+          <div
+            className="pointer-events-none absolute inset-0 z-0 overflow-hidden"
+            aria-hidden="true"
+          >
+            <div className="absolute inset-x-0 top-0 h-[260px] bg-[linear-gradient(180deg,#4ade80_0%,#86efac_100%)] blur-[60px]" />
+            <ScrollText
+              items={["DESIGNED FOR MODERN WORKFLOWS", "BUILT FOR SCALE"]}
+              speed="44s"
+              direction="left"
+              containerClassName="absolute left-0 right-0 top-20 sm:top-24 lg:top-28"
+              className="items-center gap-10 text-[42px] sm:text-[72px]  md:text-[100px] lg:text-[140px] font-black uppercase leading-none"
+            />
+          </div>
+
+          {/* ↑ increased pt here — gives space between scrolling text and mockup */}
+          <div className="relative z-10 mx-auto flex min-h-[580px] w-full max-w-[1180px] items-center justify-center pt-52 sm:pt-60 lg:min-h-[680px] lg:pt-64">
+            {/* Dashed connector lines */}
+            <svg
+              className="absolute inset-0 z-[6] hidden md:block h-full w-full"
+              viewBox="0 0 1400 800"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <marker
+                  id="arrow"
+                  markerWidth="12"
+                  markerHeight="12"
+                  refX="10"
+                  refY="6"
+                  orient="auto"
+                >
+                  <path d="M0,0 L12,6 L0,12" fill="#7f7485" />
+                </marker>
+              </defs>
+
+              {/* Top-left → center */}
+              <path
+                d="M 185 258 H 430"
+                stroke="#7f7485"
+                strokeWidth="2"
+                strokeDasharray="6 6"
+                fill="none"
+                markerEnd="url(#arrow)"
+                strokeLinecap="round"
+              />
+              {/* Bottom-left → center */}
+              <path
+                d="M 185 585 V 498 H 430"
+                stroke="#7f7485"
+                strokeWidth="2"
+                strokeDasharray="6 6"
+                fill="none"
+                markerEnd="url(#arrow)"
+                strokeLinecap="round"
+              />
+              {/* Top-right → center */}
+              <path
+                d="M 1215 258 H 970"
+                stroke="#7f7485"
+                strokeWidth="2"
+                strokeDasharray="6 6"
+                fill="none"
+                markerEnd="url(#arrow)"
+                strokeLinecap="round"
+              />
+              {/* Bottom-right → center */}
+              <path
+                d="M 1215 585 V 498 H 970"
+                stroke="#7f7485"
+                strokeWidth="2"
+                strokeDasharray="6 6"
+                fill="none"
+                markerEnd="url(#arrow)"
+                strokeLinecap="round"
+              />
+            </svg>
+
+            {/* ↓ Feature cards — z-[5] so center mockup (z-20) sits ON TOP of them */}
+
+            {/* Top Left */}
+            <AnimationCard
+              animation="fade-right"
+              className="absolute left-[1%] top-[24%] z-[5]"
+            >
+              <div className="rounded-[22px] bg-[#453646] px-6 py-5 text-center shadow-[0px_8px_30px_rgba(0,0,0,0.18)]">
+                <h3 className="text-lg md:text-xl font-bold leading-[1.6] text-white">
+                  Workflow
+                  <br />
+                  Intelligence
+                </h3>
+              </div>
+            </AnimationCard>
+
+            {/* Bottom Left */}
+            <AnimationCard
+              animation="fade-right"
+              delay={0.2}
+              className="absolute bottom-[8%] left-[1%] z-[5]"
+            >
+              <div className="rounded-[22px] bg-[#453646] px-6 py-5 text-center shadow-[0px_8px_30px_rgba(0,0,0,0.18)]">
+                <h3 className="text-lg md:text-xl font-bold leading-[1.6] text-white">
+                  System
+                  <br />
+                  Control
+                </h3>
+              </div>
+            </AnimationCard>
+
+            {/* Top Right */}
+            <AnimationCard
+              animation="fade-left"
+              className="absolute right-[1%] top-[24%] z-[5]"
+            >
+              <div className="rounded-[22px] bg-[#453646] px-6 py-5 text-center shadow-[0px_8px_30px_rgba(0,0,0,0.18)]">
+                <h3 className="text-lg md:text-xl font-bold leading-[1.6] text-white">
+                  Operational
+                  <br />
+                  Speed
+                </h3>
+              </div>
+            </AnimationCard>
+
+            {/* Bottom Right */}
+            <AnimationCard
+              animation="fade-left"
+              delay={0.2}
+              className="absolute bottom-[8%] right-[1%] z-[5] w-[190px]"
+            >
+              <div className="rounded-[22px] bg-[#453646] px-6 py-5 text-center shadow-[0px_8px_30px_rgba(0,0,0,0.18)]">
+                <h3 className="text-lg md:text-xl font-bold leading-[1.6] text-white">
+                  Scalable
+                  <br />
+                  Architecture
+                </h3>
+              </div>
+            </AnimationCard>
+
+            {/* ↓ Center mockup — z-20 so it overlaps feature cards */}
+            <AnimationCard
+              animation="zoom-in"
+              className="relative z-20 w-full max-w-[720px]"
+            >
+              <div className="relative w-full overflow-hidden rounded-[28px] border-[4px] border-[#2d1d30] bg-[#faf7fc] p-5 md:p-6 shadow-[0px_0px_30px_rgba(45,29,48,0.35)]">
+                <div className="overflow-hidden rounded-[24px] border border-[#e5ddeb] bg-white p-3 shadow-[0px_14px_40px_rgba(0,0,0,0.08)]">
+                  <Image
+                    src="/product-performance.avif"
+                    alt="Stakflo product dashboard"
+                    width={1400}
+                    height={900}
+                    priority
+                    className="w-full h-auto rounded-[20px]"
+                  />
+                </div>
+              </div>
+            </AnimationCard>
+          </div>
+        </section>
+      </section>
+      <section className="mx-auto mb-16 w-full max-w-[1400px] px-5 sm:px-8 lg:px-0">
+        <section className="relative isolate min-h-[760px] overflow-hidden rounded-[30px] px-5 py-14 sm:rounded-[36px] sm:px-8 lg:min-h-[820px] lg:px-12 lg:py-20">
+          {/* Background layer */}
+          <div
+            className="pointer-events-none absolute inset-0 z-0 overflow-hidden"
+            aria-hidden="true"
+          >
+            <div className="absolute inset-x-0 top-0 h-[260px] bg-[linear-gradient(180deg,#4ade80_0%,#86efac_100%)] blur-[60px]" />
+            <ScrollText
+              items={["DESIGNED FOR MODERN WORKFLOWS", "BUILT FOR SCALE"]}
+              speed="44s"
+              direction="left"
+              containerClassName="absolute left-0 right-0 top-20 sm:top-24 lg:top-28"
+              className="items-center gap-10 text-[42px] sm:text-[72px]  md:text-[100px] lg:text-[140px] font-black uppercase leading-none "
+            />
+          </div>
+
+          {/* CONTENT */}
+
+          <div
+            className="
+        relative
+        z-10
+
+        grid
+        grid-cols-1
+        items-center
+
+        gap-16
+
+        pt-24
+
+        lg:grid-cols-2
+        lg:gap-6
+        lg:pt-44
+      "
+          >
+            {/* LEFT CONTENT */}
+
+            <div className="mx-auto max-w-[560px] lg:mx-0">
+              <h2
+                className="
+            text-center
+            text-3xl
+            font-semibold
+            leading-[1.05]
+
+            sm:text-5xl
+            md:text-6xl
+
+            lg:text-left
+          "
+              >
+                Seamless Tool
+                <br />
+                Sync Integration
+              </h2>
+
+              <p
+                className="
+            mt-6
+            max-w-[500px]
+
+            text-center
+            text-base
+            font-semibold
+            leading-7
+            text-[#4b5563]
+
+            sm:mt-8
+            sm:text-lg
+            sm:leading-8
+
+            lg:text-left
+          "
+              >
+                Connect and synchronize your essential tools effortlessly for
+                seamless operational continuity.
+              </p>
 
               <div
                 className="
-          mb-5
+            mt-10
+            flex
+            justify-center
 
-          grid
-          grid-cols-[2fr_1fr_1fr_1fr_1fr]
-
-          border-b
-          border-[#ece5f1]
-
-          pb-3
-
-          text-xs
-          md:text-sm
-
-          text-[#7d8ba3]
-        "
+            lg:justify-start
+          "
               >
-                <p>Assigned</p>
-                <p>Progress</p>
-                <p>Priority</p>
-                <p>Budget</p>
-                <p>Chart</p>
-              </div>
+                <AnimatedButton
+                  href="/contact-us"
+                  text="Use Stakflo Free"
+                  className="
+              min-w-[220px]
 
-              {/* ROWS */}
+              bg-gradient-to-b
+              from-[#2a093d]
+              to-[#14001f]
 
-              <div className="space-y-4">
-                {[
-                  {
-                    name: "Minecraf App",
-                    person: "Jason Roy",
-                    progress: "73.2%",
-                    priority: "Low",
-                    priorityColor: "bg-green-100 text-green-500",
-                  },
+              px-7
+              py-4
 
-                  {
-                    name: "Web App Project",
-                    person: "Mathew Flintoff",
-                    progress: "56.8%",
-                    priority: "Medium",
-                    priorityColor: "bg-yellow-100 text-yellow-500",
-                  },
+              text-base
+              font-bold
+              text-white
 
-                  {
-                    name: "Modernize Dashboard",
-                    person: "Anil Kumar",
-                    progress: "25%",
-                    priority: "Very high",
-                    priorityColor: "bg-blue-100 text-blue-500",
-                  },
 
-                  {
-                    name: "Dashboard Co",
-                    person: "George Cruize",
-                    progress: "96.3%",
-                    priority: "High",
-                    priorityColor: "bg-red-100 text-red-500",
-                  },
-                ].map((item, index) => (
-                  <div
-                    key={index}
-                    className="
-              grid
-              grid-cols-[2fr_1fr_1fr_1fr_1fr]
+              hover:from-green-300
+              hover:to-green-500
 
-              items-center
-
-              border-b
-              border-[#f1edf5]
-
-              pb-4
+              sm:min-w-[250px]
+              sm:text-lg
             "
-                  >
-                    {/* USER */}
-
-                    <div className="flex items-center gap-3">
-                      <div
-                        className="
-                  h-10
-                  w-10
-
-                  rounded-xl
-
-                  bg-gradient-to-br
-                  from-pink-200
-                  to-cyan-200
-                "
-                      />
-
-                      <div>
-                        <h4
-                          className="
-                    text-sm
-                    md:text-base
-
-                    font-semibold
-
-                    text-[#35283b]
-                  "
-                        >
-                          {item.name}
-                        </h4>
-
-                        <p
-                          className="
-                    text-[11px]
-
-                    text-[#94889b]
-                  "
-                        >
-                          {item.person}
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* PROGRESS */}
-
-                    <p
-                      className="
-                text-xs
-                md:text-sm
-
-                text-[#6e7c92]
-              "
-                    >
-                      {item.progress}
-                    </p>
-
-                    {/* PRIORITY */}
-
-                    <div>
-                      <span
-                        className={`
-                  rounded-md
-
-                  px-3
-                  py-1.5
-
-                  text-[10px]
-                  md:text-xs
-
-                  font-medium
-
-                  ${item.priorityColor}
-                `}
-                      >
-                        {item.priority}
-                      </span>
-                    </div>
-
-                    {/* BUDGET */}
-
-                    <p
-                      className="
-                text-xs
-                md:text-sm
-
-                text-[#52445d]
-              "
-                    >
-                      $3.5k
-                    </p>
-
-                    {/* CHART */}
-
-                    <div
-                      className="
-                h-6
-                w-14
-
-                rounded-full
-
-                bg-gradient-to-r
-                from-blue-300
-                to-indigo-400
-
-                opacity-70
-              "
-                    />
-                  </div>
-                ))}
+                />
               </div>
             </div>
-          </AnimationCard>
-        </div>
-      </div>{" "}
-    </main >
+
+            {/* RIGHT SIDE */}
+
+            <div
+              className="
+          relative
+          mx-auto
+
+          h-[420px]
+          w-full
+          max-w-[340px]
+
+          sm:h-[560px]
+          sm:max-w-[520px]
+
+          md:h-[640px]
+          md:max-w-[620px]
+
+          lg:h-[760px]
+          lg:max-w-[760px]
+        "
+            >
+              {/* CENTER BOX */}
+
+              <div
+                className="
+            absolute
+            right-0
+            top-1/2
+            z-20
+
+            flex
+            h-[110px]
+            w-[110px]
+
+            -translate-y-1/2
+
+            items-center
+            justify-center
+
+            rounded-[22px]
+
+            bg-[#ecfdf3]
+
+            shadow-[0_20px_60px_rgba(34,197,94,0.16)]
+
+            sm:h-[150px]
+            sm:w-[150px]
+            sm:rounded-[28px]
+
+            lg:h-[190px]
+            lg:w-[190px]
+            lg:rounded-[34px]
+          "
+              >
+                <div
+                  className="
+              flex
+              h-[60px]
+              w-[60px]
+
+              items-center
+              justify-center
+
+              rounded-[18px]
+
+              bg-[linear-gradient(180deg,#4ade80_0%,#16a34a_100%)]
+
+              text-3xl
+              font-black
+              text-white
+
+              sm:h-[80px]
+              sm:w-[80px]
+              sm:text-4xl
+
+              lg:h-[100px]
+              lg:w-[100px]
+              lg:rounded-[30px]
+              lg:text-5xl
+            "
+                >
+                  S
+                </div>
+              </div>
+
+              {/* SVG LINES */}
+
+              <svg
+                className="
+            absolute
+            inset-0
+            z-10
+
+            h-full
+            w-full
+          "
+                viewBox="0 0 760 760"
+                fill="none"
+                preserveAspectRatio="xMidYMid meet"
+              >
+                <path
+                  id="path1"
+                  d="M 430 90 H 620 Q 660 90 660 135 V 160"
+                  stroke="#a7f3d0"
+                  strokeWidth="3"
+                  fill="none"
+                  strokeLinecap="round"
+                />
+
+                <path
+                  id="path2"
+                  d="M 300 170 H 590 Q 615 170 615 210 V 245"
+                  stroke="#a7f3d0"
+                  strokeWidth="3"
+                  fill="none"
+                  strokeLinecap="round"
+                />
+
+                <path
+                  id="path3"
+                  d="M 350 255 H 590"
+                  stroke="#a7f3d0"
+                  strokeWidth="3"
+                  fill="none"
+                  strokeLinecap="round"
+                />
+
+                <path
+                  id="path4"
+                  d="M 260 340 H 590"
+                  stroke="#a7f3d0"
+                  strokeWidth="3"
+                  fill="none"
+                  strokeLinecap="round"
+                />
+
+                <path
+                  id="path5"
+                  d="M 340 425 H 590"
+                  stroke="#a7f3d0"
+                  strokeWidth="3"
+                  fill="none"
+                  strokeLinecap="round"
+                />
+
+                <path
+                  id="path6"
+                  d="M 300 515 H 615 Q 615 515 615 470 V 450"
+                  stroke="#a7f3d0"
+                  strokeWidth="3"
+                  fill="none"
+                  strokeLinecap="round"
+                />
+
+                <path
+                  id="path7"
+                  d="M 430 610 H 660 Q 690 610 690 550 V 430"
+                  stroke="#a7f3d0"
+                  strokeWidth="3"
+                  fill="none"
+                  strokeLinecap="round"
+                />
+
+                {/* MOVING DOTS */}
+
+                {[1, 2, 3, 4, 5, 6, 7].map((item, index) => (
+                  <circle key={item} r="5" fill="#22c55e">
+                    <animateMotion
+                      dur={`${2.4 + index * 0.2}s`}
+                      repeatCount="indefinite"
+                    >
+                      <mpath href={`#path${item}`} />
+                    </animateMotion>
+                  </circle>
+                ))}
+              </svg>
+
+              {/* ICONS */}
+
+              <div
+                className="
+            absolute
+            left-[34%]
+            top-[5%]
+            z-20
+          "
+              >
+                1
+              </div>
+
+              <div
+                className="
+            absolute
+            left-[16%]
+            top-[18%]
+            z-20
+          "
+              >
+                2
+              </div>
+
+              <div
+                className="
+            absolute
+            left-[25%]
+            top-[31%]
+            z-20
+          "
+              >
+                3
+              </div>
+
+              <div
+                className="
+            absolute
+            left-[8%]
+            top-[43%]
+            z-20
+          "
+              >
+                4
+              </div>
+
+              <div
+                className="
+            absolute
+            left-[25%]
+            top-[56%]
+            z-20
+          "
+              >
+                5
+              </div>
+
+              <div
+                className="
+            absolute
+            left-[16%]
+            top-[69%]
+            z-20
+          "
+              >
+                6
+              </div>
+
+              <div
+                className="
+            absolute
+            left-[34%]
+            top-[82%]
+            z-20
+          "
+              >
+                7
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
   );
 }
