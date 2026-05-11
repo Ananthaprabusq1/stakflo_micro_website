@@ -1,127 +1,122 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FiArrowUpRight } from "react-icons/fi";
 
 import { navLinks } from "./navLinks";
 import AnimatedButton from "../ui/AnimatedButton";
 
 const DesktopNavbar = () => {
+  const [hideSideItems, setHideSideItems] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const shouldHide = window.scrollY > 1200;
+
+      setHideSideItems((prev) => (prev !== shouldHide ? shouldHide : prev));
+    };
+
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <header
       className="
         hidden
         lg:block
-        sticky
-        top-0
-        z-50
-
+        mt-4
+        z-[999]
       "
     >
       <div className="mx-auto w-full max-w-[1400px]">
-        <div
-          className="
-          relative
-          overflow-hidden
-          bg-[var(--primary-bg)]
-        "
-        >
-          {/* BACKGROUND GLOW */}
-
-          {/* <div
-            className="
-            absolute
-            left-0
-            top-0
-            h-full
-            w-[320px]
-            bg-green-400/30
-            blur-3xl
-          "
-          /> */}
-
-          {/* <div
-            className="
-            absolute
-            right-0
-            top-0
-            h-full
-            w-[320px]
-            bg-green-400/30
-            blur-3xl
-          "
-          /> */}
-
+        <div className="relative">
           {/* NAVBAR CONTAINER */}
 
           <div
             className="
-            relative
-            flex
-            items-center
-            justify-between
-            px-10
-            py-9
-          "
+              relative
+              flex
+              items-center
+              justify-between
+              px-10
+              py-6
+            "
           >
             {/* LEFT LOGO */}
 
             <Link
               href="/"
-              className="
-              flex
-              items-center
-              gap-4
-              z-10
-            "
+              className={`
+                flex
+                items-center
+                gap-4
+                z-10
+
+                transition-all
+                duration-500
+
+                ${
+                  hideSideItems
+                    ? "opacity-0 -translate-x-10 pointer-events-none"
+                    : "opacity-100 translate-x-0"
+                }
+              `}
             >
               <Image
                 src="/images/product-stakflo.webp"
                 alt="Stakflo Logo"
-                width={60}
-                height={60}
+                width={40}
+                height={40}
                 priority
                 className="object-contain"
               />
 
-              <h2
+              <h3
                 className="
-                text-5xl
-                font-bold
-                tracking-tight
-                text-[var(--secondary-bg)]
-              "
+                  text-5xl
+                  font-bold
+                  tracking-tight
+                  text-[var(--secondary-bg)]
+                "
               >
                 Stakflo
-              </h2>
+              </h3>
             </Link>
 
             {/* CENTER NAV */}
 
             <nav
               className="
-              absolute
-              left-1/2
-              -translate-x-1/2
-            "
+                fixed
+                left-1/2
+                top-5
+                z-[999]
+                -translate-x-1/2
+              "
             >
               <ul
                 className="
-                flex
-                items-center
-                gap-12
-                rounded-full
-                border
-                border-white/30
-                bg-green-50
-                backdrop-blur-2xl
-                px-10
-                py-4
-                shadow-lg
-
-              "
+                  flex
+                  items-center
+                  gap-10
+                  rounded-full
+                  border
+                  border-white/30
+                  bg-white/70
+                  backdrop-blur-2xl
+                  px-10
+                  py-3
+                  shadow-lg
+                  mt-5
+                "
               >
                 {navLinks
                   .filter((item) => !item.hideDesktop)
@@ -130,22 +125,22 @@ const DesktopNavbar = () => {
                       <Link
                         href={item.href}
                         className="
-    relative
-    overflow-hidden
-    h-6
-    flex
-    items-center
-  "
+                          relative
+                          flex
+                          h-6
+                          items-center
+                          overflow-hidden
+                        "
                       >
                         <motion.div
                           initial="rest"
                           whileHover="hover"
                           animate="rest"
                           className="
-      relative
-      overflow-hidden
-      h-6
-    "
+                            relative
+                            h-6
+                            overflow-hidden
+                          "
                         >
                           {/* DEFAULT TEXT */}
 
@@ -166,11 +161,11 @@ const DesktopNavbar = () => {
                               ease: "easeInOut",
                             }}
                             className="
-        block
-        text-[17px]
-        font-medium
-        text-[var(--secondary-bg)]
-      "
+                              block
+                              text-[17px]
+                              font-medium
+                              text-[var(--secondary-bg)]
+                            "
                           >
                             {item.label}
                           </motion.span>
@@ -194,14 +189,14 @@ const DesktopNavbar = () => {
                               ease: "easeInOut",
                             }}
                             className="
-        absolute
-        left-0
-        top-0
-        block
-        text-[17px]
-        font-medium
-        text-[var(--primary-color)]
-      "
+                              absolute
+                              left-0
+                              top-0
+                              block
+                              text-[17px]
+                              font-medium
+                              text-[var(--primary-color)]
+                            "
                           >
                             {item.label}
                           </motion.span>
@@ -214,53 +209,24 @@ const DesktopNavbar = () => {
 
             {/* RIGHT BUTTON */}
 
-            {/* <button
-            className="
-              flex
-              items-center
-              gap-3
-              rounded-full
-              bg-[var(--secondary-bg)]
-             px-3 py-2
-              text-lg
-              font-semibold
-              text-white
-              shadow-[0px_10px_40px_rgba(20,0,30,0.45)]
-              transition-all
-              duration-300
-              hover:scale-105
-            "
-          >
-            Contact Us
-            <FiArrowUpRight className="text-3xl" />
-          </button> */}
-            <AnimatedButton
-              text="Contact Us"
-              href="/contact-us"
-              className="
-    px-3
-    py-1
-    text-lg
-    font-semibold
-    text-white
+            <div
+              className={`
+                transition-all
+                duration-500
 
-
-
-    bg-gradient-to-b
-    from-[#2a093d]
-    to-[#14001f]
-
-    shadow-[0px_10px_30px_rgba(0,0,0,0.35)]
-
-    hover:from-green-300
-
-    hover:to-green-500
-
-    hover:shadow-[0px_0px_50px_rgba(255,0,200,0.45)]
-
-
-  "
-            />
+                ${
+                  hideSideItems
+                    ? "opacity-0 translate-x-10 pointer-events-none"
+                    : "opacity-100 translate-x-0"
+                }
+              `}
+            >
+              <AnimatedButton
+                text="Contact Us"
+                href="/contact-us"
+                className="btn-glow btn-dark-glow"
+              />
+            </div>
           </div>
         </div>
       </div>

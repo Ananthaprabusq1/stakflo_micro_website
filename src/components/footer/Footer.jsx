@@ -10,7 +10,7 @@ const Footer = () => {
     <footer
       className="
         bg-[var(--primary-bg)]
-        mt-20
+        pt-20
       "
     >
       {/* TOP TITLE */}

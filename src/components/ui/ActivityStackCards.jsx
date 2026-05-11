@@ -54,7 +54,7 @@ export default function ActivityStackCards({ cards = [] }) {
 
             <div
               className="
-                rounded-[28px]
+                rounded-[10px]
 
                 border
                 border-[#ead8f2]

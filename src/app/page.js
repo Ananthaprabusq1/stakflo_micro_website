@@ -5,11 +5,41 @@ import ActivityStackCards from "@/components/ui/ActivityStackCards";
 import AnimatedButton from "@/components/ui/AnimatedButton";
 import ScrollText from "@/components/ui/ScrollText";
 import PortalRingCard from "@/components/ui/PortalRingCard";
+import { IoSettingsOutline } from "react-icons/io5";
+import { LuCircleCheck } from "react-icons/lu";
 
 export default function Home() {
   return (
     <main>
-      <section className="  relative isolate min-h-[calc(100svh-200px)] overflow-hidden bg-[#fbfffa] px-5 py-10 sm:px-8 sm:py-12 lg:px-10 lg:min-h-[calc(100svh-138px)]  lg:py-0 ">
+      <section className="  relative isolate min-h-screen overflow-hidden bg-[#fbfffa] px-2  sm:px-8 sm:py-12 lg:px-10   lg:py-0 ">
+        {/* <section className="  relative isolate min-h-[calc(100svh-200px)] overflow-hidden bg-[#fbfffa] px-5 py-10 sm:px-8 sm:py-12 lg:px-10 lg:min-h-[calc(100svh-138px)]  lg:py-0 "> */}
+        {/* BACKGROUND GLOW */}
+
+        {/* <div
+          className="
+            absolute
+            left-0
+            top-0
+            h-full
+            w-[320px]
+            bg-green-400/30
+            blur-3xl
+           
+          "
+        />
+
+        <div
+          className="
+            absolute
+            right-0
+            top-0
+            h-full
+            w-[320px]
+            bg-green-400/30
+            blur-3xl
+            
+          "
+        /> */}
         <div
           className=" pointer-events-none absolute inset-0 z-0 overflow-hidden "
           aria-hidden="true"
@@ -32,28 +62,29 @@ export default function Home() {
             className=" absolute bottom-[-9%] right-[-62%] h-[58%] w-auto max-w-none object-contain opacity-95 sm:right-[-38%] sm:h-[72%] md:right-[-24%] md:h-[82%] lg:bottom-[-16%] lg:right-[-11%] lg:h-[118%] xl:right-[-2%] 2xl:right-0 "
           />
 
-          <div className=" absolute inset-x-[6%] top-0 h-32 rounded-full bg-white/80 blur-3xl sm:h-44 " />
+          <div className=" absolute inset-x-[6%] top-0 h-32 rounded-full lg:bg-white/80 bg-green-200 blur-3xl sm:h-44 " />
         </div>
 
-        <div className=" relative z-10 mx-auto flex min-h-[inherit] max-w-[1120px] flex-col items-center justify-center text-center ">
-          <div className=" mb-8 flex max-w-full items-center overflow-hidden rounded-full border border-[#edf2eb] bg-white/75 p-1 text-xs font-bold uppercase text-[#7f7b85] shadow-[0_12px_35px_rgba(18,5,28,0.06)] backdrop-blur-xl sm:text-sm lg:mb-10 ">
-            <span className=" rounded-full bg-[var(--primary-color)] px-4 py-2 text-white ">
+        <div className=" relative z-10 mx-auto flex min-h-[inherit] max-w-[1120px] flex-col items-center justify-center text-center lg:pt-[140px] lg:pb-20 ">
+          <div className="lg:mt-[30px] mb-8 flex w-full max-w-[300px] items-center overflow-hidden rounded-full border border-[#edf2eb] bg-white/75  text-xs font-bold uppercase text-[#7f7b85] shadow-[0_12px_35px_rgba(18,5,28,0.06)] backdrop-blur-xl sm:text-sm lg:mb-10 ">
+            <span className="text-md rounded-full  btn-glow btn-pink-glow hover px-3 py-[6px]  text-white font-medium ">
               New
             </span>
             <ScrollText
-              items={["Optimize.", "Automate.", "Scale."]}
-              speed="5s"
+              items={["Optimize.", "Automate.", "Scale.", "", "", ""]}
+              speed="3s"
               direction="left"
               containerClassName=" w-[min(17rem,calc(100vw-8rem))] sm:w-80 "
-              className=" items-center text-[#7f7b85] "
+              className=" items-center text-black font-light "
+            // className=" items-center text-[#7f7b85] "
             ></ScrollText>
           </div>
 
-          <h1 className="  max-w-[900px] text-5xl font-semibold leading-[0.95] tracking-tight text-[#16071B] sm:text-6xl md:text-7xl lg:text-[70px]">
+          <h1 className="max-w-[900px] font-[600] lg:text-[72px] md:text-[40px] text-[30px] lg:text-center lg:leading-[86px] tracking-tight text-[#16071B]">
             Optimize, Automate, and Scale with Stakflo.
           </h1>
 
-          <p className=" mt-8 max-w-[600px] text-lg font-medium leading-[1.3] text-[#5C4F5E] lg:text-xl ">
+          <p className=" mt-8 max-w-[600px] md:text-lg font-medium leading-[1.3] text-[#5C4F5E] lg:text-xl text-md ">
             From simplifying operations to automating processes, Stakflo adapts
             to the way modern teams work, grow, and scale.
           </p>
@@ -61,11 +92,11 @@ export default function Home() {
           <AnimatedButton
             href="/contact-us"
             text="Use Stakflo Free"
-            className="  mt-12 min-w-[230px] bg-gradient-to-b from-[#2a093d] to-[#14001f] px-8 py-4 text-lg font-bold text-white shadow-[0_16px_35px_rgba(217,67,255,0.32)]  hover:from-green-300  hover:to-green-500 sm:min-w-[250px] sm:text-xl "
+            className="  mt-12 min-w-[230px]  px-8 py-4 text-lg font-bold text-white    sm:min-w-[250px] sm:text-xl  btn-glow btn-pink-glow "
           />
         </div>
       </section>
-      <section className=" relative isolate overflow-hidden bg-[#fbfffa] px-5 pb-12 pt-8 sm:px-8 sm:pb-16 lg:px-10 lg:pb-24 lg:pt-12  ">
+      <section className=" relative isolate overflow-hidden bg-[#fbfffa] px-5 pb-12  sm:px-8 sm:pb-16 lg:px-10 lg:pb-24 lg:pt-12  ">
         <div
           className="
             relative
@@ -80,24 +111,28 @@ export default function Home() {
     max-w-[1200px]
     mx-auto
   "
-            innerClassName="
-    p-20
-  "
+            innerClassName=""
           ><div
             className="
-              mx-auto
-              overflow-hidden
-              rounded-[24px]
-              border-[10px]
-              border-[#f5e9fb]
-              bg-white
-              shadow-[0_30px_90px_rgba(114,45,154,0.18)]
-              sm:rounded-[30px]
-              sm:border-[14px]
-              lg:rounded-[36px]
-              lg:border-[22px]
-              max-w-[1300px]
-            "
+  mx-auto
+  overflow-hidden
+  rounded-[24px]
+
+  border-[10px]
+  border-[#c8f0cf]
+
+  bg-white
+
+  shadow-[0_30px_90px_rgba(57,181,74,0.22)]
+
+  sm:rounded-[30px]
+  sm:border-[14px]
+
+  lg:rounded-[36px]
+  lg:border-[22px]
+
+  max-w-[1300px]
+"
           >
 
               <Image
@@ -115,16 +150,17 @@ export default function Home() {
             </div></PortalRingCard>
         </div>
       </section>
-      <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_0.9fr] gap-8 p-5 ">
-        {/* LEFT CARD */}
-        <AnimationCard animation="fade-right" className="h-full">
-          <div className=" relative overflow-hidden rounded-[36px] border  border-[#efc7ff] bg-[#f9f4fb]p-8  md:p-10  min-h-[560px] ">
-            {/* BACKGROUND GLOW */}
-            <div className="  absolut  right-[-120px  top-[100px]  h-[420px  w-[420px]  rounded-full  bg-pink-300/20  blur-3xl " />
-            {/* ICON */}
+      <section className="   bg-[#fbfffa] pb-50 ">
+        <div className="w-full isolate lg:max-w-[1400px] mx-auto  grid grid-cols-1 lg:grid-cols-[1.3fr_0.9fr] gap-8 p-5 ">
+          {/* LEFT CARD */}
+          <AnimationCard animation="fade-right" className="h-full ">
+            <div className=" relative overflow-hidden rounded-[20px] border border-dashed   border-green-500 bg-green-50 p-8  md:p-10  min-h-[560px] ">
+              {/* BACKGROUND GLOW */}
+              <div className="  absolut  right-[-120px  top-[100px]  h-[420px  w-[420px]  rounded-full  bg-green-300/20  blur-3xl " />
+              {/* ICON */}
 
-            <div
-              className="
+              <div
+                className="
           relative
           z-10
 
@@ -139,34 +175,18 @@ export default function Home() {
 
           rounded-[20px]
 
-          bg-[#efdaf7]
+         bg-white 
         "
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="currentColor"
-                className="
-            h-8
-            w-8
-            text-fuchsia-500
-          "
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M10.5 6h3m-7.5 6h15m-13.5 6h12"
-                />
-              </svg>
-            </div>
 
-            {/* CONTENT */}
+                <IoSettingsOutline className="text-4xl text-green-400" />
+              </div>
 
-            <div className="relative z-10">
-              <h2
-                className="
+              {/* CONTENT */}
+
+              <div className="relative z-10">
+                <h2
+                  className="
             mb-5
 
             text-2xl
@@ -179,12 +199,12 @@ export default function Home() {
 
             text-[#1a0826]
           "
-              >
-                Smart Workflow Intelligence
-              </h2>
+                >
+                  Smart Workflow Intelligence
+                </h2>
 
-              <p
-                className="
+                <p
+                  className="
             max-w-[620px]
 
             text-base
@@ -194,158 +214,98 @@ export default function Home() {
 
             text-[#655b69]
           "
-              >
-                Organize, manage, and scale your team’s work through a
-                structured, distraction-free workspace designed for clarity.
-              </p>
-            </div>
-
-            {/* INNER CARD */}
-
-            <AnimationCard
-              animation="fade-up"
-              delay={0.2}
-              className="
-          absolute
-          bottom-6
-          left-6
-          right-6
-        "
-            >
-              <div
-                className="
-            rounded-[28px]
-
-            border
-            border-[#ead8f2]
-
-            bg-white
-
-            p-6
-            md:p-8
-
-            shadow-[0px_20px_60px_rgba(0,0,0,0.06)]
-          "
-              >
-                <h3
-                  className="
-              mb-8
-
-              text-xl
-              md:text-2xl
-
-              font-bold
-
-              text-[#2d2331]
-            "
                 >
-                  Daily activities
-                </h3>
-
-                <div className="space-y-6">
-                  <div className="flex items-center gap-4">
-                    <span
-                      className="
-                  text-sm
-                  md:text-base
-
-                  text-[#7f7485]
-                "
-                    >
-                      09:46
-                    </span>
-
-                    <div
-                      className="
-                  h-4
-                  w-4
-
-                  rounded-full
-
-                  border-2
-                  border-blue-400
-                "
-                    />
-
-                    <p
-                      className="
-                  text-sm
-                  md:text-base
-
-                  text-[#6d6472]
-                "
-                    >
-                      Payment received from John Doe of $385.90
-                    </p>
-                  </div>
-
-                  <div className="flex items-center gap-4">
-                    <span
-                      className="
-                  text-sm
-                  md:text-base
-
-                  text-[#7f7485]
-                "
-                    >
-                      09:46
-                    </span>
-
-                    <div
-                      className="
-                  h-4
-                  w-4
-
-                  rounded-full
-
-                  border-2
-                  border-cyan-400
-                "
-                    />
-
-                    <p
-                      className="
-                  text-sm
-                  md:text-base
-
-                  font-semibold
-
-                  text-[#2d2331]
-                "
-                    >
-                      New sale recorded
-                      <span className="text-blue-500"> #ML-3467</span>
-                    </p>
-                  </div>
-                </div>
+                  Organize, manage, and scale your team’s work through a
+                  structured, distraction-free workspace designed for clarity.
+                </p>
               </div>
-            </AnimationCard>
-          </div>
-        </AnimationCard>
-        {/* RIGHT CARD */}
-        <AnimationCard animation="fade-left" className="h-full">
-          <div
-            className="
+
+              {/* INNER CARD */}
+              <div className=" relative ">
+
+
+                <AnimationCard
+                  animation="fade-up"
+                  delay={0.2}
+                  className="
+          absolute top-19
+          left-0
+          right-0
+        "
+                >
+
+                  <ActivityStackCards
+                    cards={[
+                      {
+                        activities: [
+                          {
+                            time: "09:46",
+
+                            text: "Payment received from John Doe",
+
+                            dotColor: "border-blue-400",
+                          },
+                        ],
+                      },
+
+                      {
+                        activities: [
+                          {
+                            time: "10:12",
+
+                            text: "New sale recorded",
+
+                            tag: "#ML-3467",
+
+                            highlight: true,
+
+                            dotColor: "border-cyan-400",
+                          },
+                        ],
+                      },
+
+                      {
+                        activities: [
+                          {
+                            time: "11:20",
+
+                            text: "Invoice generated",
+
+                            tag: "#INV-920",
+
+                            dotColor: "border-purple-400",
+                          },
+                        ],
+                      },
+                    ]}
+                  />
+
+                </AnimationCard>
+              </div></div>
+          </AnimationCard>
+          {/* RIGHT CARD */}
+          <AnimationCard animation="fade-left" className="h-full">
+            <div
+              className="
         relative
         overflow-hidden
 
         rounded-[36px]
 
         border
-        border-[#efc7ff]
-
-        bg-[#f9f4fb]
+        border-dashed
+        border-green-500 bg-green-50
 
         p-8
         md:p-10
 
         min-h-[560px]
       "
-          >
-            {/* GLOW */}
+            >
+              {/* GLOW */}
 
-            <div
-              className="
+              <div
+                className="
           absolute
           bottom-[-80px]
           right-[-80px]
@@ -355,22 +315,22 @@ export default function Home() {
 
           rounded-full
 
-          bg-pink-300/20
+          bg-green-300/20
 
           blur-3xl
         "
-            />
+              />
 
-            {/* CONTENT */}
+              {/* CONTENT */}
 
-            <div className="relative z-10">
-              <h2
-                className="
+              <div className="relative z-10">
+                <h2
+                  className="
             mb-8
 
-            text-[48px]
-            md:text-[72px]
-            lg:text-[88px]
+            text-[38px]
+            md:text-[40px]
+            lg:text-[60px]
 
             font-black
 
@@ -380,16 +340,16 @@ export default function Home() {
 
             text-[#18041f]
           "
-              >
-                2x Faster
-              </h2>
+                >
+                  2x Faster
+                </h2>
 
-              <h3
-                className="
+                <h3
+                  className="
             mb-6
 
-            text-2xl
-            md:text-3xl
+            text-xl
+            md:text-2xl
 
             font-black
 
@@ -397,12 +357,12 @@ export default function Home() {
 
             text-[#1f1026]
           "
-              >
-                Move Work Forward Faster
-              </h3>
+                >
+                  Move Work Forward Faster
+                </h3>
 
-              <p
-                className="
+                <p
+                  className="
             mb-20
 
             text-base
@@ -412,283 +372,65 @@ export default function Home() {
 
             text-[#6c6170]
           "
-              >
-                Accelerate planning, collaboration, and execution by reducing
-                friction, confusion, and unnecessary back-and-forth.
-              </p>
+                >
+                  Accelerate planning, collaboration, and execution by reducing
+                  friction, confusion, and unnecessary back-and-forth.
+                </p>
 
-              {/* LIST */}
+                {/* LIST */}
 
-              <div className="space-y-7">
-                <div className="flex items-center gap-4">
-                  <div
-                    className="
+                <div className="space-y-7">
+                  <div className="flex items-center gap-4">
+                    <LuCircleCheck className="
                 flex
                 h-7
                 w-7
                 items-center
                 justify-center
+                font-thin
+              "/>
 
-                rounded-full
-
-                border
-                border-[#2a1d30]
-
-                text-sm
-              "
-                  >
-                    ✦
-                  </div>
-
-                  <p
-                    className="
+                    <p
+                      className="
                 text-lg
                 md:text-xl
 
                 text-[#352a39]
               "
-                  >
-                    Faster decision and approval cycles
-                  </p>
-                </div>
+                    >
+                      Faster decision and approval cycles
+                    </p>
+                  </div>
 
-                <div className="flex items-center gap-4">
-                  <div
-                    className="
+                  <div className="flex items-center gap-4">
+
+                    <LuCircleCheck className="
                 flex
                 h-7
                 w-7
                 items-center
                 justify-center
+                font-thin
+              "/>
 
-                rounded-full
 
-                border
-                border-[#2a1d30]
-
-                text-sm
-              "
-                  >
-                    ✦
-                  </div>
-
-                  <p
-                    className="
+                    <p
+                      className="
                 text-lg
                 md:text-xl
 
                 text-[#352a39]
               "
-                  >
-                    Real-time progress alignment
-                  </p>
+                    >
+                      Real-time progress alignment
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </AnimationCard>
-      </div>
-      <div className="mx-auto w-full max-w-[1400px]">
-        <section
-          className="
-            relative
-            isolate
-            mb-14
-            min-h-[540px]
-            overflow-hidden
-            rounded-[30px]
-            bg-[radial-gradient(circle_at_50%_20%,#78f09a_0%,#38c95c_42%,#16a642_100%)]
-            px-5
-            py-16
-            text-center
-            shadow-[0_30px_90px_rgba(56,201,92,0.28)]
-            sm:rounded-[36px]
-            sm:px-8
-            lg:min-h-[660px]
-            lg:px-12
-          "
-        >
-          <div
-            className="
-              pointer-events-none
-              absolute
-              inset-0
-              z-0
-              overflow-hidden
-            "
-            aria-hidden="true"
-          >
-            <ScrollText
-              items={["START TODAY IN STAKFLO", "STREAMLINE YOUR WORKFLOWS"]}
-              speed="22s"
-              direction="left"
-              containerClassName="
-                absolute
-                left-0
-                right-0
-                top-10
-                opacity-35
-                sm:top-12
-                lg:top-16
-              "
-              className="
-                items-center
-                gap-10
-                text-[72px]
-                font-black
-                uppercase
-                leading-none
-                text-white
-                sm:text-[104px]
-                md:text-[128px]
-                lg:text-[150px]
-              "
-            />
+          </AnimationCard>
+        </div></section>
 
-            {/* <Image
-              src="/images/rigthside.avif"
-              alt=""
-              width={840}
-              height={900}
-              className="
-                absolute
-                bottom-[-12%]
-                left-[-54%]
-                h-[54%]
-                w-auto
-                max-w-none
-                object-contain
-                opacity-55
-                sm:left-[-34%]
-                sm:h-[70%]
-                md:left-[-24%]
-                lg:left-[-10%]
-                lg:h-[92%]
-                xl:left-[-2%]
-              "
-            />
-
-            <Image
-              src="/images/leftside.avif"
-              alt=""
-              width={840}
-              height={900}
-              className="
-                absolute
-                bottom-[-12%]
-                right-[-54%]
-                h-[54%]
-                w-auto
-                max-w-none
-                object-contain
-                opacity-55
-                sm:right-[-34%]
-                sm:h-[70%]
-                md:right-[-24%]
-                lg:right-[-10%]
-                lg:h-[92%]
-                xl:right-[-2%]
-              "
-            /> */}
-          </div>
-
-          <div
-            className="
-              relative
-              z-10
-              mx-auto
-              flex
-              min-h-[420px]
-              max-w-[760px]
-              flex-col
-              items-center
-              justify-center
-              pt-28
-              sm:pt-36
-              lg:pt-44
-              lg:min-h-[520px]
-            "
-          >
-            <h2
-              className="
-                max-w-[720px]
-                text-4xl
-                font-black
-                leading-tight
-                text-white
-                drop-shadow-[0_8px_24px_rgba(6,55,20,0.18)]
-                sm:text-5xl
-                md:text-6xl
-              "
-            >
-              Start Streamlining Your Workflows Today
-            </h2>
-
-            <p
-              className="
-                mt-7
-                max-w-[560px]
-                text-base
-                font-bold
-                leading-7
-                text-white/90
-                sm:text-lg
-              "
-            >
-              Simplify processes, improve visibility, and keep your team moving
-              with faster, more structured workflows.
-            </p>
-
-            <div
-              className="
-                mt-12
-                flex
-                w-full
-                flex-col
-                items-center
-                justify-center
-                gap-5
-                sm:w-auto
-                sm:flex-row
-              "
-            >
-              <AnimatedButton
-                href="/contact-us"
-                text="Use Stakflo Free"
-                className="
-                  w-full
-                  bg-white
-                  px-8
-                  py-4
-                  text-base
-                  font-black
-                  text-[#111827]
-                  shadow-[0_16px_34px_rgba(6,55,20,0.24)]
-                  hover:bg-[#f7fff8]
-                  sm:w-auto
-                "
-              />
-
-              <AnimatedButton
-                href="/contact-us"
-                text="View Plans"
-                className="
-                  w-full
-                  bg-[#070b14]
-                  px-8
-                  py-4
-                  text-base
-                  font-black
-                  text-white
-                  shadow-[0_16px_34px_rgba(6,55,20,0.32)]
-                  hover:bg-[#172033]
-                  sm:w-auto
-                "
-              />
-            </div>
-          </div>
-        </section>
-      </div>
       <div className="h-100 flex  items-center justify-center w-200 ">
         <ActivityStackCards
           cards={[
@@ -1310,6 +1052,6 @@ export default function Home() {
           </AnimationCard>
         </div>
       </div>{" "}
-    </main>
+    </main >
   );
 }
