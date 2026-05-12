@@ -34,7 +34,7 @@ export default function CookieBanner() {
         aria-label="Open cookie settings"
         aria-expanded={isBannerOpen}
         aria-controls="cookie-banner-panel"
-        className="micro-press pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full border border-white/20 text-white bg-[#12C951]  shadow-[0_18px_40px_rgba(17,24,39,0.28)] transition-colors focus:outline-none focus:ring-2 focus:ring-[#12C951] focus:ring-offset-2 cursor-pointer"
+        className="micro-press pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full border border-white/20 text-white bg-[#155836]  shadow-[0_18px_40px_rgba(17,24,39,0.28)] transition-colors focus:outline-none focus:ring-2 focus:ring-[#12C951] focus:ring-offset-2 cursor-pointer"
       >
         <FaCookieBite size={20} />
       </button>

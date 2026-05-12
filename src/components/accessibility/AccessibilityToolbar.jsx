@@ -215,7 +215,7 @@ export default function AccessibilityToolbar() {
                   text-lg
                   transition-transform
                   duration-500
-                  group-hover:rotate-180
+                  group-hover:-rotate-270
                 "
               />
             </button>
