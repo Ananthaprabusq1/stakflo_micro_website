@@ -8,6 +8,8 @@ import ScrollText from "@/components/ui/ScrollText";
 import PortalRingCard from "@/components/ui/PortalRingCard";
 import { IoSettingsOutline } from "react-icons/io5";
 import { LuCircleCheck } from "react-icons/lu";
+import { motion } from "framer-motion";
+
 const cards = [
   {
     id: 1,
@@ -19,25 +21,63 @@ const cards = [
   {
     id: 2,
     title: "Accelerated Execution",
-    description:
-      "Execute projects faster with streamlined automation systems.",
+    description: "Execute projects faster with streamlined automation systems.",
   },
 
   {
     id: 3,
     title: "Scalable Performance",
-    description:
-      "Scale infrastructure efficiently without losing performance.",
+    description: "Scale infrastructure efficiently without losing performance.",
   },
 ];
 
+// const floatingCards = [
+//   {
+//     title: "Workflow\nIntelligence",
+//     className: "left-[2%] top-[18%]",
+//     path: "M180 160 H360",
+//   },
+//   {
+//     title: "System\nControl",
+//     className: "left-[1%] bottom-[18%]",
+//     path: "M240 470 H420",
+//   },
+//   {
+//     title: "Operational\nSpeed",
+//     className: "right-[5%] top-[18%]",
+//     path: "M760 160 H560",
+//   },
+//   {
+//     title: "Scalable\nArchitecture",
+//     className: "right-[1%] bottom-[14%]",
+//     path: "M760 470 H560",
+//   },
+// ];
+
+const floatingCards = [
+  {
+    title: "AI Policy Intelligence  ",
+    className: "left-[6%] top-[19%]",
+  },
+  {
+    title: "Smart Vendor Assessments",
+    className: "left-[6%] bottom-[15%]",
+  },
+  {
+    title: "Automated Evidence Collection",
+    className: "right-[5%] top-[19%]",
+  },
+  {
+    title: "Continuous Audit Readiness ",
+    className: "right-[3%] bottom-[15%]",
+  },
+];
 export default function Home() {
   const [active, setActive] = useState(0);
 
   return (
     <main>
       <section className="  relative isolate min-h-screen overflow-hidden bg-[#fbfffa] px-2  sm:px-8 sm:py-12 lg:px-10   lg:py-0 ">
-
         {/* BACKGROUND GLOW */}
 
         <div
@@ -92,8 +132,10 @@ export default function Home() {
 
         <div className=" relative z-10 mx-auto flex min-h-[inherit] max-w-[1120px] flex-col items-center justify-center text-center lg:pt-[140px] lg:pb-20 ">
           <div className="lg:mt-[30px] mb-8 flex w-full max-w-[300px] items-center overflow-hidden rounded-full border border-[#edf2eb] bg-white/75  text-xs font-bold uppercase text-[#7f7b85] shadow-[0_12px_35px_rgba(18,5,28,0.06)] backdrop-blur-xl sm:text-sm lg:mb-10 ">
-            <span className="text-md rounded-full  
-      btn-green-light pointer-events-none  px-3 py-[6px]  text-white font-medium ">
+            <span
+              className="text-md rounded-full
+      btn-green-light pointer-events-none  px-3 py-[6px]  text-white font-medium "
+            >
               New
             </span>
             <ScrollText
@@ -140,8 +182,9 @@ export default function Home() {
     mx-auto
   "
             innerClassName=""
-          ><div
-            className="
+          >
+            <div
+              className="
   mx-auto
   overflow-hidden
   rounded-[24px]
@@ -161,8 +204,7 @@ export default function Home() {
 
   max-w-[1300px]
 "
-          >
-
+            >
               <Image
                 src="/images/Stakflo-Dashboard.webp"
                 alt="Stakflo dashboard interface"
@@ -175,9 +217,11 @@ export default function Home() {
                 w-full
               "
               />
-            </div></PortalRingCard>
+            </div>
+          </PortalRingCard>
         </div>
       </section>
+
       <section className="   bg-[#fbfffa]  overflow-x-hidden" id="company">
         <div className="w-full overflow-hidden isolate lg:max-w-[1400px] mx-auto  grid grid-cols-1 lg:grid-cols-[1.3fr_0.9fr] gap-8 p-5 ">
           {/* LEFT CARD */}
@@ -203,10 +247,9 @@ export default function Home() {
 
           rounded-[20px]
 
-         bg-white 
+         bg-white
         "
               >
-
                 <IoSettingsOutline className="text-4xl text-green-400" />
               </div>
 
@@ -250,8 +293,6 @@ export default function Home() {
 
               {/* INNER CARD */}
               <div className=" relative ">
-
-
                 <AnimationCard
                   animation="fade-up"
                   delay={0.2}
@@ -261,7 +302,6 @@ export default function Home() {
           right-0
         "
                 >
-
                   <ActivityStackCards
                     cards={[
                       {
@@ -307,9 +347,9 @@ export default function Home() {
                       },
                     ]}
                   />
-
                 </AnimationCard>
-              </div></div>
+              </div>
+            </div>
           </AnimationCard>
           {/* RIGHT CARD */}
           <AnimationCard animation="fade-left" className="h-full">
@@ -409,14 +449,16 @@ export default function Home() {
 
                 <div className="space-y-7">
                   <div className="flex items-center gap-4">
-                    <LuCircleCheck className="
+                    <LuCircleCheck
+                      className="
                 flex
                 h-7
                 w-7
                 items-center
                 justify-center
                 font-thin
-              "/>
+              "
+                    />
 
                     <p
                       className="
@@ -431,16 +473,16 @@ export default function Home() {
                   </div>
 
                   <div className="flex items-center gap-4">
-
-                    <LuCircleCheck className="
+                    <LuCircleCheck
+                      className="
                 flex
                 h-7
                 w-7
                 items-center
                 justify-center
                 font-thin
-              "/>
-
+              "
+                    />
 
                     <p
                       className="
@@ -457,7 +499,9 @@ export default function Home() {
               </div>
             </div>
           </AnimationCard>
-        </div></section>
+        </div>
+      </section>
+
       <section className="w-full bg-green-50 py-24 overflow-hidden">
         <div className="lg:max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -582,9 +626,7 @@ export default function Home() {
                         }
     `}
                     >
-                      <span className="text-sm font-semibold">
-                        {index + 1}
-                      </span>
+                      <span className="text-sm font-semibold">{index + 1}</span>
                     </div>
 
                     {/* TEXT */}
@@ -600,10 +642,7 @@ export default function Home() {
         transition-all
         duration-500
 
-        ${active === index
-                            ? "text-[#052e16]"
-                            : "text-[#4b6353]"
-                          }
+        ${active === index ? "text-[#052e16]" : "text-[#4b6353]"}
       `}
                       >
                         {item.title}
@@ -618,10 +657,7 @@ export default function Home() {
         transition-all
         duration-500
 
-        ${active === index
-                            ? "text-[#16a34a]"
-                            : "text-[#94a3b8]"
-                          }
+        ${active === index ? "text-[#16a34a]" : "text-[#94a3b8]"}
       `}
                       >
                         Smart workflow optimization
@@ -667,7 +703,6 @@ export default function Home() {
             {/* RIGHT CARD */}
             {/* RIGHT CARD */}
             <div className="relative flex justify-center items-center min-h-[380px] lg:min-h-[620px] isolate mt-10 lg:mt-0 px-4 sm:px-6">
-
               {/* BACK DASHED CARD 1 */}
               <div
                 key={`back-left-${active}`}
@@ -851,11 +886,10 @@ export default function Home() {
                 </p>
               </div>
             </div>
-
-
           </div>
         </div>
       </section>
+
       <div className="mx-auto w-full max-w-[1300px] px-4 sm:px-6 lg:px-0">
         <section
           className="
@@ -933,7 +967,7 @@ export default function Home() {
             {/* LEFT IMAGE */}
 
             {/* <Image
-        src="/images/rigthside.avif"
+        src="/images/rightside.png"
         alt=""
         width={840}
         height={900}
@@ -967,7 +1001,7 @@ export default function Home() {
             {/* RIGHT IMAGE */}
 
             {/* <Image
-        src="/images/leftside.avif"
+        src="/images/lefttside.png"
         alt=""
         width={840}
         height={900}
@@ -1141,168 +1175,295 @@ export default function Home() {
           </div>
         </section>
       </div>
-      <div className="mx-auto mb-16 w-full max-w-[1300px] px-5 sm:px-8 lg:px-0">
-        <section className="relative isolate min-h-[760px] overflow-hidden rounded-[30px] px-4 py-14 sm:rounded-[36px] sm:px-8 lg:min-h-[820px] lg:px-12 lg:py-20">
-          {/* Background layer */}
-          <div
-            className="pointer-events-none absolute inset-0 z-0 overflow-hidden"
-            aria-hidden="true"
+      <section className="relative overflow-hidden bg-[#f5f5f5] py-24">
+        {/* TOP GLOW */}
+        <div className="absolute inset-x-0 top-0 h-[240px] bg-[linear-gradient(180deg,#d66cff_0%,rgba(214,108,255,0)_100%)] opacity-60 blur-3xl" />
+
+        {/* HEADING */}
+        <div className="relative z-20 text-center">
+          <h2
+            className="
+            text-[52px]
+            md:text-[90px]
+            lg:text-[120px]
+
+            font-black
+            uppercase
+
+            tracking-[-0.06em]
+            leading-none
+
+            text-[#250026]
+          "
           >
-            <div className="absolute inset-x-0 top-0 h-[260px] bg-[linear-gradient(180deg,#4ade80_0%,#86efac_100%)] blur-[60px]" />
-            <ScrollText
-              items={["DESIGNED FOR MODERN WORKFLOWS", "BUILT FOR SCALE"]}
-              speed="44s"
-              direction="left"
-              containerClassName="absolute left-0 right-0 top-20 sm:top-24 lg:top-28"
-              className="items-center gap-10 text-[42px] sm:text-[72px]  md:text-[100px] lg:text-[140px] font-black uppercase leading-none"
-            />
+            DESIGNED FOR MODERN
+          </h2>
+        </div>
+
+        {/* MAIN AREA */}
+        <div
+          className="
+          relative
+          mx-auto
+          mt-24
+
+          h-[760px]
+          w-full
+          max-w-[1400px]
+        "
+        >
+          {/* ---------------- LEFT TOP LINE ---------------- */}
+          <div className="absolute left-[170px] top-[265px] z-0">
+            {/* arrow */}
+            <div className="absolute left-[-6px] top-[-12px] text-[#8e8e8e] text-[18px]">
+              ↑
+            </div>
+
+            {/* vertical */}
+            <div className="h-[70px] w-0 border-l-2 border-dashed border-[#8e8e8e]" />
+
+            {/* curve */}
+            <div className="relative h-[24px] w-[24px]">
+              <div
+                className="
+        absolute
+        left-0
+        top-0
+
+        h-full
+        w-full
+
+        rounded-bl-[20px]
+
+        border-b-2
+        border-l-2
+        border-dashed
+        border-[#8e8e8e]
+      "
+              />
+            </div>
+
+            {/* horizontal */}
+            <div className="ml-[22px] mt-[-2px] h-0 w-[250px] border-t-2 border-dashed border-[#8e8e8e]" />
           </div>
 
-          {/* ↑ increased pt here — gives space between scrolling text and mockup */}
-          <div className="relative z-10 mx-auto flex min-h-[580px] w-full max-w-[1180px] items-center justify-center pt-52 sm:pt-60 lg:min-h-[680px] lg:pt-64">
-            {/* Dashed connector lines */}
-            <svg
-              className="absolute inset-0 z-[6] hidden md:block h-full w-full"
-              viewBox="0 0 1400 800"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <defs>
-                <marker
-                  id="arrow"
-                  markerWidth="12"
-                  markerHeight="12"
-                  refX="10"
-                  refY="6"
-                  orient="auto"
-                >
-                  <path d="M0,0 L12,6 L0,12" fill="#7f7485" />
-                </marker>
-              </defs>
+          {/* ---------------- LEFT BOTTOM LINE ---------------- */}
+          <div className="absolute left-[170px] top-[420px] z-0">
+            {/* horizontal */}
+            <div className="ml-[27px] h-0 w-[150px] border-t-2 border-dashed border-[#8e8e8e]" />
 
-              {/* Top-left → center */}
-              <path
-                d="M 185 258 H 430"
-                stroke="#7f7485"
-                strokeWidth="2"
-                strokeDasharray="6 6"
-                fill="none"
-                markerEnd="url(#arrow)"
-                strokeLinecap="round"
+            {/* curve */}
+            <div className="relative ml-[0px] h-[24px] w-[24px]">
+              <div
+                className="
+        absolute
+        left-0
+        top-0
+
+        h-full
+        w-full
+
+        rounded-tl-[20px]
+
+        border-l-2
+        border-t-2
+        border-dashed
+        border-[#8e8e8e]
+
+      "
               />
-              {/* Bottom-left → center */}
-              <path
-                d="M 185 585 V 498 H 430"
-                stroke="#7f7485"
-                strokeWidth="2"
-                strokeDasharray="6 6"
-                fill="none"
-                markerEnd="url(#arrow)"
-                strokeLinecap="round"
-              />
-              {/* Top-right → center */}
-              <path
-                d="M 1215 258 H 970"
-                stroke="#7f7485"
-                strokeWidth="2"
-                strokeDasharray="6 6"
-                fill="none"
-                markerEnd="url(#arrow)"
-                strokeLinecap="round"
-              />
-              {/* Bottom-right → center */}
-              <path
-                d="M 1215 585 V 498 H 970"
-                stroke="#7f7485"
-                strokeWidth="2"
-                strokeDasharray="6 6"
-                fill="none"
-                markerEnd="url(#arrow)"
-                strokeLinecap="round"
-              />
-            </svg>
+            </div>
 
-            {/* ↓ Feature cards — z-[5] so center mockup (z-20) sits ON TOP of them */}
+            {/* vertical down */}
+            <div className="ml-[0px] h-[70px] w-0 border-l-2 border-dashed border-[#8e8e8e]" />
 
-            {/* Top Left */}
-            <AnimationCard
-              animation="fade-right"
-              className="absolute left-[1%] top-[24%] z-[5]"
-            >
-              <div className="rounded-[22px] bg-[#453646] px-6 py-5 text-center shadow-[0px_8px_30px_rgba(0,0,0,0.18)]">
-                <h3 className="text-lg md:text-xl font-bold leading-[1.6] text-white">
-                  Workflow
-                  <br />
-                  Intelligence
-                </h3>
-              </div>
-            </AnimationCard>
-
-            {/* Bottom Left */}
-            <AnimationCard
-              animation="fade-right"
-              delay={0.2}
-              className="absolute bottom-[8%] left-[1%] z-[5]"
-            >
-              <div className="rounded-[22px] bg-[#453646] px-6 py-5 text-center shadow-[0px_8px_30px_rgba(0,0,0,0.18)]">
-                <h3 className="text-lg md:text-xl font-bold leading-[1.6] text-white">
-                  System
-                  <br />
-                  Control
-                </h3>
-              </div>
-            </AnimationCard>
-
-            {/* Top Right */}
-            <AnimationCard
-              animation="fade-left"
-              className="absolute right-[1%] top-[24%] z-[5]"
-            >
-              <div className="rounded-[22px] bg-[#453646] px-6 py-5 text-center shadow-[0px_8px_30px_rgba(0,0,0,0.18)]">
-                <h3 className="text-lg md:text-xl font-bold leading-[1.6] text-white">
-                  Operational
-                  <br />
-                  Speed
-                </h3>
-              </div>
-            </AnimationCard>
-
-            {/* Bottom Right */}
-            <AnimationCard
-              animation="fade-left"
-              delay={0.2}
-              className="absolute bottom-[8%] right-[1%] z-[5] w-[190px]"
-            >
-              <div className="rounded-[22px] bg-[#453646] px-6 py-5 text-center shadow-[0px_8px_30px_rgba(0,0,0,0.18)]">
-                <h3 className="text-lg md:text-xl font-bold leading-[1.6] text-white">
-                  Scalable
-                  <br />
-                  Architecture
-                </h3>
-              </div>
-            </AnimationCard>
-
-            {/* ↓ Center mockup — z-20 so it overlaps feature cards */}
-            <AnimationCard
-              animation="zoom-in"
-              className="relative z-20 w-full max-w-[720px]"
-            >
-              <div className="relative w-full overflow-hidden rounded-[28px] border-[4px] border-[#2d1d30] bg-[#faf7fc] p-5 md:p-6 shadow-[0px_0px_30px_rgba(45,29,48,0.35)]">
-                <div className="overflow-hidden rounded-[24px] border border-[#e5ddeb] bg-white p-3 shadow-[0px_14px_40px_rgba(0,0,0,0.08)]">
-                  <Image
-                    src="/images/product-performance.avif"
-                    alt="Stakflo product dashboard"
-                    width={1400}
-                    height={900}
-                    priority
-                    className="w-full h-auto rounded-[20px]"
-                  />
-                </div>
-              </div>
-            </AnimationCard>
+            {/* arrow */}
+            <div className="ml-[-6px] mt-[-6px] text-[#8e8e8e] text-[18px]">
+              ↓
+            </div>
           </div>
-        </section>
-      </div>
+
+          {/* ---------------- RIGHT TOP LINE ---------------- */}
+          <div className="absolute right-[170px] top-[265px] z-0">
+            {/* horizontal */}
+            <div className="h-0 w-[250px] border-t-2 border-dashed border-[#8e8e8e]" />
+
+            {/* curve */}
+            <div className="relative ml-[250px] h-[24px] w-[24px]">
+              <div
+                className="
+        absolute
+        right-0
+        top-0
+
+        h-full
+        w-full
+
+        rounded-tr-[20px]
+
+        border-r-2
+        border-t-2
+        border-dashed
+        border-[#8e8e8e]
+      "
+              />
+            </div>
+
+            {/* vertical */}
+            <div className="ml-[272px] h-[70px] w-0 border-r-2 border-dashed border-[#8e8e8e]" />
+
+            {/* arrow */}
+            <div className="ml-[266px] mt-[-6px] text-[#8e8e8e] text-[18px]">
+              ↑
+            </div>
+          </div>
+
+          {/* ---------------- RIGHT BOTTOM LINE ---------------- */}
+          <div className="absolute right-[170px] top-[420px] z-0">
+            {/* arrow */}
+            <div className="absolute right-[-6px] bottom-[-10px] text-[#8e8e8e] text-[18px]">
+              ↓
+            </div>
+
+            {/* vertical */}
+            <div className="ml-auto h-[70px] w-0 border-r-2 border-dashed border-[#8e8e8e]" />
+
+            {/* curve */}
+            <div className="relative ml-[-22px] h-[24px] w-[24px]">
+              <div
+                className="
+        absolute
+
+        h-full
+        w-full
+
+        rounded-tr-[20px]
+
+        border-r-2
+        border-t-2
+        border-dashed
+        border-[#8e8e8e]
+      "
+              />
+            </div>
+
+            {/* horizontal */}
+            <div className="mr-[22px] h-0 w-[150px] border-t-2 border-dashed border-[#8e8e8e]" />
+          </div>
+
+          {/* ---------------- RIGHT BOTTOM LINE ---------------- */}
+
+          {/* CENTER IMAGE */}
+          <motion.div
+            initial={{
+              opacity: 0,
+              scale: 0.85,
+              y: 100,
+            }}
+            whileInView={{
+              opacity: 1,
+              scale: 1,
+              y: 0,
+            }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="
+            absolute
+            left-1/2
+            top-1/2
+            z-20
+
+            w-[760px]
+
+            -translate-x-1/2
+            -translate-y-1/2
+          "
+          >
+            <div
+              className="
+              overflow-hidden
+
+              rounded-[30px]
+
+              border-[10px]
+              border-[#321c33]
+
+              bg-white
+
+              shadow-[0_0_40px_rgba(56,20,60,0.55)]
+            "
+            >
+              <Image
+                src="/images/product-performance.avif"
+                alt="dashboard"
+                width={1400}
+                height={900}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </motion.div>
+
+          {/* FLOATING CARDS */}
+          {floatingCards.map((card, index) => (
+            <motion.div
+              key={index}
+              initial={{
+                opacity: 0,
+                y: 80,
+                scale: 0.8,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                scale: 1,
+              }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.8,
+                delay: index * 0.2,
+              }}
+              className={`
+              absolute
+              z-10
+              ${card.className}
+            `}
+            >
+              <div
+                className="
+                flex
+                h-[110px]
+                w-[170px]
+
+                items-center
+                justify-center
+
+                rounded-[18px]
+
+                bg-[#4b3a4d]
+
+                px-5
+
+                text-center
+                text-[16px]
+                font-semibold
+                leading-[1.5]
+
+                text-white
+
+                shadow-[0_15px_40px_rgba(0,0,0,0.12)]
+              "
+              >
+                {card.title.split("\n").map((line, i) => (
+                  <span key={i}>
+                    {line}
+                    <br />
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
       <div className="mx-auto mb-16 w-full max-w-[1300px] px-5 sm:px-8 lg:px-0">
         <section className="relative isolate min-h-[760px] overflow-hidden rounded-[30px] px-5 py-14 sm:rounded-[36px] sm:px-8 lg:min-h-[820px] lg:px-12 lg:py-20">
           {/* Background layer */}
