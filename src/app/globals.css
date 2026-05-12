@@ -301,8 +301,17 @@ body {
     box-shadow 0.35s ease,
     transform 0.3s ease,
     color 0.3s ease;
+
+  transition:
+    background 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.3s ease,
+    color 0.3s ease;
 }
 
+/* ========================================
+   DARK GREEN BUTTON
+======================================== */
 /* ========================================
    DARK GREEN BUTTON
 ======================================== */
@@ -313,6 +322,10 @@ body {
   background:
     radial-gradient(circle at top, rgba(74, 222, 128, 0.18), transparent 45%),
     linear-gradient(180deg, #123524 0%, #07140d 100%);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.28),
+    inset 0 1px 2px rgba(255, 255, 255, 0.06);
 
   box-shadow:
     0 10px 30px rgba(0, 0, 0, 0.28),
@@ -336,10 +349,14 @@ body {
 /* ========================================
    GREEN BUTTON
 ======================================== */
+/* ========================================
+   GREEN BUTTON
+======================================== */
 
 .btn-green-light {
   color: #ffffff;
 
+  background: linear-gradient(180deg, #4ade80 0%, #22c55e 55%, #16a34a 100%);
   background: linear-gradient(180deg, #4ade80 0%, #22c55e 55%, #16a34a 100%);
 
   box-shadow:
@@ -347,6 +364,9 @@ body {
     inset 0 2px 8px rgba(255, 255, 255, 0.18);
 }
 
+/* ========================================
+   GREEN -> DARK HOVER
+======================================== */
 /* ========================================
    GREEN -> DARK HOVER
 ======================================== */
@@ -362,6 +382,8 @@ body {
     0 10px 30px rgba(0, 0, 0, 0.28),
     inset 0 1px 2px rgba(255, 255, 255, 0.06);
 }
+
+/* section4 card shuffle */
 
 /* section4 card shuffle */
 @keyframes backLeft {
@@ -414,4 +436,53 @@ body {
 
 .animate-frontCard {
   animation: frontCard 0.7s ease forwards;
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+/* HIGH CONTRAST */
+
+.high-contrast {
+  filter: contrast(1.25) brightness(1.02) saturate(1.08);
+}
+
+.grayscale {
+  filter: grayscale(1);
+}
+
+.dyslexia-font,
+.dyslexia-font * {
+  font-family: Arial, Helvetica, sans-serif !important;
+
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+}
+
+.big-cursor,
+.big-cursor * {
+  cursor:
+    url("https://cur.cursors-4u.net/cursors/cur-11/cur1054.cur"), auto !important;
+}
+
+.highlight-links a {
+  color: #155836 !important;
+
+  text-decoration: underline !important;
+
+  text-decoration-thickness: 3px;
+
+  text-underline-offset: 5px;
+
+  font-weight: 600;
+}
+
+/* SMOOTH EFFECT */
+
+#site-shell {
+  transition:
+    filter 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease;
 }

@@ -1,14 +1,18 @@
 import { Geist, Geist_Mono } from "next/font/google";
 
 import "./globals.css";
+
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
+
 import AosProvider from "@/components/animations/AosProvider";
-import "aos/dist/aos.css";
+
 import ScrollToTopButton from "@/components/ui/ScrollToTopButton";
 import CookieBanner from "@/components/ui/CookieBanner";
-// import Navbar from "@/components/navbar/Navbar";
-// import Footer from "@/components/footer/Footer";
+
+import AccessibilityToolbar from "@/components/accessibility/AccessibilityToolbar";
+
+import "aos/dist/aos.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -58,14 +62,26 @@ export default function RootLayout({ children }) {
           flex-col
         "
       >
-        {" "}
         <AosProvider>
-          <Navbar />
+          {/* Accessibility Wrapper */}
+          <div id="site-shell">
+            <Navbar />
 
-          <main className="flex-1">{children}</main>
-          <CookieBanner />
-          <ScrollToTopButton />
-          <Footer />
+
+
+            <main
+              id="main-content"
+              className="flex-1"
+            >
+              {children}
+            </main>
+
+            <CookieBanner />
+
+            <ScrollToTopButton />
+
+            <Footer />
+          </div><AccessibilityToolbar />
         </AosProvider>
       </body>
     </html>

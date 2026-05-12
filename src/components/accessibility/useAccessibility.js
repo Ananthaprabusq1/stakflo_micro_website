@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 const ACCESSIBILITY_STORAGE_KEY = "a11y-settings-v2";
 
 export const defaultAccessibilitySettings = {
-    zoom: 1,
+    zoom: 100,
     contrast: false,
     grayscale: false,
     dyslexia: false,
@@ -19,22 +19,31 @@ function sanitizeSettings(value) {
         ...(value && typeof value === "object" ? value : {}),
     };
 
-    const zoom = Number(next.zoom);
-    next.zoom = Number.isFinite(zoom) ? Math.min(1.6, Math.max(0.7, zoom)) : 1;
+    next.zoom = Math.min(
+        130,
+        Math.max(90, Number(next.zoom) || 100)
+    );
+
     next.contrast = Boolean(next.contrast);
     next.grayscale = Boolean(next.grayscale);
     next.dyslexia = Boolean(next.dyslexia);
     next.bigCursor = Boolean(next.bigCursor);
     next.highlightLinks = Boolean(next.highlightLinks);
+
     return next;
 }
 
 export default function useAccessibility() {
     const [settings, setSettings] = useState(() => {
-        if (typeof window === "undefined") return defaultAccessibilitySettings;
+        if (typeof window === "undefined") {
+            return defaultAccessibilitySettings;
+        }
 
         try {
-            const saved = localStorage.getItem(ACCESSIBILITY_STORAGE_KEY);
+            const saved = localStorage.getItem(
+                ACCESSIBILITY_STORAGE_KEY
+            );
+
             return saved
                 ? sanitizeSettings(JSON.parse(saved))
                 : defaultAccessibilitySettings;
@@ -45,29 +54,54 @@ export default function useAccessibility() {
 
     useEffect(() => {
         if (typeof window === "undefined") return;
-        const siteShell = document.getElementById("site-shell");
-        const root = document.documentElement;
 
-        localStorage.setItem(ACCESSIBILITY_STORAGE_KEY, JSON.stringify(settings));
+        const siteShell =
+            document.getElementById("site-shell");
 
-        if (siteShell) {
-            siteShell.style.zoom = String(settings.zoom);
-        }
-        root.style.fontSize = "";
+        localStorage.setItem(
+            ACCESSIBILITY_STORAGE_KEY,
+            JSON.stringify(settings)
+        );
 
-        siteShell?.classList.toggle("high-contrast", settings.contrast);
-        siteShell?.classList.toggle("grayscale", settings.grayscale);
-        siteShell?.classList.toggle("dyslexia-font", settings.dyslexia);
-        root.classList.toggle("big-cursor", settings.bigCursor);
-        document.body.classList.toggle("big-cursor", settings.bigCursor);
-        siteShell?.classList.toggle("highlight-links", settings.highlightLinks);
+        /* SAFE ZOOM */
+        document.documentElement.style.fontSize = `${settings.zoom}%`;
+
+        siteShell?.classList.toggle(
+            "high-contrast",
+            settings.contrast
+        );
+
+        siteShell?.classList.toggle(
+            "grayscale",
+            settings.grayscale
+        );
+
+        siteShell?.classList.toggle(
+            "dyslexia-font",
+            settings.dyslexia
+        );
+
+        document.body.classList.toggle(
+            "big-cursor",
+            settings.bigCursor
+        );
+
+        siteShell?.classList.toggle(
+            "highlight-links",
+            settings.highlightLinks
+        );
     }, [settings]);
 
     return {
         settings,
+
         setSettings: (value) =>
             setSettings((current) =>
-                sanitizeSettings(typeof value === "function" ? value(current) : value),
+                sanitizeSettings(
+                    typeof value === "function"
+                        ? value(current)
+                        : value
+                )
             ),
     };
 }
