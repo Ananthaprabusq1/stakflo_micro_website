@@ -10,6 +10,16 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { LuCircleCheck } from "react-icons/lu";
 import { motion } from "framer-motion";
 
+import {
+  FaSlack,
+  FaJira,
+  FaGithub,
+  FaHubspot,
+  FaDropbox,
+} from "react-icons/fa";
+
+import { SiNotion, SiZendesk } from "react-icons/si";
+
 const cards = [
   {
     id: 1,
@@ -57,19 +67,19 @@ const cards = [
 const floatingCards = [
   {
     title: "AI Policy Intelligence  ",
-    className: "left-[6%] top-[19%]",
+    className: "left-[2%] top-[18%]",
   },
   {
     title: "Smart Vendor Assessments",
-    className: "left-[6%] bottom-[15%]",
+    className: "left-[2%] bottom-[15%]",
   },
   {
     title: "Automated Evidence Collection",
-    className: "right-[5%] top-[19%]",
+    className: "right-[2%] top-[18%]",
   },
   {
     title: "Continuous Audit Readiness ",
-    className: "right-[3%] bottom-[15%]",
+    className: "right-[2%] bottom-[15%]",
   },
 ];
 export default function Home() {
@@ -136,32 +146,36 @@ export default function Home() {
               className="text-md rounded-full
       btn-green-light pointer-events-none  px-3 py-[6px]  text-white font-medium "
             >
-              New
+              AI
             </span>
             <ScrollText
-              items={["Optimize.", "Automate.", "Scale.", "", "", ""]}
-              speed="3s"
+              items={[
+                "INTELLIGENT .",
+                "AUTOMATED .",
+                "CONTINUOUS .",
+                "WITH STAKFLO",
+              ]}
+              speed="10s"
               direction="left"
               containerClassName=" w-[min(17rem,calc(100vw-8rem))] sm:w-80 "
-              className=" items-center text-black font-light "
+              className=" items-center text-black font-semibold tracking-tight"
               // className=" items-center text-[#7f7b85] "
             ></ScrollText>
           </div>
 
-          <h1 className="max-w-[900px] font-[600] lg:text-[72px] md:text-[40px] text-[30px] lg:text-center lg:leading-[86px] tracking-tight text-[#16071B]">
-            Optimize, Automate, and Scale with Stakflo.
+          <h1 className="max-w-[900px] font-[600] lg:text-[65px] md:text-[40px] text-[25px] lg:text-center lg:leading-[86px] tracking-tight text-[#16071B]">
+            The AI Native Compliance Infrastructure Built for Scale.
           </h1>
 
-          <p className=" mt-8 max-w-[600px] md:text-lg font-medium leading-[1.3] text-[#5C4F5E] lg:text-xl text-md ">
-            From simplifying operations to automating processes, Stakflo adapts
-            to the way modern teams work, grow, and scale.
+          <p className=" mt-8 max-w-[600px] text-base font-medium leading-[2] text-[#5C4F5E] lg:text-lg text-md ">
+            Manual evidence chasing. Scattered policies. Last-minute audit
+            scrambles. Multiple frameworks pulling your team in every direction.
           </p>
 
           <AnimatedButton
             href="/contact-us"
-            text="Use Stakflo Free"
-            className="  mt-12 min-w-[230px]  px-8 py-4 text-lg font-bold text-white    sm:min-w-[250px] sm:text-xl  btn-green-glow
-      btn-green-light "
+            text="Stakflo eliminates it"
+            className="  mt-12 min-w-[230px]  px-8 py-4 text-lg font-bold text-white    sm:min-w-[250px] sm:text-xl  btn-green-glow btn-green-light "
           />
         </div>
       </section>
@@ -223,7 +237,7 @@ export default function Home() {
       </section>
 
       <section className="   bg-[#fbfffa]  overflow-x-hidden" id="company">
-        <div className="w-full overflow-hidden isolate lg:max-w-[1400px] mx-auto  grid grid-cols-1 lg:grid-cols-[1.3fr_0.9fr] gap-8 p-5 ">
+        <div className="w-full overflow-hidden isolate lg:max-w-[1300px] mx-auto  grid grid-cols-1 lg:grid-cols-[1.3fr_0.9fr] gap-8 p-5 ">
           {/* LEFT CARD */}
           <AnimationCard animation="fade-right" className="h-full ">
             <div className=" relative overflow-hidden rounded-[20px] border border-dashed   border-green-500 bg-green-50 p-8  md:p-10  min-h-[560px] ">
@@ -264,14 +278,13 @@ export default function Home() {
             md:text-3xl
             lg:text-[38px]
 
-            font-black
+            font-bold
 
-            tracking-[-0.04em]
 
             text-[#1a0826]
           "
                 >
-                  Smart Workflow Intelligence
+                  AI-Powered Everything
                 </h2>
 
                 <p
@@ -286,8 +299,9 @@ export default function Home() {
             text-[#655b69]
           "
                 >
-                  Organize, manage, and scale your team’s work through a
-                  structured, distraction-free workspace designed for clarity.
+                  From risk scoring and policy generation to vendor assessments
+                  and evidence collection, every workflow is intelligent,
+                  automated, and continuously improving.
                 </p>
               </div>
 
@@ -400,11 +414,10 @@ export default function Home() {
             md:text-[40px]
             lg:text-[60px]
 
-            font-black
+            font-bold
 
             leading-none
 
-            tracking-[-0.07em]
 
             text-[#18041f]
           "
@@ -419,19 +432,18 @@ export default function Home() {
             text-xl
             md:text-2xl
 
-            font-black
+            font-bold
 
-            tracking-[-0.04em]
 
             text-[#1f1026]
           "
                 >
-                  Move Work Forward Faster
+                  Compliance Management, Centralized
                 </h3>
 
                 <p
                   className="
-            mb-20
+            mb-12
 
             text-base
             md:text-lg
@@ -441,13 +453,14 @@ export default function Home() {
             text-[#6c6170]
           "
                 >
-                  Accelerate planning, collaboration, and execution by reducing
-                  friction, confusion, and unnecessary back-and-forth.
+                  Stakflo brings all your compliance evidence under one roof
+                  organized, mapped to controls, and ready to share the moment
+                  your audit begins.
                 </p>
 
                 {/* LIST */}
 
-                <div className="space-y-7">
+                <div className="space-y-5">
                   <div className="flex items-center gap-4">
                     <LuCircleCheck
                       className="
@@ -462,13 +475,11 @@ export default function Home() {
 
                     <p
                       className="
-                text-lg
-                md:text-xl
-
+                text-base
                 text-[#352a39]
               "
                     >
-                      Faster decision and approval cycles
+                      Evidence mapped to controls and frameworks
                     </p>
                   </div>
 
@@ -486,13 +497,37 @@ export default function Home() {
 
                     <p
                       className="
-                text-lg
-                md:text-xl
+                text-base
+
 
                 text-[#352a39]
               "
                     >
-                      Real-time progress alignment
+                      Policies, logs, screenshots, reports and access reviews
+                    </p>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <LuCircleCheck
+                      className="
+                flex
+                h-7
+                w-7
+                items-center
+                justify-center
+                font-thin
+              "
+                    />
+
+                    <p
+                      className="
+                text-base
+
+
+                text-[#352a39]
+              "
+                    >
+                      Secure auditor access with built in collaboration
                     </p>
                   </div>
                 </div>
@@ -894,497 +929,131 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="mx-auto w-full max-w-[1300px] px-4 sm:px-6 lg:px-0">
-        <section
-          className="
-      relative
-      isolate
-      mb-14
-
-      min-h-[560px]
-
-      overflow-hidden
-      rounded-[26px]
-
-      bg-[radial-gradient(circle_at_50%_20%,#78f09a_0%,#38c95c_42%,#16a642_100%)]
-
-      px-5
-      py-14
-
-      text-center
-
-
-      sm:min-h-[650px]
-      sm:rounded-[32px]
-      sm:px-8
-      sm:py-16
-
-      lg:min-h-[800px]
-      lg:rounded-[36px]
-      lg:px-12
-      lg:py-20
-    "
-        >
-          {/* BACKGROUND */}
-
+      <div className="mx-auto mb-16 w-full max-w-[1300px] px-5 sm:px-8 lg:px-0">
+        <section className="relative isolate min-h-[420px] overflow-hidden rounded-[30px] px-4 py-14 sm:rounded-[36px] sm:px-8 lg:min-h-[820px] lg:px-12 lg:py-20">
+          {/* Background layer */}
           <div
-            className="
-        pointer-events-none
-        absolute
-        inset-0
-        z-0
-        overflow-hidden
-      "
+            className="pointer-events-none absolute inset-0 z-0 overflow-hidden"
             aria-hidden="true"
           >
+            <div className="absolute inset-x-0 top-0 h-[260px] bg-[linear-gradient(180deg,#4ade80_0%,#86efac_100%)] blur-[60px]" />
             <ScrollText
-              items={["START TODAY IN STAKFLO", "STREAMLINE YOUR WORKFLOWS"]}
-              speed="22s"
+              items={["AI GRC Platform for Compliance Teams"]}
+              speed="44s"
               direction="left"
-              containerClassName="
-          absolute
-          left-0
-          right-0
-
-          top-6
-
-          sm:top-10
-          lg:top-16
-        "
-              className="
-          items-center
-          gap-8
-
-          text-[42px]
-          sm:text-[72px]
-          md:text-[100px]
-          lg:text-[140px]
-
-          font-semibold
-          uppercase
-          leading-none
-
-          text-white/90
-        "
+              containerClassName="absolute left-0 right-0 top-20 sm:top-24 lg:top-28"
+              className="items-center gap-10 text-[42px] sm:text-[72px]  md:text-[100px] lg:text-[140px] font-bold uppercase leading-none"
             />
-
-            {/* LEFT IMAGE */}
-
-            {/* <Image
-        src="/images/rightside.png"
-        alt=""
-        width={840}
-        height={900}
-        className="
-          absolute
-
-          bottom-[-6%]
-          left-[-70%]
-
-          h-[40%]
-          w-auto
-          max-w-none
-
-          object-contain
-          opacity-40
-
-          sm:left-[-42%]
-          sm:h-[58%]
-
-          md:left-[-26%]
-          md:h-[68%]
-
-          lg:bottom-[-12%]
-          lg:left-[-10%]
-          lg:h-[92%]
-
-          xl:left-[-2%]
-        "
-      /> */}
-
-            {/* RIGHT IMAGE */}
-
-            {/* <Image
-        src="/images/lefttside.png"
-        alt=""
-        width={840}
-        height={900}
-        className="
-          absolute
-
-          bottom-[-6%]
-          right-[-70%]
-
-          h-[40%]
-          w-auto
-          max-w-none
-
-          object-contain
-          opacity-40
-
-          sm:right-[-42%]
-          sm:h-[58%]
-
-          md:right-[-26%]
-          md:h-[68%]
-
-          lg:bottom-[-12%]
-          lg:right-[-10%]
-          lg:h-[92%]
-
-          xl:right-[-2%]
-        "
-      /> */}
           </div>
 
-          {/* CONTENT */}
-
+          {/* MAIN AREA */}
           <div
             className="
-        relative
-        z-10
-
-        mx-auto
-
-        flex
-        min-h-[420px]
-        max-w-[860px]
-
-        flex-col
-        items-center
-        justify-center
-
-        pt-20
-
-        sm:min-h-[500px]
-        sm:pt-28
-
-        lg:min-h-[650px]
-        lg:pt-40
-      "
-          >
-            <h2
-              className="
-          max-w-[820px]
-
-          text-3xl
-          font-semibold
-          leading-[1.15]
-
-          text-white
-
-          drop-shadow-[0_8px_24px_rgba(6,55,20,0.18)]
-
-          sm:text-5xl
-          sm:leading-tight
-
-          lg:text-[60px]
-        "
-            >
-              Start Streamlining Your Workflows Today
-            </h2>
-
-            <p
-              className="
-          mt-6
-          max-w-[620px]
-
-          text-base
-          font-medium
-          leading-7
-
-          text-white/95
-
-          sm:mt-8
-          sm:text-lg
-          sm:leading-8
-
-          lg:mt-10
-          lg:text-xl
-        "
-            >
-              Simplify processes, improve visibility, and keep your team moving
-              with faster, more structured workflows.
-            </p>
-
-            {/* BUTTONS */}
-
-            <div
-              className="
-          mt-10
-
-          flex
-          w-full
-          max-w-[420px]
-
-          flex-col
-          items-center
-          justify-center
-
-          gap-4
-
-          sm:mt-14
-          sm:max-w-none
-          sm:flex-row
-
-          lg:mt-20
-        "
-            >
-              <AnimatedButton
-                href="/contact-us"
-                text="Use Stakflo Free"
-                className="
-            w-full
-
-            bg-white
-
-            px-8
-            py-4
-
-            text-base
-            font-black
-            text-[#111827]
-
-            shadow-[0_16px_34px_rgba(6,55,20,0.24)]
-
-            hover:bg-[#f7fff8]
-
-            sm:w-auto
-          "
-              />
-
-              <AnimatedButton
-                href="/contact-us"
-                text="View Plans"
-                className="
-            w-full
-
-            bg-[#070b14]
-
-            px-8
-            py-4
-
-            text-base
-            font-black
-            text-white
-
-            shadow-[0_16px_34px_rgba(6,55,20,0.32)]
-
-            hover:bg-[#172033]
-
-            sm:w-auto
-          "
-              />
-            </div>
-          </div>
-        </section>
-      </div>
-      <section className="relative overflow-hidden bg-[#f5f5f5] py-24">
-        {/* TOP GLOW */}
-        <div className="absolute inset-x-0 top-0 h-[240px] bg-[linear-gradient(180deg,#d66cff_0%,rgba(214,108,255,0)_100%)] opacity-60 blur-3xl" />
-
-        {/* HEADING */}
-        <div className="relative z-20 text-center">
-          <h2
-            className="
-            text-[52px]
-            md:text-[90px]
-            lg:text-[120px]
-
-            font-black
-            uppercase
-
-            tracking-[-0.06em]
-            leading-none
-
-            text-[#250026]
-          "
-          >
-            DESIGNED FOR MODERN
-          </h2>
-        </div>
-
-        {/* MAIN AREA */}
-        <div
-          className="
           relative
           mx-auto
           mt-24
 
-          h-[760px]
+          h-[320px]
+sm:h-[460px]
+lg:h-[760px]
           w-full
           max-w-[1400px]
         "
-        >
-          {/* ---------------- LEFT TOP LINE ---------------- */}
-          <div className="absolute left-[170px] top-[265px] z-0">
-            {/* arrow */}
-            <div className="absolute left-[-6px] top-[-12px] text-[#8e8e8e] text-[18px]">
-              ↑
+          >
+            {/* ---------------- LEFT TOP LINE ---------------- */}
+            <div className="absolute left-[170px] top-[265px] z-0 hidden lg:block">
+              {/* arrow */}
+              <div className="absolute left-[-76px] top-[-20px] text-[#8e8e8e] text-[18px]">
+                ↑
+              </div>
+
+              {/* vertical */}
+              <div className="ml-[-70px] h-[90px] w-0 border-l-2 border-dashed border-[#8e8e8e]" />
+
+              {/* curve */}
+              <div className="relative ml-[-70px] mt-[-2.5px] h-[24px] w-[24px]">
+                <div className=" absolute left-0 top-0 h-full w-full rounded-bl-[20px] border-b-2 border-l-2 border-dashed border-[#8e8e8e] " />
+              </div>
+
+              {/* horizontal */}
+              <div className="ml-[-48px] mt-[-2px] h-0 w-[250px] border-t-2 border-dashed border-[#8e8e8e]" />
             </div>
+            {/* ---------------- LEFT BOTTOM LINE ---------------- */}
+            <div className="absolute left-[170px] top-[420px] z-0 hidden lg:block">
+              {/* horizontal */}
+              <div className="ml-[27px] h-0 w-[150px] border-t-2 border-dashed border-[#8e8e8e]" />
 
-            {/* vertical */}
-            <div className="h-[70px] w-0 border-l-2 border-dashed border-[#8e8e8e]" />
+              {/* curve */}
+              <div className="relative ml-[0px] h-[24px] mt-[-0.5px] w-[24px]">
+                <div className=" absolute left-0 top-0 h-full w-full rounded-tl-[20px] border-l-2 border-t-2 border-dashed border-[#8e8e8e] " />
+              </div>
 
-            {/* curve */}
-            <div className="relative h-[24px] w-[24px]">
-              <div
-                className="
-        absolute
-        left-0
-        top-0
+              {/* vertical down */}
+              <div className="ml-[0px] h-[70px] w-0 border-l-2 border-dashed border-[#8e8e8e]" />
 
-        h-full
-        w-full
-
-        rounded-bl-[20px]
-
-        border-b-2
-        border-l-2
-        border-dashed
-        border-[#8e8e8e]
-      "
-              />
+              {/* arrow */}
+              <div className="ml-[-5px] mt-[-5px] text-[#8e8e8e] text-[18px]">
+                ↓
+              </div>
             </div>
+            {/* ---------------- RIGHT TOP LINE ---------------- */}
+            <div className="absolute right-[170px] top-[265px] z-0 hidden lg:block">
+              <div className="absolute left-[269px] top-[-18px] text-[#8e8e8e] text-[18px]">
+                ↑
+              </div>
 
-            {/* horizontal */}
-            <div className="ml-[22px] mt-[-2px] h-0 w-[250px] border-t-2 border-dashed border-[#8e8e8e]" />
-          </div>
+              <div className="ml-[274px] h-[90px] w-0 border-r-2 border-dashed border-[#8e8e8e]" />
 
-          {/* ---------------- LEFT BOTTOM LINE ---------------- */}
-          <div className="absolute left-[170px] top-[420px] z-0">
-            {/* horizontal */}
-            <div className="ml-[27px] h-0 w-[150px] border-t-2 border-dashed border-[#8e8e8e]" />
+              <div className="relative ml-[251px] mt-[-1.5px] h-[24px] w-[24px]">
+                <div className="  absolute  right-0  bottom-[-2px]  h-full  w-full  rounded-br-[20px]  border-r-2  border-b-2  border-dashed  border-[#8e8e8e]   " />
+              </div>
 
-            {/* curve */}
-            <div className="relative ml-[0px] h-[24px] w-[24px]">
-              <div
-                className="
-        absolute
-        left-0
-        top-0
-
-        h-full
-        w-full
-
-        rounded-tl-[20px]
-
-        border-l-2
-        border-t-2
-        border-dashed
-        border-[#8e8e8e]
-
-      "
-              />
+              <div className="h-0 w-[250px] border-t-2 border-dashed border-[#8e8e8e] " />
             </div>
+            {/* ---------------- RIGHT BOTTOM LINE ---------------- */}
+            <div className="absolute right-[99px] top-[420px] z-0 hidden lg:block">
+              <div className="h-0 w-[250px] border-t-2 border-dashed border-[#8e8e8e]" />
 
-            {/* vertical down */}
-            <div className="ml-[0px] h-[70px] w-0 border-l-2 border-dashed border-[#8e8e8e]" />
+              <div className="relative ml-[253px] mt-[-1.5px] h-[24px] w-[24px]">
+                <div className=" absolute right-0 top-0 h-full w-full rounded-tr-[20px] border-r-2 border-t-2 border-dashed border-[#8e8e8e]" />
+              </div>
 
-            {/* arrow */}
-            <div className="ml-[-6px] mt-[-6px] text-[#8e8e8e] text-[18px]">
-              ↓
+              <div className="ml-[275px] h-[70px] w-0 border-r-2 border-dashed border-[#8e8e8e]" />
+
+              <div className="ml-[269px] mt-[-4px] text-[#8e8e8e] text-[18px]">
+                ↓
+              </div>
             </div>
-          </div>
-
-          {/* ---------------- RIGHT TOP LINE ---------------- */}
-          <div className="absolute right-[170px] top-[265px] z-0">
-            {/* horizontal */}
-            <div className="h-0 w-[250px] border-t-2 border-dashed border-[#8e8e8e]" />
-
-            {/* curve */}
-            <div className="relative ml-[250px] h-[24px] w-[24px]">
-              <div
-                className="
-        absolute
-        right-0
-        top-0
-
-        h-full
-        w-full
-
-        rounded-tr-[20px]
-
-        border-r-2
-        border-t-2
-        border-dashed
-        border-[#8e8e8e]
-      "
-              />
-            </div>
-
-            {/* vertical */}
-            <div className="ml-[272px] h-[70px] w-0 border-r-2 border-dashed border-[#8e8e8e]" />
-
-            {/* arrow */}
-            <div className="ml-[266px] mt-[-6px] text-[#8e8e8e] text-[18px]">
-              ↑
-            </div>
-          </div>
-
-          {/* ---------------- RIGHT BOTTOM LINE ---------------- */}
-          <div className="absolute right-[170px] top-[420px] z-0">
-            {/* arrow */}
-            <div className="absolute right-[-6px] bottom-[-10px] text-[#8e8e8e] text-[18px]">
-              ↓
-            </div>
-
-            {/* vertical */}
-            <div className="ml-auto h-[70px] w-0 border-r-2 border-dashed border-[#8e8e8e]" />
-
-            {/* curve */}
-            <div className="relative ml-[-22px] h-[24px] w-[24px]">
-              <div
-                className="
-        absolute
-
-        h-full
-        w-full
-
-        rounded-tr-[20px]
-
-        border-r-2
-        border-t-2
-        border-dashed
-        border-[#8e8e8e]
-      "
-              />
-            </div>
-
-            {/* horizontal */}
-            <div className="mr-[22px] h-0 w-[150px] border-t-2 border-dashed border-[#8e8e8e]" />
-          </div>
-
-          {/* ---------------- RIGHT BOTTOM LINE ---------------- */}
-
-          {/* CENTER IMAGE */}
-          <motion.div
-            initial={{
-              opacity: 0,
-              scale: 0.85,
-              y: 100,
-            }}
-            whileInView={{
-              opacity: 1,
-              scale: 1,
-              y: 0,
-            }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
-            className="
+            {/* CENTER IMAGE */}
+            <motion.div
+              initial={{
+                opacity: 0,
+                scale: 0.85,
+                y: 100,
+              }}
+              whileInView={{
+                opacity: 1,
+                scale: 1,
+                y: 0,
+              }}
+              viewport={{ once: false, amount: 0.3 }}
+              transition={{ duration: 1 }}
+              className="
             absolute
             left-1/2
             top-1/2
             z-20
-
-            w-[760px]
-
+            w-full
+max-w-[760px]
+px-2
+sm:px-4
+lg:px-0
             -translate-x-1/2
             -translate-y-1/2
           "
-          >
-            <div
-              className="
+            >
+              <div
+                className="
               overflow-hidden
 
               rounded-[30px]
@@ -1396,44 +1065,44 @@ export default function Home() {
 
               shadow-[0_0_40px_rgba(56,20,60,0.55)]
             "
-            >
-              <Image
-                src="/images/product-performance.avif"
-                alt="dashboard"
-                width={1400}
-                height={900}
-                className="w-full h-auto object-cover"
-              />
-            </div>
-          </motion.div>
-
-          {/* FLOATING CARDS */}
-          {floatingCards.map((card, index) => (
-            <motion.div
-              key={index}
-              initial={{
-                opacity: 0,
-                y: 80,
-                scale: 0.8,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                scale: 1,
-              }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.8,
-                delay: index * 0.2,
-              }}
-              className={`
+              >
+                <Image
+                  src="/images/product-performance.avif"
+                  alt="dashboard"
+                  width={1400}
+                  height={900}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </motion.div>
+            {/* FLOATING CARDS */}
+            {floatingCards.map((card, index) => (
+              <motion.div
+                key={index}
+                initial={{
+                  opacity: 0,
+                  y: 80,
+                  scale: 0.8,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  scale: 1,
+                }}
+                viewport={{ once: false, amount: 0.3 }}
+                transition={{
+                  duration: 0.8,
+                  delay: index * 0.2,
+                }}
+                className={`
               absolute
               z-10
+              hidden lg:block
               ${card.className}
             `}
-            >
-              <div
-                className="
+              >
+                <div
+                  className="
                 flex
                 h-[110px]
                 w-[170px]
@@ -1443,7 +1112,7 @@ export default function Home() {
 
                 rounded-[18px]
 
-                bg-[#4b3a4d]
+                bg-[#443846]
 
                 px-5
 
@@ -1456,18 +1125,20 @@ export default function Home() {
 
                 shadow-[0_15px_40px_rgba(0,0,0,0.12)]
               "
-              >
-                {card.title.split("\n").map((line, i) => (
-                  <span key={i}>
-                    {line}
-                    <br />
-                  </span>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+                >
+                  {card.title.split("\n").map((line, i) => (
+                    <span key={i}>
+                      {line}
+                      <br />
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+      </div>
+
       <div className="mx-auto mb-16 w-full max-w-[1300px] px-5 sm:px-8 lg:px-0">
         <section className="relative isolate min-h-[760px] overflow-hidden rounded-[30px] px-5 py-14 sm:rounded-[36px] sm:px-8 lg:min-h-[820px] lg:px-12 lg:py-20">
           {/* Background layer */}
@@ -1477,11 +1148,11 @@ export default function Home() {
           >
             <div className="absolute inset-x-0 top-0 h-[260px] bg-[linear-gradient(180deg,#4ade80_0%,#86efac_100%)] blur-[60px]" />
             <ScrollText
-              items={["DESIGNED FOR MODERN WORKFLOWS", "BUILT FOR SCALE"]}
+              items={["Your Entire Stack, Compliance-Ready"]}
               speed="44s"
               direction="left"
               containerClassName="absolute left-0 right-0 top-20 sm:top-24 lg:top-28"
-              className="items-center gap-10 text-[42px] sm:text-[72px]  md:text-[100px] lg:text-[140px] font-black uppercase leading-none "
+              className="items-center gap-10 text-[42px] sm:text-[72px]  md:text-[100px] lg:text-[140px] font-bold uppercase leading-none "
             />
           </div>
 
@@ -1544,8 +1215,8 @@ export default function Home() {
             lg:text-left
           "
               >
-                Connect and synchronize your essential tools effortlessly for
-                seamless operational continuity.
+                Connect your existing stack and let Stackflo handle compliance
+                across all of it, end to end.
               </p>
 
               <div
@@ -1559,28 +1230,8 @@ export default function Home() {
               >
                 <AnimatedButton
                   href="/contact-us"
-                  text="Use Stakflo Free"
-                  className="
-              min-w-[220px]
-
-              bg-gradient-to-b
-              from-[#2a093d]
-              to-[#14001f]
-
-              px-7
-              py-4
-
-              text-base
-              font-bold
-              text-white
-
-
-              hover:from-green-300
-              hover:to-green-500
-
-              sm:min-w-[250px]
-              sm:text-lg
-            "
+                  text="Start Connecting Your Stack"
+                  className="  mt-12 min-w-[230px]  px-8 py-4 text-lg font-bold text-white    sm:min-w-[250px] sm:text-xl  btn-green-glow btn-green-light "
                 />
               </div>
             </div>
@@ -1641,32 +1292,30 @@ export default function Home() {
               >
                 <div
                   className="
-        flex
-        h-[60px]
-        w-[60px]
-
-        items-center
-        justify-center
-
-        rounded-[18px]
-
-        bg-[linear-gradient(180deg,#4ade80_0%,#16a34a_100%)]
-
-        text-3xl
-        font-black
-        text-white
-
-        sm:h-[80px]
-        sm:w-[80px]
-        sm:text-4xl
-
-        lg:h-[100px]
-        lg:w-[100px]
-        lg:rounded-[30px]
-        lg:text-5xl
-      "
+    flex
+    h-[60px]
+    w-[60px]
+    items-center
+    justify-center
+    rounded-[18px]
+    lg:h-[100px]
+    lg:w-[100px]
+    lg:rounded-[30px]
+  "
                 >
-                  S
+                  <Image
+                    src="/images/product-stakflo.webp"
+                    alt="Stakflo"
+                    width={54}
+                    height={54}
+                    className="
+      h-[34px]
+      w-[34px]
+      object-contain
+      lg:h-[100px]
+      lg:w-[100px]
+    "
+                  />
                 </div>
               </div>
 
@@ -1674,13 +1323,13 @@ export default function Home() {
 
               <svg
                 className="
-      absolute
-      inset-0
-      z-10
+    absolute
+    inset-0
+    z-10
 
-      h-full
-      w-full
-    "
+    h-full
+    w-full
+  "
                 viewBox="0 0 760 760"
                 fill="none"
                 preserveAspectRatio="xMidYMid meet"
@@ -1690,12 +1339,12 @@ export default function Home() {
                 <path
                   id="path1"
                   d="
-        M 320 90
-        H 610
-        Q 650 90 650 130
-        V 240
-      "
-                  stroke="#a7f3d0"
+      M 320 90
+      H 610
+      Q 650 90 650 130
+      V 240
+    "
+                  stroke="#86efac"
                   strokeWidth="3"
                   fill="none"
                   strokeLinecap="round"
@@ -1706,12 +1355,12 @@ export default function Home() {
                 <path
                   id="path2"
                   d="
-        M 90 190
-        H 560
-        Q 590 190 590 220
-        V 275
-      "
-                  stroke="#a7f3d0"
+      M 90 190
+      H 560
+      Q 590 190 590 220
+      V 275
+    "
+                  stroke="#86efac"
                   strokeWidth="3"
                   fill="none"
                   strokeLinecap="round"
@@ -1722,10 +1371,10 @@ export default function Home() {
                 <path
                   id="path3"
                   d="
-        M 320 300
-        H 565
-      "
-                  stroke="#a7f3d0"
+      M 320 300
+      H 565
+    "
+                  stroke="#86efac"
                   strokeWidth="3"
                   fill="none"
                   strokeLinecap="round"
@@ -1736,10 +1385,10 @@ export default function Home() {
                 <path
                   id="path4"
                   d="
-        M 60 390
-        H 565
-      "
-                  stroke="#a7f3d0"
+      M 60 390
+      H 565
+    "
+                  stroke="#86efac"
                   strokeWidth="3"
                   fill="none"
                   strokeLinecap="round"
@@ -1750,10 +1399,10 @@ export default function Home() {
                 <path
                   id="path5"
                   d="
-        M 320 480
-        H 565
-      "
-                  stroke="#a7f3d0"
+      M 320 480
+      H 565
+    "
+                  stroke="#86efac"
                   strokeWidth="3"
                   fill="none"
                   strokeLinecap="round"
@@ -1764,12 +1413,12 @@ export default function Home() {
                 <path
                   id="path6"
                   d="
-        M 90 585
-        H 590
-        Q 590 585 590 540
-        V 450
-      "
-                  stroke="#a7f3d0"
+      M 90 585
+      H 590
+      Q 590 585 590 540
+      V 450
+    "
+                  stroke="#86efac"
                   strokeWidth="3"
                   fill="none"
                   strokeLinecap="round"
@@ -1780,12 +1429,12 @@ export default function Home() {
                 <path
                   id="path7"
                   d="
-        M 320 690
-        H 650
-        Q 690 690 690 620
-        V 390
-      "
-                  stroke="#a7f3d0"
+      M 320 690
+      H 650
+      Q 690 690 690 620
+      V 390
+    "
+                  stroke="#86efac"
                   strokeWidth="3"
                   fill="none"
                   strokeLinecap="round"
@@ -1805,27 +1454,515 @@ export default function Home() {
                 ))}
               </svg>
 
-              {/* ICONS */}
-
               {/* TOP */}
 
-              <div className="absolute left-[38%] top-[6%] z-20">1</div>
+              <div
+                className="
+    absolute
+    left-[30%]
+    top-[15%]
+    z-20
 
-              <div className="absolute left-[0%] top-[18%] z-20">2</div>
+    flex
+    h-[52px]
+    w-[52px]
+    items-center
+    justify-center
+
+    rounded-full
+
+    bg-[#1E293B]
+
+    text-white
+
+    shadow-[0_10px_30px_rgba(0,0,0,0.12)]
+
+    sm:h-[62px]
+    sm:w-[62px]
+
+    lg:h-[72px]
+    lg:w-[72px]
+  "
+              >
+                <FaSlack className="text-[24px] sm:text-[28px] lg:text-[34px]" />
+              </div>
+
+              <div
+                className="
+    absolute
+    left-[0%]
+    top-[26%]
+    z-20
+
+    flex
+    h-[52px]
+    w-[52px]
+    items-center
+    justify-center
+
+    rounded-full
+
+    bg-[#0052CC]
+
+    text-white
+
+    shadow-[0_10px_30px_rgba(0,0,0,0.12)]
+
+    sm:h-[62px]
+    sm:w-[62px]
+
+    lg:h-[72px]
+    lg:w-[72px]
+  "
+              >
+                <FaJira className="text-[24px] sm:text-[28px] lg:text-[34px]" />
+              </div>
 
               {/* CENTER */}
 
-              <div className="absolute left-[38%] top-[33%] z-20">3</div>
+              <div
+                className="
+    absolute
+    left-[30%]
+    top-[37%]
+    z-20
 
-              <div className="absolute left-[0%] top-[45%] z-20">4</div>
+    flex
+    h-[52px]
+    w-[52px]
+    items-center
+    justify-center
 
-              <div className="absolute left-[38%] top-[57%] z-20">5</div>
+    rounded-full
+
+    bg-[#171515]
+
+    text-white
+
+    shadow-[0_10px_30px_rgba(0,0,0,0.12)]
+
+    sm:h-[62px]
+    sm:w-[62px]
+
+    lg:h-[72px]
+    lg:w-[72px]
+  "
+              >
+                <FaGithub className="text-[24px] sm:text-[28px] lg:text-[34px]" />
+              </div>
+
+              <div
+                className="
+    absolute
+    left-[0%]
+    top-[46%]
+    z-20
+
+    flex
+    h-[52px]
+    w-[52px]
+    items-center
+    justify-center
+
+    rounded-full
+
+    bg-[#2F855A]
+
+    text-white
+
+    shadow-[0_10px_30px_rgba(0,0,0,0.12)]
+
+    sm:h-[62px]
+    sm:w-[62px]
+
+    lg:h-[72px]
+    lg:w-[72px]
+  "
+              >
+                <SiNotion className="text-[24px] sm:text-[28px] lg:text-[34px]" />
+              </div>
+
+              <div
+                className="
+    absolute
+    left-[30%]
+    top-[55%]
+    z-20
+
+    flex
+    h-[52px]
+    w-[52px]
+    items-center
+    justify-center
+
+    rounded-full
+
+    bg-[#FF7A59]
+
+    text-white
+
+    shadow-[0_10px_30px_rgba(0,0,0,0.12)]
+
+    sm:h-[62px]
+    sm:w-[62px]
+
+    lg:h-[72px]
+    lg:w-[72px]
+  "
+              >
+                <FaHubspot className="text-[24px] sm:text-[28px] lg:text-[34px]" />
+              </div>
 
               {/* BOTTOM */}
 
-              <div className="absolute left-[0%] top-[71%] z-20">6</div>
+              <div
+                className="
+    absolute
+    left-[0%]
+    top-[66%]
+    z-20
 
-              <div className="absolute left-[38%] top-[85%] z-20">7</div>
+    flex
+    h-[52px]
+    w-[52px]
+    items-center
+    justify-center
+
+    rounded-full
+
+    bg-[#0061FF]
+
+    text-white
+
+    shadow-[0_10px_30px_rgba(0,0,0,0.12)]
+
+    sm:h-[62px]
+    sm:w-[62px]
+
+    lg:h-[72px]
+    lg:w-[72px]
+  "
+              >
+                <FaDropbox className="text-[24px] sm:text-[28px] lg:text-[34px]" />
+              </div>
+
+              <div
+                className="
+    absolute
+    left-[30%]
+    top-[77%]
+    z-20
+
+    flex
+    h-[52px]
+    w-[52px]
+    items-center
+    justify-center
+
+    rounded-full
+
+    bg-[#03363D]
+
+    text-white
+
+    shadow-[0_10px_30px_rgba(0,0,0,0.12)]
+
+    sm:h-[62px]
+    sm:w-[62px]
+
+    lg:h-[72px]
+    lg:w-[72px]
+  "
+              >
+                <SiZendesk className="text-[24px] sm:text-[28px] lg:text-[34px]" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div className="mx-auto w-full max-w-[1300px] px-4 sm:px-6 lg:px-0">
+        <section
+          className="
+      relative
+      isolate
+      mb-14
+
+      min-h-[560px]
+
+      overflow-hidden
+      rounded-[26px]
+
+      bg-[radial-gradient(circle_at_50%_20%,#78f09a_0%,#38c95c_42%,#16a642_100%)]
+
+      px-5
+      py-14
+
+      text-center
+
+
+      sm:min-h-[650px]
+      sm:rounded-[32px]
+      sm:px-8
+      sm:py-16
+
+      lg:min-h-[800px]
+      lg:rounded-[36px]
+      lg:px-12
+      lg:py-20
+    "
+        >
+          {/* BACKGROUND */}
+
+          <div
+            className="
+        pointer-events-none
+        absolute
+        inset-0
+        z-0
+        overflow-hidden
+      "
+            aria-hidden="true"
+          >
+            <ScrollText
+              items={["Unified platform for automated compliance"]}
+              speed="22s"
+              direction="left"
+              containerClassName="
+          absolute
+          left-0
+          right-0
+
+          top-6
+
+          sm:top-10
+          lg:top-16
+        "
+              className="
+          items-center
+          gap-8
+
+          text-[42px]
+          sm:text-[72px]
+          md:text-[100px]
+          lg:text-[140px]
+
+          font-semibold
+          uppercase
+          leading-none
+
+          text-white/90
+        "
+            />
+
+            {/* LEFT GLOW IMAGE */}
+            <Image
+              src="/images/leftsidebg2.png"
+              alt=""
+              width={900}
+              height={1200}
+              className="
+    pointer-events-none
+    absolute
+
+    bottom-[-18%]
+    left-[-18%]
+
+    z-[1]
+
+    h-[85%]
+    w-auto
+    max-w-none
+
+    object-contain
+
+    opacity-80
+    mix-blend-screen
+
+    blur-[0.5px]
+
+    sm:left-[-12%]
+    sm:h-[92%]
+
+    lg:left-[-4%]
+    lg:h-[105%]
+  "
+            />
+
+            {/* RIGHT GLOW IMAGE */}
+            <Image
+              src="/images/rightsidebg2.png"
+              alt=""
+              width={900}
+              height={1200}
+              className="
+    pointer-events-none
+    absolute
+
+    bottom-[-18%]
+    right-[-18%]
+
+    z-[1]
+
+    h-[85%]
+    w-auto
+    max-w-none
+
+    object-contain
+
+    opacity-80
+    mix-blend-screen
+
+    blur-[0.5px]
+
+    sm:right-[-12%]
+    sm:h-[92%]
+
+    lg:right-[-4%]
+    lg:h-[105%]
+  "
+            />
+          </div>
+
+          {/* CONTENT */}
+
+          <div
+            className="
+        relative
+        z-10
+
+        mx-auto
+
+        flex
+        min-h-[420px]
+        max-w-[860px]
+
+        flex-col
+        items-center
+        justify-center
+
+        pt-20
+
+        sm:min-h-[500px]
+        sm:pt-28
+
+        lg:min-h-[650px]
+        lg:pt-40
+      "
+          >
+            <h2
+              className="
+          max-w-[820px]
+
+          text-3xl
+          font-semibold
+          leading-[1.15]
+
+          text-white
+
+          drop-shadow-[0_8px_24px_rgba(6,55,20,0.18)]
+
+          sm:text-5xl
+          sm:leading-tight
+
+          lg:text-[60px]
+        "
+            >
+              Strengthen Your Compliance Posture Today.
+            </h2>
+
+            <p
+              className="
+          mt-6
+          max-w-[650px]
+
+          text-base
+          font-medium
+          leading-7
+
+          text-white/95
+
+          sm:mt-8
+          sm:text-lg
+          sm:leading-8
+
+          lg:mt-10
+          lg:text-xl
+        "
+            >
+              Centralize your GRC operations, reduce audit risk, and scale
+              compliance across every framework your organization operates
+              under.
+            </p>
+
+            {/* BUTTONS */}
+
+            <div
+              className="
+          mt-10
+
+          flex
+          w-full
+          max-w-[420px]
+
+          flex-col
+          items-center
+          justify-center
+
+          gap-4
+
+          sm:mt-14
+          sm:max-w-none
+          sm:flex-row
+
+          lg:mt-20
+        "
+            >
+              <AnimatedButton
+                href="/contact-us"
+                text="Book a Demo "
+                className="
+            w-full
+
+            bg-white
+
+            px-8
+            py-4
+
+            text-base
+            font-bold
+            text-[#111827]
+
+            shadow-[0_16px_34px_rgba(6,55,20,0.24)]
+
+            hover:bg-[#f7fff8]
+
+            sm:w-auto
+          "
+              />
+
+              <AnimatedButton
+                href="/contact-us"
+                text="View Plans"
+                className="
+            w-full
+
+            bg-[#070b14]
+
+            px-8
+            py-4
+
+            text-base
+            font-bold
+            text-white
+
+            shadow-[0_16px_34px_rgba(6,55,20,0.32)]
+
+            hover:bg-[#172033]
+
+            sm:w-auto
+          "
+              />
             </div>
           </div>
         </section>
