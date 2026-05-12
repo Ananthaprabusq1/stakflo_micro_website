@@ -137,10 +137,8 @@ html {
 }
 
 body {
-  background: var(--primary-bg);
   color: var(--primary-text);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
-
   transition: var(--transition-medium);
 }
 
@@ -198,14 +196,12 @@ body {
   content: "";
   position: absolute;
   inset: -5%;
-  background: conic-gradient(
-    from 0deg,
-    #86efac,
-    #4ade80,
-    #16a34a,
-    #bbf7d0,
-    #22c55e
-  );
+  background: conic-gradient(from 0deg,
+      #86efac,
+      #4ade80,
+      #16a34a,
+      #bbf7d0,
+      #22c55e);
   /* background: conic-gradient(
     from 0deg,
     #34d399,
@@ -277,6 +273,7 @@ body {
     transform: rotate(360deg);
   }
 }
+
 /* ========================================
    PREMIUM GREEN GLOW BUTTONS
 ======================================== */
@@ -438,6 +435,7 @@ body {
 .animate-frontCard {
   animation: frontCard 0.7s ease forwards;
 }
+
 /* ========================================
    ACCESSIBILITY
 ======================================== */

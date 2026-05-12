@@ -15,30 +15,6 @@ const Footer = () => {
     >
       {/* TOP TITLE */}
 
-      {/* <div
-        className="
-          overflow-hidden
-          border-b
-          border-dashed
-          border-pink-300
-        "
-      >
-        <h2
-          className="
-            text-[120px]
-            md:text-[180px]
-            lg:text-[240px]
-            font-bold
-            leading-none
-            text-[var(--secondary-bg)]
-            opacity-95
-            whitespace-nowrap
-            text-center
-          "
-        >
-          Stakflo
-        </h2>
-      </div> */}
       <div className="mx-auto w-full max-w-[1400px]">
         <div
           className="
@@ -46,7 +22,7 @@ const Footer = () => {
     overflow-hidden
     border-b
     border-dashed
-    border-pink-300
+    border-green-500
     py-10
   "
         >
@@ -61,8 +37,7 @@ const Footer = () => {
 
       text-center
 
-      text-[90px]
-      sm:text-[140px]
+      text-[70px]
       md:text-[200px]
       lg:text-[260px]
       xl:text-[320px]
@@ -112,14 +87,6 @@ const Footer = () => {
               mb-5
             "
             >
-              {/* <div
-              className="
-                w-12
-                h-12
-                rounded-xl
-                bg-[var(--primary-color)]
-              "
-            /> */}
               <Image
                 src="/images/product-stakflo.webp"
                 alt="Stakflo Logo"
@@ -150,77 +117,6 @@ const Footer = () => {
               AI-powered compliance workflows that help teams stay audit-ready,
               improve collaboration, and scale efficiently.
             </p>
-
-            {/* SOCIALS */}
-
-            {/* <div
-            className="
-              flex
-              items-center
-              gap-4
-              mt-8
-            "
-          >
-            <Link
-              href="/"
-              className="
-                w-10
-                h-10
-                rounded-lg
-                border
-                border-pink-300
-                flex
-                items-center
-                justify-center
-                text-pink-500
-                hover:bg-pink-500
-                hover:text-white
-                transition-all
-              "
-            >
-              <FaLinkedin />
-            </Link>
-
-            <Link
-              href="/"
-              className="
-                w-10
-                h-10
-                rounded-lg
-                border
-                border-pink-300
-                flex
-                items-center
-                justify-center
-                text-pink-500
-                hover:bg-pink-500
-                hover:text-white
-                transition-all
-              "
-            >
-              <FaXTwitter />
-            </Link>
-
-            <Link
-              href="/"
-              className="
-                w-10
-                h-10
-                rounded-lg
-                border
-                border-pink-300
-                flex
-                items-center
-                justify-center
-                text-pink-500
-                hover:bg-pink-500
-                hover:text-white
-                transition-all
-              "
-            >
-              <FaInstagram />
-            </Link>
-          </div> */}
           </div>
 
           {/* CENTER */}
@@ -229,7 +125,7 @@ const Footer = () => {
             className="
             md:border-x
             border-dashed
-            border-pink-300
+            border-green-500
             md:px-10
           "
           >
@@ -303,7 +199,7 @@ const Footer = () => {
           py-5
           border-t
           border-dashed
-          border-pink-300
+          border-green-500
           text-sm
           text-[var(--primary-text-light)]
         "

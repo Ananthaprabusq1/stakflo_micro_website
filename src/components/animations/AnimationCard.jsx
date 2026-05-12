@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-
+import { useMediaQuery } from "react-responsive";
+import { useEffect, useState } from "react";
 export default function AnimationCard({
   children,
 
@@ -12,6 +13,8 @@ export default function AnimationCard({
   delay = 0,
 
   className = "",
+
+  desktopAnimationOnly = false,
 }) {
   const animations = {
     "fade-up": {
@@ -61,6 +64,33 @@ export default function AnimationCard({
         x: 0,
       },
     },
+    "fade-left-side": {
+      initial: {
+        opacity: 0,
+        x: 0,
+        y: -250,
+      },
+
+      whileInView: {
+        opacity: 1,
+        x: -350,
+        y: -250,
+      },
+    },
+
+    "fade-right-side": {
+      initial: {
+        opacity: 0,
+        x: 0,
+        y: -280,
+      },
+
+      whileInView: {
+        opacity: 1,
+        x: 350,
+        y: -280,
+      },
+    },
 
     "zoom-in": {
       initial: {
@@ -86,12 +116,40 @@ export default function AnimationCard({
       },
     },
   };
+  const [mounted, setMounted] = useState(false);
 
-  const selected = animations[animation] || animations["fade-up"];
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  const isDesktop = useMediaQuery({
+    minWidth: 1024,
+  });
 
+  const disableAnimation = desktopAnimationOnly && !isDesktop;
+
+  // const selected = animations[animation] || animations["fade-up"];
+  const selected = disableAnimation
+    ? {
+        initial: {
+          opacity: 1,
+          x: 0,
+          y: 0,
+          scale: 1,
+          rotate: 0,
+        },
+
+        whileInView: {
+          opacity: 1,
+          x: 0,
+          y: 0,
+          scale: 1,
+          rotate: 0,
+        },
+      }
+    : animations[animation] || animations["fade-up"];
   return (
     <motion.div
-      initial={selected.initial}
+      initial={mounted ? selected.initial : false}
       whileInView={selected.whileInView}
       viewport={{
         once: false,
@@ -101,6 +159,9 @@ export default function AnimationCard({
         duration,
         delay,
         ease: "easeOut",
+        type: "spring",
+        stiffness: 90,
+        damping: 18,
       }}
       className={className}
     >
