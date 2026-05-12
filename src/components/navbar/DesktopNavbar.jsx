@@ -4,13 +4,13 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
+import { usePathname } from "next/navigation";
 import { navLinks } from "./navLinks";
 import AnimatedButton from "../ui/AnimatedButton";
 
 const DesktopNavbar = () => {
   const [hideSideItems, setHideSideItems] = useState(false);
-
+  const pathname = usePathname();
   useEffect(() => {
     const handleScroll = () => {
       const shouldHide = window.scrollY > 1200;
@@ -94,13 +94,22 @@ const DesktopNavbar = () => {
             {/* CENTER NAV */}
 
             <nav
-              className="
-                fixed
-                left-1/2
-                top-5
-                z-[999]
-                -translate-x-1/2
-              "
+              className={`
+    fixed
+    left-1/2
+    top-5
+    z-[999]
+    -translate-x-1/2
+
+    transition-all
+    duration-500
+
+    ${
+      pathname === "/contact-us"
+        ? "opacity-0 pointer-events-none"
+        : "opacity-100"
+    }
+  `}
             >
               <ul
                 className="
