@@ -137,10 +137,8 @@ html {
 }
 
 body {
-  background: var(--primary-bg);
   color: var(--primary-text);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
-
   transition: var(--transition-medium);
 }
 

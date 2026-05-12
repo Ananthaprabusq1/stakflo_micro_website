@@ -8,12 +8,16 @@ export default function ScrollText({
   return (
     <div
       className={`
-        relative
-        overflow-hidden
-        whitespace-nowrap
-        w-full
-        ${containerClassName}
-      `}
+    relative
+    w-full
+    overflow-hidden
+    whitespace-nowrap
+
+    [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]
+    [-webkit-mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]
+
+    ${containerClassName}
+  `}
     >
       <div
         className={`

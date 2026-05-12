@@ -22,7 +22,7 @@ const Footer = () => {
     overflow-hidden
     border-b
     border-dashed
-    border-pink-300
+    border-green-500
     py-10
   "
         >
@@ -125,7 +125,7 @@ const Footer = () => {
             className="
             md:border-x
             border-dashed
-            border-pink-300
+            border-green-500
             md:px-10
           "
           >
@@ -199,7 +199,7 @@ const Footer = () => {
           py-5
           border-t
           border-dashed
-          border-pink-300
+          border-green-500
           text-sm
           text-[var(--primary-text-light)]
         "

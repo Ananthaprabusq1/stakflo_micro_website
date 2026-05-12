@@ -127,6 +127,7 @@ export default function AccessibilityToolbar() {
 
           hover:scale-105
           hover:bg-[#0f472c]
+          cursor-pointer
         "
       >
         <FaUniversalAccess className="text-xl" />
